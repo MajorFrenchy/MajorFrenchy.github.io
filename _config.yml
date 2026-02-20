@@ -1,0 +1,35 @@
+title: Major Frenchy
+tagline: "Collaborative Knowledge · Better Pinball."
+description: An information blog dedicated to the latest and most comprehensive knowledge on virtual pinball setup, accessories, and community resources.
+url: "https://majorfrenchy.github.io"
+baseurl: ""
+
+author: Major Frenchy
+
+nav_links:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
+  - title: Cab Building
+    url: /cab-building/
+  - title: Glossary
+    url: /glossary/
+  - title: Parts
+    url: /parts/
+  - title: Software
+    url: /software/
+  - title: Toys
+    url: /toys/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+collections:
+  pages:
+    output: true
+    permalink: /:name/
+
+permalink: /blog/:year/:month/:day/:title/

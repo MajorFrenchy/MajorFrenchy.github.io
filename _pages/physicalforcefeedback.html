@@ -1,0 +1,143 @@
+---
+layout: page
+title: Toys & Force Feedback
+permalink: /toys/
+---
+
+Physical force feedback consists of adding hardware to your virtual pinball cabinet — shaker motors, solenoids, blowing fans, chimes, gear motors, beacons, and strobes. In the virtual pinball community, we refer to these devices as **toys**.
+
+The purpose is to make the hardware react to the pinball table code in real time. For example, the shaker motor activates in Jurassic Park VPX when the dinosaur eats the ball, solenoids fire when the ball hits bumpers, and a real plunger can be used to launch the ball.
+
+---
+
+## Solenoids
+
+<div class="toy-grid">
+
+<div class="toy-card">
+  <img src="https://static.wixstatic.com/media/8d31f8_9c67bb49101a48e88c1eff98b7559505~mv2.png" alt="Solenoids">
+  <div>
+    <strong>Adding Solenoids</strong>
+    <p>Add a <a href="https://amzn.to/3rdIYFc" target="_blank">1N4007 diode</a> on the positive terminal of each solenoid — this allows current to flow in only one direction and protects your controller board. <a href="https://youtu.be/IQoWhMMDYoo" target="_blank">Watch the video →</a></p>
+    <p>The grey bar of the diode connects to the positive terminal. The other side connects to the negative terminal.</p>
+    <p><strong>Connections:</strong> Positive → 12V power supply. Negative → controller board port.</p>
+  </div>
+</div>
+
+</div>
+
+### Solenoid Recommendations
+
+A typical virtual pinball setup uses 10 solenoids:
+
+- **6** × 12V car/truck starter solenoids — for bumpers
+- **2** × Real pinball flipper assemblies
+- **2** × Real pinball slingshot assemblies  
+- **1** × Real pinball knocker
+
+Car/truck solenoids work well on a 12V 20A supply. Real pinball assemblies are designed for 50V but are still extremely loud at 24V.
+
+---
+
+## Controller Boards
+
+You need a DOF-compatible controller to connect your toys to your PC. Here are the options:
+
+<div class="toy-grid">
+
+<div class="toy-card">
+  <img src="https://static.wixstatic.com/media/8d31f8_b73bc92be3b6427c8fcb190e76055b36~mv2.png" alt="Cleveland Software">
+  <div>
+    <strong>Cleveland Software Pinscape Board</strong>
+    <p>Connects and boosts all your toys using a KL25Z board. Well built, good support, popular in the community.</p>
+    <a href="https://www.clevelandsoftwaredesign.com/pinball-parts/p/21-output-kl25z-board" target="_blank">Buy →</a>
+  </div>
+</div>
+
+<div class="toy-card">
+  <img src="https://static.wixstatic.com/media/8d31f8_85098ae3d3474bb2ae269e886cc0cc4c~mv2.png" alt="Arnoz Rigmaster">
+  <div>
+    <strong>Arnoz Rigmaster</strong>
+    <p>All-in-one solution for buttons and toys. Has on-board fuses — very nice feature. 16 outputs (8 PWM). Supports expansion boards for more devices and LEDs.</p>
+    <a href="https://shop.arnoz.com/en/basic-kl25z/74-the-rig-master.html" target="_blank">Buy →</a> &nbsp;
+    <a href="https://youtu.be/lXGWvaKvl9M" target="_blank">Video Tutorial →</a>
+  </div>
+</div>
+
+<div class="toy-card">
+  <img src="https://static.wixstatic.com/media/8d31f8_63638cba2d52471fa990ae5662557f78~mv2.png" alt="Arnoz KLshield">
+  <div>
+    <strong>Arnoz KLshield</strong>
+    <p>Expansion board for the KL25Z. Simplifies button connections. 10 outputs for toys (requires a Mosfet booster board). Also supports a plunger connection.</p>
+    <a href="https://shop.arnoz.com/en/basic-kl25z/5-kl-shield.html" target="_blank">Buy →</a>
+  </div>
+</div>
+
+<div class="toy-card">
+  <img src="https://static.wixstatic.com/media/8d31f8_9ebcb84923d9433daea34fd05effd09a~mv2.png" alt="Sainsmart">
+  <div>
+    <strong>Sainsmart USB 8-Port Relay Board</strong>
+    <p>Relay board for up to 8 power toys (solenoids, shaker). Up to 10A per port.</p>
+    <a href="https://amzn.to/3Qp9lR7" target="_blank">Buy →</a> &nbsp;
+    <a href="/sainsmart/">Tutorial →</a>
+  </div>
+</div>
+
+<div class="toy-card">
+  <img src="https://static.wixstatic.com/media/8d31f8_c0f3f0ca4c02479494683fc1f9abb68b~mv2.png" alt="KL25Z">
+  <div>
+    <strong>KL25Z</strong>
+    <p>The core development board used in most controller expansion boards (Rigmaster, KLshield, Pinscape). Can be used standalone with a Mosfet booster board.</p>
+    <a href="https://amzn.to/3Quf748" target="_blank">Buy →</a> &nbsp;
+    <a href="/kl25z/">Tutorial →</a>
+  </div>
+</div>
+
+<div class="toy-card">
+  <img src="https://static.wixstatic.com/media/8d31f8_7bfcc2f9500848fa8f6c44887a09f4f3~mv2.png" alt="Pinscape Oak Micro">
+  <div>
+    <strong>Pinscape Oak Micro AIO</strong>
+    <p>The best board tested — still used in the main cabinet. Unfortunately discontinued and no longer available.</p>
+    <a href="https://www.majorfrenchy.com/_files/ugd/8d31f8_5c3f826d2a6b4100ba42a914958003dd.pdf" target="_blank">Connection Guide (PDF) →</a> &nbsp;
+    <a href="https://youtu.be/LuYUNY6B8no" target="_blank">Video Tutorial →</a>
+  </div>
+</div>
+
+</div>
+
+---
+
+## Shaker Motor
+
+<div class="toy-grid">
+<div class="toy-card">
+  <img src="https://static.wixstatic.com/media/8d31f8_d3bd00d08d01489bbc0cd50b6e7fe05f~mv2.png" alt="Shaker motor">
+  <div>
+    <strong>Adding a Shaker Motor</strong>
+    <p>A shaker motor is one of the best additions to a cabinet. The Stern pinball shaker is the recommended option — it's been programmed into more than 300 virtual pinball tables.</p>
+    <p><strong>Wiring any toy:</strong></p>
+    <ul>
+      <li>Add a 1N4007 diode if the device has a magnetic field (motor, solenoid)</li>
+      <li>Connect positive to the power supply</li>
+      <li>Add a fuse between negative and the controller port</li>
+      <li>Connect negative to a controller port</li>
+    </ul>
+    <p><a href="https://www.tinkercad.com/things/cX68ks4pXgs-shakergear-motor-exercise" target="_blank">DIY shaker motor (TinkerCAD) →</a></p>
+  </div>
+</div>
+</div>
+
+---
+
+← [Back to Home](/)
+
+<style>
+.toy-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
+.toy-card { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
+.toy-card img { width: 100%; max-height: 160px; object-fit: contain; border-radius: 6px; background: var(--bg3); padding: 0.5rem; }
+.toy-card div { font-size: 0.875rem; color: var(--text); line-height: 1.5; }
+.toy-card strong { color: #fff; display: block; margin-bottom: 0.4rem; font-size: 0.95rem; }
+.toy-card p { margin-bottom: 0.5rem; }
+.toy-card ul { padding-left: 1.2rem; }
+.toy-card li { margin-bottom: 0.2rem; }
+</style>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="{{ '/' | relative_url }}" class="site-logo">
+        <img src="https://static.wixstatic.com/media/8d31f8_5ae51096cd694971a35ff477876b0fdd~mv2.png/v1/crop/x_0,y_0,w_710,h_440,q_85,enc_avif,quality_auto/8d31f8_5ae51096cd694971a35ff477876b0fdd~mv2.png" alt="Major Frenchy" height="50">
+      </a>
+      <div class="site-brand-text">
+        <span class="site-title">Major Frenchy</span>
+        <span class="site-tagline">{{ site.tagline }}</span>
+      </div>
+      <button class="nav-toggle" id="navToggle">☰</button>
+      <nav class="site-nav" id="siteNav">
+        {% for link in site.nav_links %}
+          <a href="{{ link.url | relative_url }}" class="nav-link {% if page.url == link.url %}active{% endif %}">{{ link.title }}</a>
+        {% endfor %}
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2023 by Major Frenchy. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/Majorfrenchy" target="_blank">YouTube</a>
+        <a href="https://bit.ly/virtualpinball" target="_blank">Discord</a>
+        <a href="https://github.com/MajorFrenchy" target="_blank">GitHub</a>
+        <a href="https://paypal.me/majorfrenchy" target="_blank">☕ Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('siteNav').classList.toggle('open');
+    });
+  </script>
+
+</body>
+</html>

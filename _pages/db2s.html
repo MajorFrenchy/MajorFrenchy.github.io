@@ -1,0 +1,97 @@
+---
+layout: page
+title: B2S Server
+permalink: /db2s/
+---
+
+<img src="https://static.wixstatic.com/media/8d31f8_1c4d617b76554b7ab50a8cf892b925e9~mv2.png" alt="B2S Server" style="width:100px; margin-bottom:1rem;">
+
+**Source:** [GitHub](https://github.com/vpinball/b2s-backglass/releases) &nbsp;·&nbsp; **Current version:** 2.1.2 &nbsp;·&nbsp; [B2S Wiki](https://github.com/vpinball/b2s-backglass/wiki)
+
+**Description:** Software used to display an image on the backglass in Visual Pinball X.
+
+---
+
+## What is B2S Server?
+
+The B2SServer allows a backglass image to be displayed in a Visual Pinball X table. The backglass file (`tablename.directb2s`) is an XML file with images and instructions on when to display certain smaller images that simulate lamps behind the backglass. The trigger can come either from a pinball ROM via VPinMAME or directly from commands in the table VB script.
+
+---
+
+## Setting It Up
+
+<img src="https://static.wixstatic.com/media/8d31f8_032ae80f2da54528bd3e18b75fcbbdb4~mv2.png" alt="Check version" style="max-width:400px; margin:1rem 0; border-radius:6px;">
+
+You might already have a version installed. To check your version, launch a table and right-click on the backglass — this will show the installed version.
+
+Version 2 has changed significantly in both look and setup. Download the latest from [GitHub](https://github.com/vpinball/b2s-backglass/releases).
+
+<img src="https://static.wixstatic.com/media/8d31f8_8cea8daf583646df835ef22da01fe84d~mv2.png" alt="Rename folder" style="max-width:700px; margin:1rem 0; border-radius:6px;">
+
+Rename the downloaded folder from the long name (e.g. `B2SServer-2.0.3-a1b7e6d-Release-win-x86-x64`) to simply **B2SServer**.
+
+---
+
+## Old Version Users
+
+If you have an existing B2SServer installed, back up all files that belong to the server — anything starting with `B2S`, `B2SBackglassServer.dll`, `B2SBackglassServerEXE.exe`, `B2SServerPluginInterface.dll`, etc.
+
+It is always a good idea to back up `ScreenRes.txt`, `B2STableSettings.xml`, and your plugins folder.
+
+Copy your `ScreenRes.txt` into the new B2SServer folder. You can place the B2SServer folder anywhere — a common choice is the root of your Visual Pinball folder.
+
+Delete all instances of B2SServer located in your `VisualPinball/Table` folder (this is where the old version was installed). In your tables folder, delete everything except the `table.xml` file.
+
+<img src="https://static.wixstatic.com/media/8d31f8_7c047201d6c4408088321ec086175820~mv2.png" alt="Tables folder" style="max-width:700px; margin:1rem 0; border-radius:6px;">
+
+---
+
+## New Version Users
+
+Copy the B2SServer folder into your Visual Pinball folder and run `B2SBackglassServerRegisterApp.exe`. Accept the security warning — this registers the software as a COM object.
+
+<div style="display:flex; gap:1rem; flex-wrap:wrap; margin:1rem 0;">
+  <img src="https://static.wixstatic.com/media/8d31f8_8409d4edb87a45dc87cfe3ae1df32132~mv2.png" alt="Register" style="height:200px; border-radius:6px;">
+  <img src="https://static.wixstatic.com/media/8d31f8_d8862e7d21d94a6e8b9552e723447be6~mv2.png" alt="Warning" style="height:200px; border-radius:6px;">
+  <img src="https://static.wixstatic.com/media/8d31f8_4e630280d8f24b8ab3a05157d4cf88b2~mv2.png" alt="Already registered" style="height:200px; border-radius:6px;">
+</div>
+
+You will get a warning if it is already registered — you can still say YES.
+
+<img src="https://static.wixstatic.com/media/8d31f8_0a3f1c6b809f406b82a3722f56ddc108~mv2.png" alt="Security prompt" style="max-width:500px; margin:1rem 0; border-radius:6px;">
+
+<img src="https://static.wixstatic.com/media/8d31f8_c0e0138407e54693b57bb9cb98492720~mv2.png" alt="Run screen identifier" style="max-width:700px; margin:1rem 0; border-radius:6px;">
+
+Run `B2S_ScreenResIdentifier.exe` to set up your screen layout.
+
+---
+
+## Screen Setup
+
+**1 Screen Setup**
+
+<img src="https://static.wixstatic.com/media/8d31f8_fdfba18ec31146f1aba44a3cab7b35cd~mv2.png" alt="1 screen setup" style="max-width:700px; margin:1rem 0; border-radius:6px;">
+
+Select how many screens your setup has. You can then move the box to the appropriate screens and the Backglass and DMD will be positioned correctly when launching tables.
+
+<img src="https://static.wixstatic.com/media/8d31f8_2aeda5fb7f5c4ee5a3b6b08be1eab2c3~mv2.png" alt="1 screen result" style="max-width:500px; margin:1rem 0; border-radius:6px;">
+
+**2 Screen Setup**
+
+<img src="https://static.wixstatic.com/media/8d31f8_4140a3194d4c44968b7513e4f790e982~mv2.png" alt="2 screen setup" style="max-width:700px; margin:1rem 0; border-radius:6px;">
+
+With more than one screen, the software detects it and allows multiple screen options. Move the backglass screen to the 2nd monitor and check the full screen box.
+
+<img src="https://static.wixstatic.com/media/8d31f8_50fc66d442d544ce943ed02286a13ea9~mv2.png" alt="2 screen result" style="max-width:500px; margin:1rem 0; border-radius:6px;">
+
+---
+
+## In-Game Backglass Settings
+
+[B2S Settings reference](https://github.com/vpinball/b2s-backglass/wiki/Settings)
+
+While a VPX table is loaded (not a Pup Pack), right-click on the backglass to access the settings menu. The most commonly used feature is enabling or disabling the Speaker Grill — use the dropdown to select Hide and save. You must reload the table for changes to take effect.
+
+---
+
+← [Back to Software](/software/)

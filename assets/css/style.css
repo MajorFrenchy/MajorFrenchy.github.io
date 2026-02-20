@@ -412,3 +412,21 @@ a:hover { color: var(--accent); }
   font-weight: bold;
   font-size: 18px;
 }
+
+.blue-text {
+  color: blue;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.green-text {
+  color: green;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.orange-text {
+  color: orange;
+  font-weight: bold;
+  font-size: 18px;
+}

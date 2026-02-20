@@ -15,12 +15,8 @@ nav_links:
     url: /cab-building/
   - title: Glossary
     url: /glossary/
-  - title: Parts
-    url: /parts/
   - title: Software
     url: /software/
-  - title: Toys
-    url: /toys/
 
 plugins:
   - jekyll-feed

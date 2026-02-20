@@ -405,4 +405,9 @@ a:hover { color: var(--accent); }
   .nav-link { padding: 0.5rem 0.75rem; }
   .hero h1 { font-size: 1.5rem; }
   .software-grid { grid-template-columns: 1fr; }
+
+   .red-text {
+  color: red;
+}
+   
 }

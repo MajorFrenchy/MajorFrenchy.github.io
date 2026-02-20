@@ -425,7 +425,8 @@ a:hover { color: var(--accent); }
   font-size: 18px;
 }
 
-  color: #ffd700;  /* Gold yellow instead of "yellow" */
+.burnt-orange-text {
+  color: Burnt-Orange;
   font-weight: bold;
   font-size: 18px;
 }

@@ -400,12 +400,15 @@ a:hover { color: var(--accent); }
     width: 100%;
     flex-direction: column;
     padding: 0.5rem 0;
-  }
+}
   .site-nav.open { display: flex; }
   .nav-link { padding: 0.5rem 0.75rem; }
   .hero h1 { font-size: 1.5rem; }
   .software-grid { grid-template-columns: 1fr; }
+}  /* <-- This closes the @media query */
 
-   .red-text {
+.red-text {
   color: red;
+  font-weight: bold;
+  font-size: 18px;
 }

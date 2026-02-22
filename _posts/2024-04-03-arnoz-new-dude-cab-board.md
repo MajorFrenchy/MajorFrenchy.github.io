@@ -25,4 +25,3 @@ Check the [Arnoz shop](https://shop.arnoz.com) for availability and pricing.
 
 ---
 
-*Questions about the board? [Send feedback](/feedback).*

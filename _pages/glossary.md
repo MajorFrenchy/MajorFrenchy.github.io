@@ -31,4 +31,4 @@ A reference for common virtual pinball terms, acronyms, and jargon.
 
 ---
 
-> Missing a term? [Submit a suggestion](/feedback).
+

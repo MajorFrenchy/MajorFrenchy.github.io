@@ -11,7 +11,7 @@ A reference for common virtual pinball terms, acronyms, and jargon.
 | Term | Definition |
 |------|------------|
 | **VPX** | Visual Pinball X — the main virtual pinball simulation engine |
-| **VPW** | Visual Pinball Wheel — community resource for VPX tables |
+| **VPW** | VpinWorkshop — community resource for VPX tables |
 | **B2S** | Back2Screen — software that drives the backglass display |
 | **DMD** | Dot Matrix Display — the score/animation screen on real and virtual machines |
 | **DOF** | DirectOutput Framework — connects software to physical feedback toys |

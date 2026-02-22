@@ -25,4 +25,4 @@ Check the [Parts](/parts) and [Toys](/toys) pages for sourcing info on the compo
 
 ---
 
-*Building your own cab? [Share your experience](/feedback).*
+

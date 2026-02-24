@@ -155,10 +155,155 @@ Result:
 <br>
 ## Media 
 <br>
-
+<img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="50%">
+<br>
 Depending on what system you are exporting it for, you can select 2 different front end or a generic structure for the media. 
 Whether you are on Mac or Linux, you only have 2 options for a front End. <a href="https://github.com/superhac/vpinfe">VPinFE</a>
  or <a href="https://batocera.org/">Batocera</a>
+ <br>
+
+Media Export Logic - Three Formats
+1. VPinFE Format
+Source Location:
+
+POPMedia/Visual Pinball X/ subfolders (Playfield, Menu, Backglass, Wheel, etc.)
+
+Matching Logic:
+
+Look in each POPMedia subfolder
+Find files matching the VPX filename (without .vpx extension)
+Use fuzzy matching (50% word overlap minimum)
+Example: Attack from Mars.vpx matches Attack from Mars (Williams 1995).mp4
+
+Output Location:
+
+Target/TableName/medias/ subfolder
+
+Output Naming (Renamed):
+
+Playfield/file.mp4 → table.mp4
+Menu/file.mp4 → fulldmd.mp4
+Loading/file.mp4 → loading.mp4
+Backglass/file.mp4 → bg.mp4
+Wheel/file.png → wheel.png
+Gameinfo/file.png → flyer.png
+GameHelp/file.png → rules.png
+AudioLaunch/file.mp3 → audiolaunch.mp3
+Audio/file.mp3 → audio.mp3
+
+Example:
+Target/Attack from Mars/
+├── Attack from Mars.vpx
+└── medias/
+    ├── table.mp4
+    ├── fulldmd.mp4
+    ├── bg.mp4
+    └── wheel.png
+
+2. Batocera Format
+Source Location:
+
+Same as VPinFE: POPMedia/Visual Pinball X/ subfolders
+
+Matching Logic:
+
+Identical to VPinFE (fuzzy matching on VPX filename)
+
+Output Location:
+
+Next to VPX file (same folder, NOT in medias/ subfolder)
+
+Output Naming (Simple fixed names):
+
+Playfield/file.mp4 → table.mp4
+Backglass/file.mp4 → backglass.mp4 (video)
+Backglass/file.png → backglass.png (image fallback)
+Menu/file.mp4 → dmd.mp4 (video)
+Menu/file.png → dmd.png (image fallback)
+Wheel/file.png → wheel.png
+AudioLaunch/file.mp3 → audiolaunch.mp3
+Audio/file.mp3 → audio.mp3
+
+Example:
+Target/Attack from Mars/
+├── Attack from Mars.vpx
+├── table.mp4              ← next to VPX
+├── backglass.mp4          ← next to VPX
+├── dmd.mp4                ← next to VPX
+├── wheel.png              ← next to VPX
+├── audiolaunch.mp3        ← next to VPX
+└── audio.mp3              ← next to VPX
+Special Note:
+
+Batocera identifies tables by folder name, not VPX filename
+EmulationStation scans folder structure
+
+
+3. PuP Media Format
+Source Location:
+
+POPMedia/Visual Pinball X/ - ALL subfolders dynamically scanned
+
+Matching Logic:
+
+Same fuzzy matching as VPinFE/Batocera
+Scans ALL folders found (not just predefined list)
+Includes: Playfield, Menu, Backglass, Wheel, Audio, AudioLaunch, GameHelp, GameInfo, GameSelect, Loading, DMD, Topper, Other1, Other2, System, etc.
+
+Output Location:
+
+Target/TableName/medias/ subfolder
+
+Output Naming (Preserves original structure):
+
+Keeps folder structure AND original filenames
+No renaming - files copied as-is
+
+Example:
+Target/Attack from Mars/
+├── Attack from Mars.vpx
+└── medias/
+    ├── Playfield/
+    │   └── Attack from Mars (Williams 1995).mp4    ← original name
+    ├── Menu/
+    │   └── Attack from Mars (Williams 1995).mp4
+    ├── Backglass/
+    │   └── Attack from Mars.mp4
+    ├── Wheel/
+    │   └── Attack from Mars.png
+    ├── Topper/
+    │   └── Attack from Mars topper.mp4
+    ├── GameSelect/
+    │   └── Attack from Mars select.png
+    └── Audio/
+        └── Attack from Mars music.mp3
+Special Features:
+
+Preserves complete POPMedia folder hierarchy
+Keeps original filenames (no renaming)
+Copies from any folder found in POPMedia (future-proof)
+Ideal for PinUP Popper systems
+
+
+Common Features (All Formats)
+Skip Logic:
+
+If medias/ folder exists (or media files exist for Batocera) → Skip copying
+Prevents re-processing already merged tables
+
+Fuzzy Matching:
+
+50% word overlap minimum
+Ignores manufacturer/year in parentheses
+Ignores noise words (limited, edition, LE, pro, premium, VPW, etc.)
+Strips apostrophes and special characters
+
+Media Log:
+
+Creates media_log.ini in output folder
+Records: Original filename = Renamed filename
+Includes match confidence score (for debugging)
+ Sonnet 4.5
 
 
 

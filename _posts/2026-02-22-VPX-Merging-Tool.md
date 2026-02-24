@@ -98,7 +98,7 @@ may need to enable an option, change the rom name or edit a specific line.
 <img src="/Screenshots/vpx-merging-tool/vpxmt-fix.jpg" width="50%">
 
 <br>
-VPX tables were built using windows infrastructure like VBS, .NET a lot of table patches were already made by members of the community and they are being hosted on JSM74's Giuhub. <a href="https://github.com/jsm174/vpx-standalone-scripts">VPX Standalone Scripts </a>
+VPX tables were built using windows infrastructure like VBS, .NET a lot of table patches were already made by members of the community and they are being hosted on JSM74's Giuhub. <a href="https://github.com/jsm174/vpx-standalone-scripts">VPX Standalone Scripts</a>
 <br> 
 
 <img src="/Screenshots/vpx-merging-tool/vpxmt-sscripts.jpg" width="50%">

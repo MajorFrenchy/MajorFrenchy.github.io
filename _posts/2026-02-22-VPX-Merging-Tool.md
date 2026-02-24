@@ -46,4 +46,4 @@ This is to merge you existing Virtual pinball tables and media collection to a V
        alt="Watch the video" 
        style="width: 50%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
 </a>
-<Check the tutorial video>
+Check the tutorial video

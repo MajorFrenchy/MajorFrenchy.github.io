@@ -250,21 +250,7 @@ Preserves complete POPMedia folder hierarchy
 Keeps original filenames (no renaming)
 Copies from any folder found in POPMedia (future-proof)
 Ideal for PinUP Popper systems
-
-
-Common Features (All Formats)
-Skip Logic:
-
-If medias/ folder exists (or media files exist for Batocera) → Skip copying
-Prevents re-processing already merged tables
-
-Fuzzy Matching:
-
-50% word overlap minimum
-Ignores manufacturer/year in parentheses
-Ignores noise words (limited, edition, LE, pro, premium, VPW, etc.)
-Strips apostrophes and special characters
-
+<br>
 Media Log:
 
 Creates media_log.ini in output folder

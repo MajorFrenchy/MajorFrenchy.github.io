@@ -62,10 +62,12 @@ Check the video tutorial
 4- there is a Globe on the right side of the table title in the picture preview box. This will take you to the table in virtualpinballspreadsheet
 <br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-globe.jpg" width="25%"> 
-5- You can select to export your Table media check the box and pick the folder structure you want. <br>
+5- You can select to export your Table media check the box and pick the folder structure you want. <br><br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%"> 
 <br>
 6- The Audit window will tell you what files were detected on your system<br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-audit.jpg" width="100%"> 
 <br>
-7- 
+7- Click the Make magic Happen to launch the Merging tool. It will copy all files in a single folder ready for VPX Standalone. 
+<br>
+<img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%"> 

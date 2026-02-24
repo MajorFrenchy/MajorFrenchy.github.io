@@ -41,7 +41,9 @@ This is to merge you existing Virtual pinball tables and media collection to a V
 
   ## HOW TO USE THE TOOL?
 
-  You can look at the video preview here
- <a href="https://www.youtube.com/watch?v=ANuKqiN80LA">
-  <img src="https://img.youtube.com/vi/ANuKqiN80LA/maxresdefault.jpg" alt="Watch the video" style="width: 50%; height: auto;">
+<a href="https://www.youtube.com/watch?v=ANuKqiN80LA">
+  <img src="https://img.youtube.com/vi/ANuKqiN80LA/hqdefault.jpg" 
+       alt="Watch the video" 
+       style="width: 50%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+</a>
 </a>

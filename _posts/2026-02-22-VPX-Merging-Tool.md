@@ -95,14 +95,32 @@ may need to enable an option, change the rom name or edit a specific line.
 <br>
 
 ## Fix Script <br>
-<img src="/Screenshots/vpx-merging-tool/vpxmt-vbs-fix.jpg" width="50%">
+<img src="/Screenshots/vpx-merging-tool/vpxmt-fix.jpg" width="50%">
 
 <br>
 VPX tables were built using windows infrastructure like VBS, .NET a lot of table patches were already made by members of the community and they are being hosted on JSM74's Giuhub. <a href="https://github.com/jsm174/vpx-standalone-scripts">VPX Standalone Scripts </a>
 <br> 
 
-<img src="/Screenshots/vpx-merging-tool/vpxmt-vbs-full.jpg" width="50%">
+<img src="/Screenshots/vpx-merging-tool/vpxmt-sscripts.jpg" width="50%">
 <br>
      
 The software automatically looks for it and if there is a match, it will download it automatically. Sometimes, even after downloading the patch and running the table, you may still have an error like below! <br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-vbs-full.jpg" width="50%">
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

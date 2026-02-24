@@ -240,25 +240,10 @@ Output Naming (Preserves original structure):
 
 Keeps folder structure AND original filenames
 No renaming - files copied as-is
+<br>
+<img src="/Screenshots/vpx-merging-tool/vpxmt-ex03.jpg" width="50%">
+<br>
 
-Example:
-Target/Attack from Mars/
-├── Attack from Mars.vpx
-└── medias/
-    ├── Playfield/
-    │   └── Attack from Mars (Williams 1995).mp4    ← original name
-    ├── Menu/
-    │   └── Attack from Mars (Williams 1995).mp4
-    ├── Backglass/
-    │   └── Attack from Mars.mp4
-    ├── Wheel/
-    │   └── Attack from Mars.png
-    ├── Topper/
-    │   └── Attack from Mars topper.mp4
-    ├── GameSelect/
-    │   └── Attack from Mars select.png
-    └── Audio/
-        └── Attack from Mars music.mp3
 Special Features:
 
 Preserves complete POPMedia folder hierarchy

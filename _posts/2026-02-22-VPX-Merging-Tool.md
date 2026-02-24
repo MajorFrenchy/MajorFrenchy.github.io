@@ -47,4 +47,13 @@ This is to merge you existing Virtual pinball tables and media collection to a V
        style="width: 50%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
 </a>
 <br>
-Check the tutorial video
+Check the video tutorial
+<br>
+<br>
+
+## STEP
+1- Set your SOURCE folder and 
+1- Drag your VPX to the software box where it say " DROP .VPX HERE "
+2- if an image preview is available it will display the table preview
+3- there is a Globe on the right side of the table title in the picture preview box. This will take you to the table in virtualpinballspreadsheet
+4

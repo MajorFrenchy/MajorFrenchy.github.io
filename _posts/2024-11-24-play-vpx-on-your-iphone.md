@@ -2,7 +2,8 @@
 layout: post
 title: "Play VPX on Your iPhone"
 date: 2024-11-24
-categories: [vpx, mobile, standalone]
+categories: [vpx, mobile, standalone,ios]
+image: /Screenshots/ios/ios.jpg
 ---
 
 Jason Millard has done it again. After his integration of Visual Pinball Standalone on the gaming system Batocera, he has come up with a way to run VPX on iOS — meaning you can play Virtual Pinball X directly on your iPhone.

@@ -126,7 +126,7 @@ What It Fixes: VPX Standalone doesn't support certain Windows-specific features 
 * Problem: Creates Windows shell objects (not supported in VPX Standalone)
 * Fix: Comments out any line containing CreateObject("WScript.Shell")
 * Action: Adds ' comment marker and explanation
-* <br> <br>
+<br> <br>
 
 3. RegRead Calls
 * Problem: Reads Windows registry values (registry doesn't exist on Linux/Android)

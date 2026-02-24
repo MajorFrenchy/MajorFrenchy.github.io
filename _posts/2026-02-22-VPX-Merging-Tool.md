@@ -53,7 +53,12 @@ Check the video tutorial
 
 ## STEP
 1- Set your SOURCE folder and 
+
 1- Drag your VPX to the software box where it say " DROP .VPX HERE "
+
 2- if an image preview is available it will display the table preview
+
 3- there is a Globe on the right side of the table title in the picture preview box. This will take you to the table in virtualpinballspreadsheet
-4
+
+<img src="/Screenshots/vpx-merging-tool/vpmt-globe.jpg" width="50%"> 
+

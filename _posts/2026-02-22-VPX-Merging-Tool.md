@@ -75,7 +75,7 @@ Check the video tutorial
 <img src="/Screenshots/vpx-merging-tool/vpxmt-magic.jpg" width="100%"> 
 <br><br>
 After the copy, you will see a summary of all copied files <br><br>
-img src="/Screenshots/vpx-merging-tool/vpxmt-summary.jpg" width="100%"> 
+<img src="/Screenshots/vpx-merging-tool/vpxmt-summary.jpg" width="100%"> 
 8- The folder and all files will now be in your target folder
 <br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-target.jpg" width="100%">

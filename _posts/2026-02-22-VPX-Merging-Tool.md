@@ -80,3 +80,11 @@ Check the video tutorial
 <br><br>
 
 ## Clean VBS
+<br>
+<img src="/Screenshots/vpx-merging-tool/vpxmt-vbs.jpg" width="100%">
+<br>
+Sometimes you may need to change an option in the table script, this option allows you to extract the Table script with 1 click of a button. it will be renaming the .vbs to match the .VPX<br>
+<img src="/Screenshots/vpx-merging-tool/vpxmt-vbs-full.jpg" width="50%">
+
+<br>
+

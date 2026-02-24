@@ -75,3 +75,5 @@ Check the video tutorial
 <img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%"> 
 <br><br>
 8- The folder and all files will now be in your target folder
+<br>
+<img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%">

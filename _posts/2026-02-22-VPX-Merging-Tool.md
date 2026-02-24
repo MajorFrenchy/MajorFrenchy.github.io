@@ -60,5 +60,5 @@ Check the video tutorial
 
 3- there is a Globe on the right side of the table title in the picture preview box. This will take you to the table in virtualpinballspreadsheet
 
-<img src="/Screenshots/vpx-merging-tool/vpmt-globe.jpg" width="50%"> 
+<img src="/Screenshots/vpx-merging-tool/vpxmt-globe.jpg" width="50%"> 
 

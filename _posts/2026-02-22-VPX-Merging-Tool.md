@@ -54,23 +54,24 @@ Check the video tutorial
 ## STEP
 1- Set your SOURCE folder and TARGET<br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-source.jpg" width="25%"> 
-<br>
+<br><br>
 2- Drag your VPX to the software box where it say " DROP .VPX HERE "
-<br>
+<br><br>
 3- if an image preview is available it will display the table preview
-<br>
+<br><br>
 4- there is a Globe on the right side of the table title in the picture preview box. This will take you to the table in virtualpinballspreadsheet
+<br><br>
+<img src="/Screenshots/vpx-merging-tool/vpxmt-globe.jpg" width="25%"> <br>
+5- You can select to export your Table media check the box and pick the folder structure you want.
 <br>
-<img src="/Screenshots/vpx-merging-tool/vpxmt-globe.jpg" width="25%"> 
-5- You can select to export your Table media check the box and pick the folder structure you want. <br><br>
 <br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%"> 
-<br>
+<br><br>
 6- The Audit window will tell you what files were detected on your system<br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-audit.jpg" width="100%"> 
-<br>
+<br><br>
 7- Click the Make magic Happen to launch the Merging tool. It will copy all files in a single folder ready for VPX Standalone. 
-<br>
+<br><br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%"> 
-<br>
+<br><br>
 8- The folder and all files will now be in your target folder

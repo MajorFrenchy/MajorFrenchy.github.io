@@ -55,16 +55,17 @@ Check the video tutorial
 1- Set your SOURCE folder and TARGET<br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-source.jpg" width="25%"> 
 <br>
-1- Drag your VPX to the software box where it say " DROP .VPX HERE "
+2- Drag your VPX to the software box where it say " DROP .VPX HERE "
 <br>
-2- if an image preview is available it will display the table preview
+3- if an image preview is available it will display the table preview
 <br>
-3- there is a Globe on the right side of the table title in the picture preview box. This will take you to the table in virtualpinballspreadsheet
+4- there is a Globe on the right side of the table title in the picture preview box. This will take you to the table in virtualpinballspreadsheet
 <br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-globe.jpg" width="25%"> 
-4- You can select to export your Table media check the box and pick the folder structure you want. <br>
+5- You can select to export your Table media check the box and pick the folder structure you want. <br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="25%"> 
 <br>
-5- The Audit window will tell you what files were detected on your system<br>
+6- The Audit window will tell you what files were detected on your system<br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-audit.jpg" width="25%"> 
 <br>
+

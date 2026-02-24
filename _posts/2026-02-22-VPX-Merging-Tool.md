@@ -215,24 +215,24 @@ Next to VPX file (same folder, NOT in medias/ subfolder)
 
 Output Naming (Simple fixed names):
 
-Playfield/file.mp4 → table.mp4
-Backglass/file.mp4 → backglass.mp4 (video)
-Backglass/file.png → backglass.png (image fallback)
-Menu/file.mp4 → dmd.mp4 (video)
-Menu/file.png → dmd.png (image fallback)
-Wheel/file.png → wheel.png
-AudioLaunch/file.mp3 → audiolaunch.mp3
-Audio/file.mp3 → audio.mp3
+Playfield/file.mp4 → table.mp4<br>
+Backglass/file.mp4 → backglass.mp4 (video)<br>
+Backglass/file.png → backglass.png (image fallback)<br>
+Menu/file.mp4 → dmd.mp4 (video)<br>
+Menu/file.png → dmd.png (image fallback)<br>
+Wheel/file.png → wheel.png<br>
+AudioLaunch/file.mp3 → audiolaunch.mp3<br>
+Audio/file.mp3 → audio.mp3<br>
 
 Example:
-Target/Attack from Mars/
-├── Attack from Mars.vpx
-├── table.mp4              ← next to VPX
-├── backglass.mp4          ← next to VPX
-├── dmd.mp4                ← next to VPX
-├── wheel.png              ← next to VPX
-├── audiolaunch.mp3        ← next to VPX
-└── audio.mp3              ← next to VPX
+Target/Attack from Mars/<br>
+├── Attack from Mars.vpx<br>
+├── table.mp4              ← next to VPX<br>
+├── backglass.mp4          ← next to VPX<br>
+├── dmd.mp4                ← next to VPX<br>
+├── wheel.png              ← next to VPX<br>
+├── audiolaunch.mp3        ← next to VPX<br>
+└── audio.mp3              ← next to VPX<br>
 Special Note:
 
 Batocera identifies tables by folder name, not VPX filename

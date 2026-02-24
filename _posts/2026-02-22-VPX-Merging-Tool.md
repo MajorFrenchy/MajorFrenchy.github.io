@@ -12,6 +12,7 @@ image: /Screenshots/vpx-merging-tool/vpxmt.png
 
      VPXmerge streamlines your VPX table collection by automating exports, script fixes, media organization, and asset detection — all with an intuitive 
      drag-and-drop interface.
+     <br><br>
 
 🎯 One-Click Full Export — VPX + VBS + Backglass + PUP + Media<br>
 🔧 Auto-Fix Scripts — WScript.Shell, RegRead, deprecated B2S properties<br>

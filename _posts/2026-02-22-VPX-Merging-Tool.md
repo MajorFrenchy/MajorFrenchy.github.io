@@ -53,7 +53,7 @@ Check the video tutorial
 
 ## STEPS
 1- Set your SOURCE folder and TARGET<br>
-<img src="/Screenshots/vpx-merging-tool/vpxmt-source.jpg" width="25%"> 
+<img src="/Screenshots/vpx-merging-tool/vpxmt-source.jpg" width="100%"> 
 <br><br>
 2- Drag your VPX to the software box where it say " DROP .VPX HERE "
 <br><br>
@@ -62,7 +62,7 @@ Check the video tutorial
 4- there is a Globe on the right side of the table title in the picture preview box. This will take you to the table in virtualpinballspreadsheet
 <br><br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-globe.jpg" width="25%"> <br>
-5- You can select to export your Table media check the box and pick the folder structure you want.
+5- You can select to export your Table media check the box and pick the folder structure you want. See Below ## Media for additional info
 <br>
 <br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%"> 
@@ -153,6 +153,12 @@ Result:
 * Original problematic code is commented out (not deleted) for reference
 
 <br>
+## Media 
+<br>
+
+Depending on what system you are exporting it for, you can select 2 different front end or a generic structure for the media. 
+Whether you are on Mac or Linux, you only have 2 options for a front End. <a href="https://github.com/superhac/vpinfe">VPinFE</a>
+ or <a href="https://batocera.org/">Batocera</a>
 
 
 

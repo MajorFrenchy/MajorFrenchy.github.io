@@ -13,17 +13,18 @@ image: /Screenshots/vpx-merging-tool/vpxmt.png
      VPXmerge streamlines your VPX table collection by automating exports, script fixes, media organization, and asset detection — all with an intuitive 
      drag-and-drop interface.
 
-🎯 One-Click Full Export — VPX + VBS + Backglass + PUP + Media
-🔧 Auto-Fix Scripts — WScript.Shell, RegRead, deprecated B2S properties
-🎬 Smart Media Manager — Fuzzy matching for POPMedia files
-🖼️ Live Table Previews — See table artwork while you work
-📦 Batch Processing — Handle entire collections at once
-🎮 ROM Detection — 3-tier fallback for maximum compatibility
+🎯 One-Click Full Export — VPX + VBS + Backglass + PUP + Media<br>
+🔧 Auto-Fix Scripts — WScript.Shell, RegRead, deprecated B2S properties<br>
+🎬 Smart Media Manager — Fuzzy matching for POPMedia files<br>
+🖼️ Live Table Previews — See table artwork while you work<br>
+📦 Batch Processing — Handle entire collections at once<br>
+🎮 ROM Detection — 3-tier fallback for maximum compatibility<br>
 📝 VBS Extraction — Pull scripts from VPX files safely
-
+<br>
+<br>
 
 ## PURPOSE OF THE TOOL
-
+<br>
 This is to merge you existing Virtual pinball tables and media collection to a VPX Standalone "ready" format. The Standalone uses a 1 folder structure with all required files. This tool will scan the required files for a specific table (.VPX) and list all the required files such as 
 - Backglass
 - ROM
@@ -38,4 +39,6 @@ This is to merge you existing Virtual pinball tables and media collection to a V
   ## HOW TO USE THE TOOL?
 
   You can look at the video preview here
-  [![Watch the video](https://img.youtube.com/vi/ANuKqiN80LA/maxresdefault.jpg)](https://www.youtube.com/watch?v=ANuKqiN80LA)
+ <a href="https://www.youtube.com/watch?v=ANuKqiN80LA">
+  <img src="https://img.youtube.com/vi/ANuKqiN80LA/maxresdefault.jpg" alt="Watch the video" style="width: 50%; height: auto;">
+</a>

@@ -191,7 +191,7 @@ GameHelp/file.png → rules.png<br>
 AudioLaunch/file.mp3 → audiolaunch.mp3<br>
 Audio/file.mp3 → audio.mp3<br>
 
-<img src="/Screenshots/vpx-merging-tool/vpxmt-ex01.jpg" width="100%">
+<img src="/Screenshots/vpx-merging-tool/vpxmt-ex01.jpg" width="50%">
 
 2. Batocera Format
 Source Location:

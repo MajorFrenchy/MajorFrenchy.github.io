@@ -107,7 +107,7 @@ VPX tables were built using windows infrastructure like VBS, .NET a lot of table
 The software automatically looks for it and if there is a match, it will download it automatically. Sometimes, certain tables will crash and there is no patch for it . Clicking the Fix script will scan and list the table issues . If it detects any issues , it will create a .VBS script 
 with the corrections. 
 <br>
-<img src="/Screenshots/vpx-merging-tool/vpxmt-sscripts.jpg" width="100%">
+
 <br>
 
 

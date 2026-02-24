@@ -113,39 +113,40 @@ with the corrections.
 
 <br>
 Auto-Fix Script Logic
-
+<br>
 What It Fixes: VPX Standalone doesn't support certain Windows-specific features that desktop VPX uses. The auto-fixer removes or replaces these incompatible code patterns.
-
+<br>
 1. WScript.Shell Registry Reads
 * Problem: Desktop VPX reads Windows registry to find NVRAM folder path
 * Fix: Replace GetNVramPath() function to use local .\pinmame\nvram\ folder instead
 * Action: Completely rewrites the function to return a hardcoded local path
 <br>
-
+<br>
 2. WScript.Shell CreateObject
 * Problem: Creates Windows shell objects (not supported in VPX Standalone)
 * Fix: Comments out any line containing CreateObject("WScript.Shell")
 * Action: Adds ' comment marker and explanation
-  <br>
+* <br> <br>
 
 3. RegRead Calls
 * Problem: Reads Windows registry values (registry doesn't exist on Linux/Android)
 * Fix: Comments out lines containing RegRead(
 * Action: Adds ' comment marker with explanation
-
+<br>
 <br>
 4. Const cGameName Declaration
 * Problem: Old table format declares Const cGameName = "rom_name"
 * Fix: Replaces with modern format: Const cGameName = "rom_name" : cAltGameName = ""
 * Action: Adds empty cAltGameName variable for compatibility
-
+<br>
 <br>
 5. Table1_Exit() Sub
 * Problem: Desktop VPX uses Table1_Exit() to clean up on close
 * Fix: Renames to Table1_Paused() (VPX Standalone equivalent)
 * Action: Changes function name while keeping all code inside unchanged
-
 <br>
+<br>
+
 Result:
 * Script runs on VPX Standalone without Windows dependencies
 * All fixes are logged in audit output

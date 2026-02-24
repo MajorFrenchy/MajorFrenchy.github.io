@@ -10,8 +10,8 @@ image: /Screenshots/vpx-merging-tool/vpxmt.png
      style="width: 50%; height: auto;" 
      alt="VPX Merging Tool">
 
-     VPXmerge streamlines your VPX table collection by automating exports, script fixes, media organization, and asset detection — all with an intuitive 
-     drag-and-drop interface.
+VPXmerge streamlines your VPX table collection by automating exports, script fixes, media organization, and asset detection — all with an intuitive 
+drag-and-drop interface.
      
 <br>
 <br>

@@ -63,6 +63,7 @@ Check the video tutorial
 <br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-globe.jpg" width="25%"> 
 5- You can select to export your Table media check the box and pick the folder structure you want. <br><br>
+<br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%"> 
 <br>
 6- The Audit window will tell you what files were detected on your system<br>
@@ -71,3 +72,5 @@ Check the video tutorial
 7- Click the Make magic Happen to launch the Merging tool. It will copy all files in a single folder ready for VPX Standalone. 
 <br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%"> 
+<br>
+8- The folder and all files will now be in your target folder

@@ -87,7 +87,7 @@ Check the video tutorial
  <img src="/Screenshots/vpx-merging-tool/vpxmt-vbs.jpg" width="100%">
  <br>
 In VPX Standalone, you can not access the script directly anymore. This tool will allow you to export a clean version of the table script. Sometimes, you 
-may need to enable an option, change the rom name or edit a pecific line. 
+may need to enable an option, change the rom name or edit a specific line. 
 <img src="/Screenshots/vpx-merging-tool/vpxmt-vbs-full.jpg" width="50%">
 
 <br>

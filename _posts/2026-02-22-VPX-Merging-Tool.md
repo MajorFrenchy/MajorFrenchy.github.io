@@ -181,24 +181,17 @@ Target/TableName/medias/ subfolder
 
 Output Naming (Renamed):
 
-Playfield/file.mp4 → table.mp4
-Menu/file.mp4 → fulldmd.mp4
-Loading/file.mp4 → loading.mp4
-Backglass/file.mp4 → bg.mp4
-Wheel/file.png → wheel.png
-Gameinfo/file.png → flyer.png
-GameHelp/file.png → rules.png
-AudioLaunch/file.mp3 → audiolaunch.mp3
-Audio/file.mp3 → audio.mp3
+Playfield/file.mp4 → table.mp4<br>
+Menu/file.mp4 → fulldmd.mp4<br>
+Loading/file.mp4 → loading.mp4<br>
+Backglass/file.mp4 → bg.mp4<br>
+Wheel/file.png → wheel.png<br>
+Gameinfo/file.png → flyer.png<br>
+GameHelp/file.png → rules.png<br>
+AudioLaunch/file.mp3 → audiolaunch.mp3<br>
+Audio/file.mp3 → audio.mp3<br>
 
-Example:
-Target/Attack from Mars/
-├── Attack from Mars.vpx
-└── medias/
-    ├── table.mp4
-    ├── fulldmd.mp4
-    ├── bg.mp4
-    └── wheel.png
+<img src="/Screenshots/vpx-merging-tool/vpxmt-ex01.jpg" width="100%">
 
 2. Batocera Format
 Source Location:

@@ -76,4 +76,7 @@ Check the video tutorial
 <br><br>
 8- The folder and all files will now be in your target folder
 <br>
-<img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%">
+<img src="/Screenshots/vpx-merging-tool/vpxmt-target.jpg" width="100%">
+<br><br>
+
+## Clean VBS

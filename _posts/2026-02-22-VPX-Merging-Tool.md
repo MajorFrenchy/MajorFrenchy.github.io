@@ -51,7 +51,7 @@ Check the video tutorial
 <br>
 <br>
 
-## STEP
+## STEPS
 1- Set your SOURCE folder and TARGET<br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-source.jpg" width="25%"> 
 <br><br>

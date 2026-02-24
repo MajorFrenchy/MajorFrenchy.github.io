@@ -112,7 +112,7 @@ with the corrections.
 
 
 <br>
-Auto-Fix Script Logic
+Auto-Fix Script Logic ( This does not fix Broken PUP PACKS ) 
 <br>
 What It Fixes: VPX Standalone doesn't support certain Windows-specific features that desktop VPX uses. The auto-fixer removes or replaces these incompatible code patterns.
 <br>

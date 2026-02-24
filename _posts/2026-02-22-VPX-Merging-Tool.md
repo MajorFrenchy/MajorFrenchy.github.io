@@ -104,8 +104,49 @@ VPX tables were built using windows infrastructure like VBS, .NET a lot of table
 <img src="/Screenshots/vpx-merging-tool/vpxmt-sscripts.jpg" width="100%">
 <br>
      
-The software automatically looks for it and if there is a match, it will download it automatically. Sometimes, even after downloading the patch and running the table, you may still have an error like below! <br>
-<img src="/Screenshots/vpx-merging-tool/vpxmt-vbs-full.jpg" width="50%">
+The software automatically looks for it and if there is a match, it will download it automatically. Sometimes, certain tables will crash and there is no patch for it . Clicking the Fix script will scan and list the table issues . If it detects any issues , it will create a .VBS script 
+with the corrections. 
+<br>
+<img src="/Screenshots/vpx-merging-tool/vpxmt-sscripts.jpg" width="100%">
+<br>
+
+Here's the Fix script Logic: 
+<br>
+Auto-Fix Script Logic
+
+What It Fixes: VPX Standalone doesn't support certain Windows-specific features that desktop VPX uses. The auto-fixer removes or replaces these incompatible code patterns.
+
+1. WScript.Shell Registry Reads
+* Problem: Desktop VPX reads Windows registry to find NVRAM folder path
+* Fix: Replace GetNVramPath() function to use local .\pinmame\nvram\ folder instead
+* Action: Completely rewrites the function to return a hardcoded local path
+
+2. WScript.Shell CreateObject
+* Problem: Creates Windows shell objects (not supported in VPX Standalone)
+* Fix: Comments out any line containing CreateObject("WScript.Shell")
+* Action: Adds ' comment marker and explanation
+
+3. RegRead Calls
+* Problem: Reads Windows registry values (registry doesn't exist on Linux/Android)
+* Fix: Comments out lines containing RegRead(
+* Action: Adds ' comment marker with explanation
+
+4. Const cGameName Declaration
+* Problem: Old table format declares Const cGameName = "rom_name"
+* Fix: Replaces with modern format: Const cGameName = "rom_name" : cAltGameName = ""
+* Action: Adds empty cAltGameName variable for compatibility
+
+5. Table1_Exit() Sub
+* Problem: Desktop VPX uses Table1_Exit() to clean up on close
+* Fix: Renames to Table1_Paused() (VPX Standalone equivalent)
+* Action: Changes function name while keeping all code inside unchanged
+
+Result:
+* Script runs on VPX Standalone without Windows dependencies
+* All fixes are logged in audit output
+* Original problematic code is commented out (not deleted) for reference
+
+
 
 
 

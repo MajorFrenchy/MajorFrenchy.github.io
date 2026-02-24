@@ -81,9 +81,13 @@ Check the video tutorial
 
 ## Clean VBS
 <br>
-<img src="/Screenshots/vpx-merging-tool/vpxmt-vbs.jpg" width="100%">
+<img src="/Screenshots/vpx-merging-tool/vpxmt-script.jpg" width="100%">
 <br>
-Sometimes you may need to change an option in the table script, this option allows you to extract the Table script with 1 click of a button. it will be renaming the .vbs to match the .VPX<br>
+ This option allows you to extract the Table script with 1 click of a button. It will be renaming the .vbs to match the .VPX <br>
+ <img src="/Screenshots/vpx-merging-tool/vpxmt-vbs.jpg" width="100%">
+ <br>
+In VPX Standalone, you can not access the script directly anymore. This tool will allow you to export a clean version of the table script. Sometimes, you 
+may need to enable an option, change the rom name or edit a pecific line. 
 <img src="/Screenshots/vpx-merging-tool/vpxmt-vbs-full.jpg" width="50%">
 
 <br>

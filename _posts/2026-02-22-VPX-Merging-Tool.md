@@ -168,13 +168,6 @@ Source Location:
 
 POPMedia/Visual Pinball X/ subfolders (Playfield, Menu, Backglass, Wheel, etc.)
 
-Matching Logic:
-
-Look in each POPMedia subfolder
-Find files matching the VPX filename (without .vpx extension)
-Use fuzzy matching (50% word overlap minimum)
-Example: Attack from Mars.vpx matches Attack from Mars (Williams 1995).mp4
-
 Output Location:
 
 Target/TableName/medias/ subfolder
@@ -192,15 +185,11 @@ AudioLaunch/file.mp3 → audiolaunch.mp3<br>
 Audio/file.mp3 → audio.mp3<br>
 
 <img src="/Screenshots/vpx-merging-tool/vpxmt-ex01.jpg" width="50%">
-
+<br>
 2. Batocera Format
 Source Location:
 
 Same as VPinFE: POPMedia/Visual Pinball X/ subfolders
-
-Matching Logic:
-
-Identical to VPinFE (fuzzy matching on VPX filename)
 
 Output Location:
 
@@ -231,7 +220,7 @@ Special Note:
 Batocera identifies tables by folder name, not VPX filename
 EmulationStation scans folder structure
 
-
+<br>
 3. PuP Media Format
 Source Location:
 

@@ -72,8 +72,10 @@ Check the video tutorial
 <br><br>
 7- Click the Make magic Happen to launch the Merging tool. It will copy all files in a single folder ready for VPX Standalone. 
 <br><br>
-<img src="/Screenshots/vpx-merging-tool/vpxmt-media.jpg" width="100%"> 
+<img src="/Screenshots/vpx-merging-tool/vpxmt-magic.jpg" width="100%"> 
 <br><br>
+After the copy, you will see a summary of all copied files <br><br>
+img src="/Screenshots/vpx-merging-tool/vpxmt-summary.jpg" width="100%"> 
 8- The folder and all files will now be in your target folder
 <br>
 <img src="/Screenshots/vpx-merging-tool/vpxmt-target.jpg" width="100%">

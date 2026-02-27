@@ -1,0 +1,330 @@
+---
+layout: page
+title: DMD Ext (Freezy)
+permalink: /freezy/
+---
+
+<style>
+/* ── Lightbox ── */
+.lb-overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.88);
+  z-index: 9999;
+  align-items: center;
+  justify-content: center;
+  cursor: zoom-out;
+}
+.lb-overlay.open { display: flex; }
+.lb-overlay img {
+  max-width: 90vw;
+  max-height: 88vh;
+  border: 3px solid #c8a84b;
+  border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.8);
+}
+.lb-close {
+  position: absolute;
+  top: 18px; right: 26px;
+  font-size: 2em; color: #fff;
+  cursor: pointer; line-height: 1;
+  user-select: none;
+}
+
+/* ── Page ── */
+.freezy { max-width: 900px; margin: 0 auto; }
+.freezy h2 { border-bottom: 2px solid #e94560; padding-bottom: 6px; margin-top: 40px; }
+.freezy h3 { color: #c8a84b; margin-top: 28px; }
+
+.freezy img.zoomable {
+  border: 3px solid #c8a84b;
+  border-radius: 4px;
+  display: block;
+  cursor: zoom-in;
+  transition: opacity 0.15s;
+}
+.freezy img.zoomable:hover { opacity: 0.85; }
+
+.freezy img.full { width: 100%; max-width: 860px; margin: 14px 0; }
+.freezy img.med  { max-width: 580px; width: 100%; margin: 14px 0; }
+.freezy img.sm   { max-width: 380px; width: 100%; margin: 14px 0; }
+
+.side {
+  display: flex;
+  gap: 28px;
+  align-items: flex-start;
+  margin: 22px 0;
+  flex-wrap: wrap;
+}
+.side img { flex: 0 0 auto; }
+.side .text { flex: 1 1 260px; }
+
+.img-pair {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  margin: 16px 0;
+  align-items: flex-start;
+}
+.img-pair img { flex: 1 1 200px; max-width: 48%; }
+
+.step-title {
+  font-size: 1.1em;
+  font-weight: bold;
+  color: #e94560;
+  margin: 32px 0 10px 0;
+  padding-left: 12px;
+  border-left: 4px solid #e94560;
+}
+
+.note { border-left: 4px solid #c8a84b; padding: 10px 16px; background: rgba(200,168,75,0.07); font-size: 0.92em; margin: 14px 0; border-radius: 0 4px 4px 0; }
+.warn { border-left: 4px solid #e94560; padding: 10px 16px; background: rgba(233,69,96,0.07); font-size: 0.92em; margin: 14px 0; border-radius: 0 4px 4px 0; }
+
+.freezy ul { padding-left: 22px; }
+.freezy ul li { margin-bottom: 6px; line-height: 1.6; }
+
+.dl-btn {
+  display: inline-block;
+  background: #e94560;
+  color: #fff;
+  padding: 8px 18px;
+  border-radius: 4px;
+  text-decoration: none;
+  font-weight: bold;
+  margin: 6px 8px 6px 0;
+  font-size: 0.9em;
+}
+.dl-btn:hover { background: #c73650; color: #fff; }
+.dl-btn.gold { background: #c8a84b; color: #111; }
+.dl-btn.gold:hover { background: #a88830; }
+
+@media (max-width: 600px) {
+  .side { flex-direction: column; }
+  .img-pair img { max-width: 100%; }
+}
+</style>
+
+<!-- Lightbox -->
+<div class="lb-overlay" id="lb" onclick="closeLb()">
+  <span class="lb-close" onclick="closeLb()">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLb(src, alt) {
+  document.getElementById('lb-img').src = src;
+  document.getElementById('lb-img').alt = alt || '';
+  document.getElementById('lb').classList.add('open');
+}
+function closeLb() { document.getElementById('lb').classList.remove('open'); }
+document.addEventListener('keydown', function(e){ if(e.key==='Escape') closeLb(); });
+</script>
+
+<div class="freezy">
+
+<p><em>Click any image to enlarge it.</em></p>
+
+<div class="side">
+  <img src="https://static.wixstatic.com/media/8d31f8_69ad8787e2874c7ca34e766296f5245af000.jpg"
+       alt="Colorized DMD in action"
+       class="zoomable sm"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_69ad8787e2874c7ca34e766296f5245af000.jpg','Colorized DMD')">
+  <div class="text">
+    <p><strong>DMD Ext and Freezy are the same thing</strong> — just two names for the same tool. This is a very significant upgrade to your Virtual Pinball experience. It enhances the built-in table DMD to a much higher quality and fully customizable display.</p>
+    <blockquote style="border-left:3px solid #c8a84b; padding-left:14px; color:#ccc; font-style:italic; margin:16px 0;">
+      "This project aims to connect digital pinball games with the physical DMDs that are widespread in the community. It also comes with pretty monitor output, supports frame-by-frame colorization, and can even stream over the network."
+    </blockquote>
+    <a href="https://github.com/freezy/dmd-extensions/releases" class="dl-btn" target="_blank">⬇ Freezy on Github</a>
+    <a href="https://github.com/freezy/dmd-extensions/releases" class="dl-btn gold" target="_blank">📄 Readme</a>
+  </div>
+</div>
+
+<h2>What You Need</h2>
+
+<p>You will need <a href="/vpx/">Visual Pinball X</a> installed, and you will need to download Freezy. Download the <strong>zip file</strong> rather than the auto installer.</p>
+
+<div class="note">💡 Download the zip, not the auto-installer — it gives you more control over where files go.</div>
+
+<div class="step-title">Step 1 — Download &amp; Unblock</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_23e11d1c75fc4351869ca2aa006b2f73~mv2.png"
+     alt="Freezy Github releases page"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_23e11d1c75fc4351869ca2aa006b2f73~mv2.png','Freezy Github releases')">
+
+<img src="https://static.wixstatic.com/media/8d31f8_b623a505f39044e9acc1d91e54741cdf~mv2.png"
+     alt="Right click Properties Unblock"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_b623a505f39044e9acc1d91e54741cdf~mv2.png','Unblock the file')">
+
+<p>Right click the downloaded file → <strong>Properties</strong> → check <strong>Unblock</strong> → Apply. Then extract the zip.</p>
+
+<div class="step-title">Step 2 — Copy to Vpinmame</div>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_6d276bd348374acdbecce339d9906a63~mv2.png"
+       alt="Extracted Freezy files"
+       class="zoomable"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_6d276bd348374acdbecce339d9906a63~mv2.png','Extracted Freezy files')">
+  <img src="https://static.wixstatic.com/media/8d31f8_017e138b76fc4be8a7ad84ab8cc44db5~mv2.png"
+       alt="Copy to Vpinmame folder"
+       class="zoomable"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_017e138b76fc4be8a7ad84ab8cc44db5~mv2.png','Copy to Vpinmame')">
+</div>
+
+<p>Select all extracted files and copy them to your <code>VisualPinball/Vpinmame</code> folder.</p>
+
+<div class="step-title">Step 3 — Change Vpinmame Settings</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_864cf92e370c49feb317addeb67a8250~mv2.png"
+     alt="Vpinmame setup options"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_864cf92e370c49feb317addeb67a8250~mv2.png','Vpinmame settings')">
+
+<p>Run <strong>Setup.exe</strong> in the Vpinmame folder and change these settings:</p>
+<ul>
+  <li>Select the <strong>Setup Default</strong> tab</li>
+  <li><strong>Uncheck</strong> Show DMD/Display window</li>
+  <li><strong>Check</strong> Use External DMD (dll)</li>
+  <li><strong>Check</strong> Colorize DMD (4 colors)</li>
+</ul>
+
+<div class="step-title">Step 4 — Run a Table</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_1e3dae0ce05a46e58329e9ccd1d3d62f~mv2.png"
+     alt="Sharp Freezy DMD running on screen"
+     class="zoomable full"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_1e3dae0ce05a46e58329e9ccd1d3d62f~mv2.png','Freezy DMD running')">
+
+<p>You will now see a much sharper DMD. Drag it to any location — even across other monitors in a multi-screen setup.</p>
+
+<div class="step-title">Step 5 — Resize &amp; Save Position</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_c1341d1c77b841f4ae152dfaa69e7607~mv2.png"
+     alt="Resizing the DMD window"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_c1341d1c77b841f4ae152dfaa69e7607~mv2.png','Resize DMD')">
+
+<p>Drag the DMD to position it. Resize by dragging the lower right corner.</p>
+<div class="note">💡 If you can't see your mouse pointer, disable <strong>Force Exclusive Fullscreen</strong> in VPX video settings.</div>
+<p>Once happy with the position, <strong>right-click the DMD</strong> to save it globally (all tables) or for this table only.</p>
+
+<div class="step-title">Step 6 — Customize the Look</div>
+
+<p>Select <strong>Customize Style</strong> to change the shape and colour of the DMD. Set it globally or per table.</p>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_a7bfe8611ccb4e15a0516f0139db95a2~mv2.png"
+       alt="Right-click DMD context menu"
+       class="zoomable"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_a7bfe8611ccb4e15a0516f0139db95a2~mv2.png','DMD context menu')">
+  <img src="https://static.wixstatic.com/media/8d31f8_3cfd89711b634fc49d33b2f05c47b2e3~mv2.png"
+       alt="DMD style customization"
+       class="zoomable"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_3cfd89711b634fc49d33b2f05c47b2e3~mv2.png','DMD style options')">
+</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_ad3e92f9fdb74f5581346626e5ce7e9c~mv2.png"
+     alt="Save globally or per table"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_ad3e92f9fdb74f5581346626e5ce7e9c~mv2.png','Save global or per table')">
+
+<h2>DMD Colorization</h2>
+
+<p>If you have Freezy running when launching a VPX table, you're almost there. The final step is getting <strong>colorized ROM files</strong> for the table. Not all tables have them — check VPUniverse.</p>
+
+<a href="https://vpuniverse.com/files/category/101-pin2dmd-colorizations-virtual-pinball/" class="dl-btn gold" target="_blank">🎨 VPU Colorized ROMs</a>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_cbff6b14373148f8b04d2e1dfdffb8a7~mv2.png"
+       alt="VPUniverse colorization page"
+       class="zoomable"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_cbff6b14373148f8b04d2e1dfdffb8a7~mv2.png','VPU colorization page')">
+  <img src="https://static.wixstatic.com/media/8d31f8_ea7be7bce8f842bcb9e7020000944483~mv2.png"
+       alt="Colorization files to download"
+       class="zoomable"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_ea7be7bce8f842bcb9e7020000944483~mv2.png','Colorization files')">
+</div>
+
+<p>Download both files and save them somewhere you'll remember — they are all named the same across tables.</p>
+
+<div class="step-title">Step 7 — Find the ROM Name</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_54e4622b8ed340729405e2b3909517d2~mv2.png"
+     alt="Finding the ROM name in VPX script editor"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_54e4622b8ed340729405e2b3909517d2~mv2.png','VPX script ROM name')">
+
+<p>You need a folder matching the ROM name. Here's how to find it:</p>
+<ul>
+  <li>Open your table in the <strong>VPX editor</strong></li>
+  <li>Click the <strong>script icon</strong></li>
+  <li>Press <strong>Ctrl+F</strong> and search for <code>gamename</code></li>
+</ul>
+<p>Example: <code>Const cGamename = "cv_20h"</code> — the ROM name for Cirqus Voltaire.</p>
+
+<div class="step-title">Step 8 — Create the altcolor Folder</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_476621b5c7b646489999f7b3f100f462~mv2.png"
+     alt="Creating the altcolor folder"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_476621b5c7b646489999f7b3f100f462~mv2.png','altcolor folder')">
+
+<p>In the <code>Vpinmame</code> folder, create a folder named <code>altcolor</code> if it doesn't exist yet.</p>
+
+<div class="step-title">Step 9 — Create the ROM Name Folder</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_6113a51684b74a558bba5c4686c6b49d~mv2.png"
+     alt="Create folder named after the ROM"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_6113a51684b74a558bba5c4686c6b49d~mv2.png','ROM named folder')">
+
+<p>Inside <code>altcolor</code>, create a folder matching the ROM name (e.g. <code>cv_20h</code>).</p>
+
+<div class="step-title">Step 10 — Copy the Colorized Files</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_b8101371ad9a4488bdcbd2ed8391044b~mv2.png"
+     alt="Copy pin2dmd.pal and pin2dmd.vni"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_b8101371ad9a4488bdcbd2ed8391044b~mv2.png','Copy colorized files')">
+
+<p>Copy the 2 downloaded files into the ROM folder: <strong>pin2dmd.pal</strong> and <strong>pin2dmd.vni</strong>.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_69ad8787e2874c7ca34e766296f5245af002.jpg"
+     alt="Colorized DMD result"
+     class="zoomable full"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_69ad8787e2874c7ca34e766296f5245af002.jpg','Colorized DMD result')">
+
+<p>If everything was installed correctly, you will now see DMD animations in <strong>vivid colours</strong>. 🎉</p>
+
+<h2>Serum / PAC File Colorization</h2>
+
+<img src="https://static.wixstatic.com/media/8d31f8_8629eec97a7f422eb207aa2f7cdfd635~mv2.png"
+     alt="Serum PAC file colorization example"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_8629eec97a7f422eb207aa2f7cdfd635~mv2.png','Serum PAC colorization')">
+
+<p>A newer 100% open-source colorization format called <strong>Serum (cRom)</strong> uses <code>.PAC</code> files instead of pin2dmd files.</p>
+
+<ul>
+  <li><a href="https://www.pincabpassion.net/t15414-comprehensive-tuto-about-colorizingdmd" target="_blank">Comprehensive tutorial on colorizing DMD</a></li>
+  <li><a href="https://vpuniverse.com/tutorials/article/25-instructions-for-setting-up-the-dmd-extensions-and-colored-roms-english-german/" target="_blank">Tutorial from RajoJoey (English/German)</a></li>
+  <li><a href="https://vpuniverse.com/forums/topic/7504-new-version-dmd-extensions-with-pin2dmd-coloring-plugin-and-pac-file-support/" target="_blank">Article from Lucky1 on VPUniverse</a></li>
+</ul>
+
+<img src="https://static.wixstatic.com/media/8d31f8_7d3ed0f0b72e4680ae9cbe648764dc99~mv2.png"
+     alt="Serum DLL files to download"
+     class="zoomable med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_7d3ed0f0b72e4680ae9cbe648764dc99~mv2.png','Serum DLL files')">
+
+<p>Download the 2 files linked in the article. Extract and paste them into the <code>Vpinmame</code> folder, overwriting existing files.</p>
+
+<div class="warn">⚠️ Do <strong>NOT</strong> overwrite your <code>VPMalias</code> or <code>dmddevice.ini</code> files.</div>
+
+<p>Once done, drop the <code>.PAC</code> file into the <code>altcolor/[romname]</code> folder, just like the pin2dmd steps above.</p>
+
+---
+
+<p><strong>Related:</strong> <a href="/vpx/">Visual Pinball X</a> · <a href="/dof/">DOF Setup</a> · <a href="/software/">Software</a></p>
+
+</div>

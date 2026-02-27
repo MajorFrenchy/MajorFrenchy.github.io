@@ -38,7 +38,25 @@ This is to merge you existing Virtual pinball tables and media collection to a V
 - music
 
   It will gather the above from your Windows setup or your Backup drive as long as the folder structure is existing.
+<br>
+<br>
+## Installation 
+ <a href="https://www.w3schools.com/](https://github.com/MajorFrenchy/VPX-Standalone-Merging-Tool">Refer to the Installation page</a>
+<br>
+Install Python  <a href="https://www.python.org/downloads/">Python Website</a>
 
+After Run the command in Python to install the dependencies. 
+
+```
+# Windows
+pip install tkinterdnd2 pillow olefile
+
+# macOS/Linux  
+pip3 install Pillow olefile tkinterdnd2 --break-system-packages
+```
+
+
+ 
   ## HOW TO USE THE TOOL?
 
 <a href="https://www.youtube.com/watch?v=ANuKqiN80LA">

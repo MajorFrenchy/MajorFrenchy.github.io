@@ -1,0 +1,535 @@
+---
+layout: page
+title: PinUP Popper
+permalink: /popper/
+---
+
+<style>
+/* ── Lightbox ── */
+.lb-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.88); z-index: 9999;
+  align-items: center; justify-content: center; cursor: zoom-out;
+}
+.lb-overlay.open { display: flex; }
+.lb-overlay img {
+  max-width: 90vw; max-height: 88vh;
+  border: 3px solid #c8a84b; border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.8);
+}
+.lb-close {
+  position: absolute; top: 18px; right: 26px;
+  font-size: 2em; color: #fff; cursor: pointer; user-select: none;
+}
+
+/* ── Page ── */
+.popper { max-width: 900px; margin: 0 auto; }
+.popper h2 { border-bottom: 2px solid #e94560; padding-bottom: 6px; margin-top: 44px; }
+.popper h3 { color: #c8a84b; margin-top: 28px; }
+
+.popper img.z {
+  border: 3px solid #c8a84b; border-radius: 4px;
+  display: block; cursor: zoom-in; transition: opacity 0.15s;
+}
+.popper img.z:hover { opacity: 0.85; }
+.popper img.full  { width: 100%; max-width: 860px; margin: 12px 0; }
+.popper img.med   { max-width: 600px; width: 100%; margin: 12px 0; }
+.popper img.sm    { max-width: 440px; width: 100%; margin: 12px 0; }
+.popper img.xs    { max-width: 280px; width: 100%; margin: 12px 0; }
+
+.quick-nav {
+  background: #1a1a1a; border: 1px solid #333;
+  border-left: 4px solid #c8a84b;
+  border-radius: 0 6px 6px 0; padding: 16px 20px; margin: 20px 0;
+}
+.quick-nav strong { color: #c8a84b; display: block; margin-bottom: 10px; }
+.quick-nav ul { list-style: none; padding: 0; margin: 0; columns: 2; gap: 10px; }
+.quick-nav ul li { margin-bottom: 5px; }
+.quick-nav ul li a { color: #e94560; text-decoration: none; font-size: 0.92em; }
+.quick-nav ul li a:hover { text-decoration: underline; }
+
+.dl-grid { display: flex; flex-direction: column; gap: 10px; margin: 18px 0; }
+.dl-row {
+  background: #1a1a1a; border: 1px solid #333;
+  border-left: 4px solid #c8a84b;
+  border-radius: 0 6px 6px 0; padding: 12px 18px;
+  display: flex; flex-wrap: wrap; gap: 10px; align-items: center;
+}
+.dl-row .lbl { color: #c8a84b; font-weight: bold; flex: 1 1 220px; font-size: 0.9em; }
+.dl-row a { color: #e94560; font-size: 0.88em; white-space: nowrap; }
+
+.step-title {
+  font-size: 1.05em; font-weight: bold; color: #e94560;
+  margin: 30px 0 10px; padding-left: 12px;
+  border-left: 4px solid #e94560;
+}
+
+.side { display: flex; gap: 24px; align-items: flex-start; margin: 18px 0; flex-wrap: wrap; }
+.side img { flex: 0 0 auto; }
+.side .text { flex: 1 1 260px; }
+
+.img-pair { display: flex; gap: 16px; flex-wrap: wrap; margin: 14px 0; align-items: flex-start; }
+.img-pair img { flex: 1 1 200px; max-width: 49%; }
+
+.note { border-left: 4px solid #c8a84b; padding: 10px 16px; background: rgba(200,168,75,0.07); font-size: 0.9em; margin: 12px 0; border-radius: 0 4px 4px 0; }
+.warn { border-left: 4px solid #e94560; padding: 10px 16px; background: rgba(233,69,96,0.07); font-size: 0.9em; margin: 12px 0; border-radius: 0 4px 4px 0; }
+
+.popper ul { padding-left: 22px; }
+.popper ul li { margin-bottom: 5px; line-height: 1.6; }
+
+.dl-btn { display: inline-block; background: #e94560; color: #fff; padding: 7px 16px; border-radius: 4px; text-decoration: none; font-weight: bold; margin: 5px 6px 5px 0; font-size: 0.88em; }
+.dl-btn:hover { background: #c73650; color: #fff; }
+.dl-btn.gold { background: #c8a84b; color: #111; }
+.dl-btn.gold:hover { background: #a88830; }
+
+@media (max-width: 620px) {
+  .side { flex-direction: column; }
+  .img-pair img { max-width: 100%; }
+  .quick-nav ul { columns: 1; }
+}
+</style>
+
+<div class="lb-overlay" id="lb" onclick="closeLb()">
+  <span class="lb-close" onclick="closeLb()">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLb(s,a){document.getElementById('lb-img').src=s;document.getElementById('lb-img').alt=a||'';document.getElementById('lb').classList.add('open');}
+function closeLb(){document.getElementById('lb').classList.remove('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+</script>
+
+<div class="popper">
+
+<img src="https://static.wixstatic.com/media/8d31f8_8698e70587a14102a6127a518d178b52~mv2.png"
+     alt="PinUP Popper frontend" class="z full"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_8698e70587a14102a6127a518d178b52~mv2.png','PinUP Popper')">
+
+<p><em>Click any image to enlarge it.</em></p>
+
+<div class="quick-nav">
+  <strong>Table of Contents</strong>
+  <ul>
+    <li><a href="#what-is">What is PinUP Popper</a></li>
+    <li><a href="#prereqs">Pre-Requisites</a></li>
+    <li><a href="#getting-started">Getting Started</a></li>
+    <li><a href="#files">Download Files</a></li>
+    <li><a href="#player-install">PinUP Player Installation</a></li>
+    <li><a href="#pup-packs">PUP Packs</a></li>
+    <li><a href="#frontend-install">Front End Installation</a></li>
+    <li><a href="#backup">Backing up the Database</a></li>
+    <li><a href="#update">Updating PinUP Popper</a></li>
+    <li><a href="#tables">Tables Management</a></li>
+    <li><a href="#media">Media Manager</a></li>
+  </ul>
+</div>
+
+<h2 id="files">PinUP Popper Files</h2>
+
+<div class="dl-grid">
+  <div class="dl-row">
+    <span class="lbl">PinUP Player (enables PUP Packs) — v1.4.5</span>
+    <a href="https://www.nailbuster.com/wikipinup/doku.php?id=install_guide" target="_blank">Install Guide</a>
+  </div>
+  <div class="dl-row">
+    <span class="lbl">PinUP Player Update — v1.4.5 → v1.4.6</span>
+    <a href="https://www.nailbuster.com/wikipinup/doku.php?id=release_notes" target="_blank">Release Notes</a>
+  </div>
+  <div class="dl-row">
+    <span class="lbl">PinUP Popper Front End — v1.4.5</span>
+    <a href="https://www.nailbuster.com/wikipinup/doku.php?id=install_guide" target="_blank">Install Guide</a>
+  </div>
+  <div class="dl-row">
+    <span class="lbl">PinUP Popper Front End Update — v1.4.5 → v1.4.6</span>
+    <a href="https://www.nailbuster.com/wikipinup/doku.php?id=release_notes" target="_blank">Release Notes</a>
+  </div>
+  <div class="dl-row">
+    <span class="lbl">Baller Installer (All-in-One) — Ver 2022.4</span>
+    <a href="https://www.nailbuster.com/wikipinup/doku.php?id=baller_installer" target="_blank">Main Page</a>
+    <a href="https://www.nailbuster.com/wikipinup/doku.php?id=update_baller_2023" target="_blank">Jan 2023 Update</a>
+  </div>
+</div>
+
+<h2 id="what-is">What is PinUP Popper?</h2>
+
+<p>PinUP Popper is a front end designed to manage tables. It is the front end of choice for many virtual pinball enthusiasts, partly because the developer <strong>Nailbuster</strong> is very active in the community and releases many guides on popular features.</p>
+<p>PinUP Popper is loaded with functionality — including a built-in multimedia server where users can download artwork for their tables with a single click.</p>
+
+<div class="side">
+  <img src="https://static.wixstatic.com/media/8d31f8_d7dab7f471e44669a48be562a5621431~mv2.png"
+       alt="Flintstones PUP Pack" class="z xs"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_d7dab7f471e44669a48be562a5621431~mv2.png','Flintstones PUP Pack')">
+  <div class="text">
+    <p>One of PinUP Popper's killer features is <strong>PUP Packs</strong> — additional video animations synchronized with gameplay. When a certain action is triggered on the table, the animation plays on the backglass. It can also be text or an image on a topper screen or full DMD.</p>
+    <p>PUP Packs are available for free download on <a href="https://vpuniverse.com/" target="_blank">VPUniverse</a>.</p>
+    <p><em>A PUP Pack for the Flintstones VPX.</em></p>
+  </div>
+</div>
+
+<h2 id="prereqs">Pre-Requisites</h2>
+
+<div class="side">
+  <img src="https://static.wixstatic.com/media/8d31f8_e5a3ad46bc37414a9b8fb38bee3cfa39~mv2.png"
+       alt="Disable antivirus" class="z sm"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_e5a3ad46bc37414a9b8fb38bee3cfa39~mv2.png','Disable antivirus')">
+  <div class="text">
+    <h3 style="margin-top:0;">Disable Antivirus</h3>
+    <p>Disable your antivirus from day one. It can create false positives, block files, and make tables sluggish.</p>
+  </div>
+</div>
+
+<div class="side">
+  <img src="https://static.wixstatic.com/media/8d31f8_678b8e579e5946d3995e8d3fcb9efdfc~mv2.png"
+       alt="Unblock downloaded files" class="z sm"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_678b8e579e5946d3995e8d3fcb9efdfc~mv2.png','Unblock files')">
+  <div class="text">
+    <h3 style="margin-top:0;">Always Unblock Downloaded Files</h3>
+    <p>Right-click → Properties → check <strong>Unblock</strong> → Apply. This unblocks files downloaded from the internet so Windows will run them.</p>
+  </div>
+</div>
+
+<div class="side">
+  <img src="https://static.wixstatic.com/media/8d31f8_06304294fb9d4406ae4a3f8efd0973da~mv2.png"
+       alt="Windows display scaling 100%" class="z sm"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_06304294fb9d4406ae4a3f8efd0973da~mv2.png','Display scaling')">
+  <div class="text">
+    <h3 style="margin-top:0;">Set Display Scaling to 100%</h3>
+    <p>Make sure <strong>Scaling is set to 100%</strong> on all displays in Windows display settings.</p>
+  </div>
+</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_3b8c10992f52424c9089fdc8f522abb3~mv2.png"
+     alt="Windows display settings" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_3b8c10992f52424c9089fdc8f522abb3~mv2.png','Display settings')">
+
+<h2 id="getting-started">Getting Started</h2>
+
+<div class="side">
+  <img src="https://static.wixstatic.com/media/8d31f8_b03e928fbcdb4e9dbd180f1077b8598d~mv2.png"
+       alt="Deadpool PUP Pack" class="z xs"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_b03e928fbcdb4e9dbd180f1077b8598d~mv2.png','Deadpool PUP Pack')">
+  <div class="text">
+    <p>Be prepared to be frustrated when things don't work at first. PUP Packs require everything to be configured correctly. <strong>Read The Manual.</strong> The author(s) put enormous effort into creating and documenting this software — read it, read it, read it.</p>
+    <p>Once configured correctly, you will be amazed at the overall experience.</p>
+    <p><strong>Step 1: RTFM.</strong> All steps, images, and videos are available online. Take the few hours required to get to know the software — it is so much more fun when you understand everything you're doing.</p>
+    <p><em>A PUP Pack for JP's Deadpool.</em></p>
+  </div>
+</div>
+
+<h2 id="player-install">PinUP Player Installation</h2>
+
+<p>Install PinUP Player <strong>first</strong>, before the front end. Download link at <a href="https://www.nailbuster.com/wikipinup/doku.php?id=install_guide" target="_blank">Nailbuster's wiki</a>.</p>
+
+<div class="step-title">1 — Download, Unblock &amp; Extract</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_44dd1a2621b145b9b4c7c50c3c0e93a7~mv2.png"
+     alt="Installing PinUP Player" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_44dd1a2621b145b9b4c7c50c3c0e93a7~mv2.png','Installing PinUP Player')">
+
+<img src="https://static.wixstatic.com/media/8d31f8_722b68d21c884ef6a1340295a4812ec0~mv2.png"
+     alt="PinUP Player files" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_722b68d21c884ef6a1340295a4812ec0~mv2.png','PinUP Player files')">
+
+<ul>
+  <li>Download PinUP Player, unblock, and extract</li>
+  <li>Copy all files to a folder of your choice — recommended: <code>C:\Vpinball\PinupSystem</code></li>
+</ul>
+
+<div class="step-title">2 — Run PinupPlayerRegister.bat as Administrator</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_58ee5ff61e014db8826a66d19a836072~mv2.png"
+     alt="Run PinupPlayerRegister.bat" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_58ee5ff61e014db8826a66d19a836072~mv2.png','PinupPlayerRegister.bat')">
+
+<p>Right-click <strong>PinupPlayerRegister.bat</strong> → Run as Administrator. You'll be presented with the PinUP Player Screen Config setup.</p>
+
+<div class="step-title">3 — Configure Your Screens</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_22c24adb94e44d198043c008eb1790ea~mv2.png"
+     alt="Screen config setup" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_22c24adb94e44d198043c008eb1790ea~mv2.png','Screen config')">
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_d043b74e87b5416494065a73593a88c4~mv2.png"
+       alt="Screen layout options" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_d043b74e87b5416494065a73593a88c4~mv2.png','Screen layout')">
+  <img src="https://static.wixstatic.com/media/8d31f8_f2af7d2497eb4de28f6a80056b0e327e~mv2.png"
+       alt="Topper screen settings" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_f2af7d2497eb4de28f6a80056b0e327e~mv2.png','Topper settings')">
+</div>
+
+<p>A <strong>topper</strong> is an additional screen above the backglass. If you don't have one, allocate a space on the backglass screen. Toppers display images, text, or looping videos.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_cfcb6fedea854457bacbc5c84703ebb2f000.jpg"
+     alt="Ghostbusters topper animation" class="z full"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_cfcb6fedea854457bacbc5c84703ebb2f000.jpg','Ghostbusters topper')">
+
+<p><em>Example topper animation: The Real Ghostbusters by <a href="https://vpuniverse.com/files/file/15864-the-real-ghostbusters-v%C3%ADdeo-topper/" target="_blank">SERGIOSOUZA</a>.</em> Toppers can be downloaded from Facebook Groups, Discord, VPUniverse, VPForums, and the built-in media server.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_115fdcb4522b43ae8dc5dbbc8ad65379~mv2.png"
+     alt="Select and size all screens" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_115fdcb4522b43ae8dc5dbbc8ad65379~mv2.png','Size screens')">
+
+<p>Select all screens and size to your desired proportions. For a single-screen setup, place the topper and Slim DMD at non-overlapping locations on your main screen. You can always adjust this later — for now, <strong>Save and Exit</strong>.</p>
+
+<div class="step-title">4 — Install the B2S Driver</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_d2bd87b18e8d4ddfb700c33e86d8c569~mv2.png"
+     alt="Copy PinUPPlayerB2Sdriver" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_d2bd87b18e8d4ddfb700c33e86d8c569~mv2.png','Copy B2S driver')">
+
+<p>Copy <strong>PinUPPlayerB2Sdriver</strong> to the folder where your B2S server files are (where <code>B2S_Setup.exe</code> is located).</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_997da0a93e3841a4bbb67535f160d27e~mv2.png"
+     alt="Paste shortcut in plugins folder" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_997da0a93e3841a4bbb67535f160d27e~mv2.png','Paste shortcut plugins')">
+
+<p>Open (or create) a <code>plugins</code> folder, right-click inside it and select <strong>Paste Shortcut</strong>.</p>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_80ae3852f82a40b88ac10af5fd37c0d8~mv2.png"
+       alt="Plugins folder contents" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_80ae3852f82a40b88ac10af5fd37c0d8~mv2.png','Plugins folder')">
+  <img src="https://static.wixstatic.com/media/8d31f8_672a10d1ecd74fceabc96410e6ab956f~mv2.png"
+       alt="Final plugins folder" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_672a10d1ecd74fceabc96410e6ab956f~mv2.png','Plugins folder final')">
+</div>
+
+<p>This is what your folder should look like. The B2S driver is now installed.</p>
+
+<div class="step-title">5 — Copy PinUPPlayerVPinMame Files</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_27861b7b6cc54b7ab1eae95fc4429157~mv2.png"
+     alt="PinUPPlayerVPinMame files" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_27861b7b6cc54b7ab1eae95fc4429157~mv2.png','VPinMame files')">
+
+<p>Navigate to <code>C:\Vpinball\PinupSystem\PinUPPlayerVPinMame</code>, select all files, cut, and paste into <code>C:\VisualPinball\VPinMAME</code>.</p>
+
+<div class="step-title">6 — Run PUPDMDControl.bat as Administrator</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_0c915281347d4b64a5860744159c31b3~mv2.png"
+     alt="Run PUPDMDControl.bat" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_0c915281347d4b64a5860744159c31b3~mv2.png','PUPDMDControl.bat')">
+
+<p>In the Vpinmame folder, right-click <strong>PUPDMDControl.bat</strong> → Run as Administrator.</p>
+
+<div class="step-title">7 — Edit DmdDevice.ini</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_291ce32f4f224500bc8ce491d1124cf1~mv2.png"
+     alt="DmdDevice.ini location" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_291ce32f4f224500bc8ce491d1124cf1~mv2.png','DmdDevice.ini')">
+
+<p>Edit <code>DmdDevice.ini</code> to enable PinUP Popper. Use <a href="https://notepad-plus-plus.org/downloads/" target="_blank">Notepad++</a> for easy editing.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_2486704bbd424ad5bdee8368efe861cf~mv2.png"
+     alt="Set pinup enabled=true" class="z sm"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_2486704bbd424ad5bdee8368efe861cf~mv2.png','enabled=true')">
+
+<p>Around line 290, find the <code>[pinup]</code> section and set <code>enabled = true</code>.</p>
+
+<div class="step-title">8 — Activate Plugins via Backglass</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_512325a6d0854627bc47f8ff111f995e~mv2.png"
+     alt="Right-click backglass plugins" class="z sm"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_512325a6d0854627bc47f8ff111f995e~mv2.png','Activate plugins')">
+
+<p>Launch a table. When the backglass opens, right-click it and:</p>
+<ul>
+  <li>Check <strong>Activate Plugins</strong></li>
+  <li>Uncheck <strong>Error message without backglass</strong></li>
+</ul>
+<p>Close and re-launch the table — the Plugins settings button should now be enabled.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_46f643d2d43b40e0a5e99350d6da948a~mv2.png"
+     alt="Plugin active" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_46f643d2d43b40e0a5e99350d6da948a~mv2.png','Plugin active')">
+
+<p>The plugin is active. PinUP Player installation is complete! ✅</p>
+
+<h2 id="pup-packs">Installing PUP Packs</h2>
+
+<p>PUP Packs are made by the community and can be complex to create. Synchronizing video triggers with table actions is difficult — sometimes a PUP pack will overlap the table audio. All PUP packs are on <a href="https://vpuniverse.com/" target="_blank">VPUniverse</a>. The VPS often links to the PUP pack in the table description.</p>
+
+<div class="step-title">Example — JP's Deadpool</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_31a51561b13f4750b72215f2bddf8ead~mv2.png"
+     alt="Deadpool V5.1 and PupPack 2.0 on VPUniverse" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_31a51561b13f4750b72215f2bddf8ead~mv2.png','Deadpool PupPack download')">
+
+<p><strong>DeadPool Table V5.1 &amp; PupPack 2.0</strong> &nbsp; <a href="https://vpuniverse.com/files/file/7368-deadpool-table-v51-puppack-20/" target="_blank" class="dl-btn gold">⬇ Download</a></p>
+<ul>
+  <li>Download, unblock, and extract</li>
+  <li>Copy <code>JP's Deadpool v5.1_VPX8(Pup).vpx</code> to your VPX tables folder</li>
+  <li>Copy the PUP pack folder <code>jpsdeadpool</code> to <code>\PinupSystem\PUPVideos</code></li>
+</ul>
+
+<div class="note">🎉 And all that work is now paying off!</div>
+
+<h2 id="frontend-install">PinUP Popper Front End Installation</h2>
+
+<p>This front end lets you add, manage, organise and launch tables. <strong>PinUP Player MUST be installed first.</strong></p>
+
+<div class="step-title">1 — Download, Unblock &amp; Extract</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_e1e0e7356ce944d797ee54505806548b~mv2.png"
+     alt="Popper front end files" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_e1e0e7356ce944d797ee54505806548b~mv2.png','Popper files')">
+
+<p>Download, unblock, and extract PinUP Popper. Drop the files into the <strong>same folder</strong> as PinUP Player (<code>C:\Vpinball\PinupSystem</code>).</p>
+
+<div class="step-title">2 — Run PinUPPopperRegister.bat as Administrator</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_cb0d65a3db1a49bb8c5741555b537c11~mv2.png"
+     alt="PinUPPopperRegister.bat" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_cb0d65a3db1a49bb8c5741555b537c11~mv2.png','PopperRegister.bat')">
+
+<img src="https://static.wixstatic.com/media/8d31f8_ce414967dd384ba1bff65bf7b66c6f78~mv2.png"
+     alt="Screen config shown" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_ce414967dd384ba1bff65bf7b66c6f78~mv2.png','Screen config')">
+
+<p>You will see the screen config — close it, as we already set up screens during PinUP Player installation.</p>
+
+<div class="step-title">3 — Configure Popper Setup Options</div>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_6caa5abd558045db9c0198a574f86df2~mv2.png"
+       alt="DMD Slim 512x128" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_6caa5abd558045db9c0198a574f86df2~mv2.png','DMD Slim')">
+  <img src="https://static.wixstatic.com/media/8d31f8_217db88a93494685b5f685cf7556d460~mv2.png"
+       alt="DMD settings" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_217db88a93494685b5f685cf7556d460~mv2.png','DMD settings')">
+</div>
+
+<div class="note">Real DMD users: set DMD Slim to 512×128, enable it, set to Show Always On, and position it on your backglass screen.</div>
+
+<p>The most commonly used options are shown below. For full details visit <a href="https://www.nailbuster.com/wikipinup/doku.php" target="_blank">Nailbuster's Wiki</a>.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_b190b8b08ed24d28b9b833acb2d6cd2e~mv2.png" alt="Setup screen 1" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_b190b8b08ed24d28b9b833acb2d6cd2e~mv2.png','Setup 1')">
+<img src="https://static.wixstatic.com/media/8d31f8_16fb9722bd3f442d884299169e8e49fe~mv2.png" alt="Setup screen 2" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_16fb9722bd3f442d884299169e8e49fe~mv2.png','Setup 2')">
+<img src="https://static.wixstatic.com/media/8d31f8_ea05b753f74f4f8ba6386635d9a161c0~mv2.png" alt="Apron/FullDMD section" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_ea05b753f74f4f8ba6386635d9a161c0~mv2.png','Apron FullDMD')">
+
+<div class="note">Do not change the Apron/FullDMD section unless you have a Full DMD setup — then set to Active and Update.</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_d9f87e3a39e34d63bb5e74acab744c8d~mv2.png" alt="Setup screen 4" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_d9f87e3a39e34d63bb5e74acab744c8d~mv2.png','Setup 4')">
+<img src="https://static.wixstatic.com/media/8d31f8_7115b9ec1faf4e088bbafb79ddb40a6a~mv2.png" alt="Emulator launch setup" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_7115b9ec1faf4e088bbafb79ddb40a6a~mv2.png','Emulator launch')">
+<img src="https://static.wixstatic.com/media/8d31f8_1a12a96b8b95414ea06e435ec3b3635d~mv2.png" alt="Launch parameters" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_1a12a96b8b95414ea06e435ec3b3635d~mv2.png','Launch params')">
+<img src="https://static.wixstatic.com/media/8d31f8_9d01ddb62d834912b8d20be60c561dca~mv2.png" alt="VPX emulator settings" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_9d01ddb62d834912b8d20be60c561dca~mv2.png','VPX settings')">
+
+<p>In <strong>Emulator/Launch Setup</strong> you can add programs and parameters for table launch. All parameters documented <a href="https://www.nailbuster.com/wikipinup/doku.php?id=emulator_vpx" target="_blank">here</a>.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_035bb2bfaf36426288da6ef8faded93d~mv2.png" alt="Controller setup tab" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_035bb2bfaf36426288da6ef8faded93d~mv2.png','Controller setup')">
+
+<p>The <strong>Controller Setup</strong> tab configures keyboard/cabinet button mappings. Double-click an action for a yellow prompt waiting for key input.</p>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_aceca1050e17442fb89a0e0cd1fc2260~mv2.png" alt="Key binding" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_aceca1050e17442fb89a0e0cd1fc2260~mv2.png','Key binding')">
+  <img src="https://static.wixstatic.com/media/8d31f8_bb906c2cd7ca4115b3ae13ad5e048d9b~mv2.png" alt="Screen/Theme section" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_bb906c2cd7ca4115b3ae13ad5e048d9b~mv2.png','Screen Theme')">
+</div>
+
+<p>The <strong>Screen/Theme</strong> section toggles front end screens on or off (does not affect PUP packs).</p>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_040be4f40c0a429e9be17468d842ff00~mv2.png" alt="DMD show forced back" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_040be4f40c0a429e9be17468d842ff00~mv2.png','DMD forced back')">
+  <img src="https://static.wixstatic.com/media/8d31f8_eba0c9bfe0e44fb683804e81e674234a~mv2.png" alt="useDOF setting" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_eba0c9bfe0e44fb683804e81e674234a~mv2.png','useDOF')">
+</div>
+
+<ul>
+  <li>Real DMD: set DMD to <em>Show forced back</em></li>
+  <li>DOF users: change <code>useDOF</code> from false to true and save</li>
+</ul>
+
+<img src="https://static.wixstatic.com/media/8d31f8_ba285055576c4b1ca6a4940e80807e6d~mv2.png" alt="useDMD true and mirror" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_ba285055576c4b1ca6a4940e80807e6d~mv2.png','useDMD')">
+
+<div class="note">Real DMD: set <code>useDMD</code> to true and mirror.</div>
+
+<h2 id="tables">Tables Management</h2>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_84b7af129dd04a2f8e12e9e4ff859520~mv2.png" alt="Tables management" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_84b7af129dd04a2f8e12e9e4ff859520~mv2.png','Tables management')">
+  <img src="https://static.wixstatic.com/media/8d31f8_0a609ca3955f4912bae5a9e6d6b04dc3~mv2.png" alt="Add game button" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_0a609ca3955f4912bae5a9e6d6b04dc3~mv2.png','Add game')">
+</div>
+
+<ul>
+  <li>Click <strong>Add Game</strong> to open the table scanner</li>
+  <li>Use the <strong>Emulator</strong> dropdown to filter by system</li>
+  <li>Click <strong>Scan for new games</strong> — shows only tables not yet in the front end</li>
+</ul>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_dc4dffd41ccb4314bbedd831b9ae52a5~mv2.png" alt="Scan results" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_dc4dffd41ccb4314bbedd831b9ae52a5~mv2.png','Scan results')">
+  <img src="https://static.wixstatic.com/media/8d31f8_55cfd6e022dd4f6c80d199bffc39f7eb~mv2.png" alt="Select all add to system" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_55cfd6e022dd4f6c80d199bffc39f7eb~mv2.png','Add to system')">
+</div>
+
+<p>Select all and click <strong>Add to System</strong>. Added games turn <strong>green</strong>. Now add them to a playlist.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_64d00088ec0040a0914656b478912afd~mv2.png" alt="Games green" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_64d00088ec0040a0914656b478912afd~mv2.png','Games green')">
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_76d4f4976c424bb292aad9139f0f7ce9~mv2.png" alt="Add to playlist" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_76d4f4976c424bb292aad9139f0f7ce9~mv2.png','Add to playlist')">
+  <img src="https://static.wixstatic.com/media/8d31f8_04117f5496024066a40d89a814210e83~mv2.png" alt="Playlist view" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_04117f5496024066a40d89a814210e83~mv2.png','Playlist')">
+</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_16859b0e67ea4ffdad64e45b4d2f0ed1~mv2.png" alt="Playlist final" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_16859b0e67ea4ffdad64e45b4d2f0ed1~mv2.png','Playlist final')">
+
+<h2 id="media">Media Manager</h2>
+
+<p>The built-in multimedia server lets you preview and download media for each table (backglass art, wheel images, playfield videos, audio, etc.).</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_b0244ba2ff1443b89278b53946318b4b~mv2.png" alt="Media manager tab" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_b0244ba2ff1443b89278b53946318b4b~mv2.png','Media manager')">
+
+<img src="https://static.wixstatic.com/media/8d31f8_4d7ef6a41325441e9f36abdb945720c8~mv2.png" alt="Globe icon for media server" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_4d7ef6a41325441e9f36abdb945720c8~mv2.png','Globe media server')">
+
+<p>Click the <strong>Globe icon</strong> next to AudioLaunch. If you see an error, PinUP Popper needs updating — see below.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_12153493bf0a4a44bb87c19525ac6cea~mv2.png" alt="Error — update needed" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_12153493bf0a4a44bb87c19525ac6cea~mv2.png','Update needed error')">
+
+<div class="warn">⚠️ <strong>Before updating PinUP Popper, always back up your database first.</strong></div>
+
+<h2 id="backup">Backing up the Database</h2>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_2bdeb29bc8634c59ba26f506ac7b45f1~mv2.png" alt="Popper Setup Backup DB" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_2bdeb29bc8634c59ba26f506ac7b45f1~mv2.png','Backup DB')">
+  <img src="https://static.wixstatic.com/media/8d31f8_8de96e2c49d84a7ea1cc05ff62285254~mv2.png" alt="Backup confirmation" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_8de96e2c49d84a7ea1cc05ff62285254~mv2.png','Backup confirm')">
+</div>
+
+<p>Go to <strong>Popper Setup → Backup DB</strong> → click Yes. It saves a single SQL file.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_e099b3cea1a04850985559c1ea0de059~mv2.png" alt="Backup file path" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_e099b3cea1a04850985559c1ea0de059~mv2.png','Backup path')">
+<img src="https://static.wixstatic.com/media/8d31f8_0544059e97a94773adc81b9cbea4626a~mv2.png" alt="Save backup safely" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_0544059e97a94773adc81b9cbea4626a~mv2.png','Save backup')">
+
+<p>Save somewhere safe. To restore: rename to <code>PUPDatabase.db</code> and drop into <code>PinupSystem</code>.</p>
+
+<h2 id="update">Updating PinUP Popper</h2>
+
+<img src="https://static.wixstatic.com/media/8d31f8_0f99774b28e54c509db41d73fb001b2e~mv2.png" alt="Release notes wiki" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_0f99774b28e54c509db41d73fb001b2e~mv2.png','Release notes')">
+
+<p>Go to <a href="https://www.nailbuster.com/wikipinup/doku.php?id=release_notes" target="_blank">PinUP Popper Wiki release notes</a>. Read the file titles carefully and download the correct upgrade package for your version (e.g. 1.4.5 → 1.4.6). This update covers both PinUP Player and the Front End.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_64ba1b11818f4ec5bc737e0f72fa4bf8~mv2.png" alt="Upgrade files highlighted in yellow" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_64ba1b11818f4ec5bc737e0f72fa4bf8~mv2.png','Upgrade files')">
+
+<p>Download, unblock, extract. Drag and drop new files into PinupSystem, overwriting old ones. <strong>Make sure PinUP Popper is fully closed.</strong> Re-launch when done.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_3fa7d1f1056148ab8ce6b34814038c3e~mv2.png" alt="Copy overwrite files" class="z med" onclick="openLb('https://static.wixstatic.com/media/8d31f8_3fa7d1f1056148ab8ce6b34814038c3e~mv2.png','Overwrite files')">
+
+<p>Back in Media Manager, click the Globe icon — the multimedia server should now be working.</p>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_dfcfd78ccc924349a684139618e37130~mv2.png" alt="Media server working" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_dfcfd78ccc924349a684139618e37130~mv2.png','Server working')">
+  <img src="https://static.wixstatic.com/media/8d31f8_d148565235204ca7ae6fbd89a8604384~mv2.png" alt="Download media for table" class="z" onclick="openLb('https://static.wixstatic.com/media/8d31f8_d148565235204ca7ae6fbd89a8604384~mv2.png','Download media')">
+</div>
+
+<p>Repeat for backglass, DMD, Playfield, Audio, Wheel, and anything else you want.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_1af64ce77d88400aa6a47002da182d99~mv2.png" alt="Fields turn green when set" class="z sm" onclick="openLb('https://static.wixstatic.com/media/8d31f8_1af64ce77d88400aa6a47002da182d99~mv2.png','Fields green')">
+
+<p>When media is applied, the field turns <strong>green</strong>.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_4af938cfa8264077b10a268cfcf36659~mv2.png" alt="Apollo 13 in the front end" class="z full" onclick="openLb('https://static.wixstatic.com/media/8d31f8_4af938cfa8264077b10a268cfcf36659~mv2.png','Apollo 13 front end')">
+
+<p>Click <strong>Exit and Launch</strong> to open the front end. Here's Apollo13 with all media set. Now do the same for all your games — and <strong>don't forget to back up your database!</strong> 🎉</p>
+
+---
+
+<p><strong>Related:</strong> <a href="/vpx/">Visual Pinball X</a> · <a href="/freezy/">Freezy / DMD Ext</a> · <a href="/dof/">DOF Setup</a> · <a href="/software/">Software</a></p>
+
+</div>

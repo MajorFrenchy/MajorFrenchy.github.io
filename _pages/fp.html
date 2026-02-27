@@ -1,0 +1,157 @@
+---
+layout: page
+title: Future Pinball
+permalink: /fp/
+---
+
+<style>
+.fp { max-width: 900px; margin: 0 auto; }
+.fp h2 { border-bottom: 2px solid #e94560; padding-bottom: 6px; margin-top: 40px; }
+.fp h3 { color: #c8a84b; margin-top: 28px; }
+
+/* Hero banner */
+.fp .hero { width: 100%; max-width: 860px; border: 3px solid #c8a84b; border-radius: 4px; display: block; margin: 18px 0; }
+
+/* Download link cards */
+.dl-grid { display: flex; flex-direction: column; gap: 12px; margin: 20px 0; }
+.dl-row {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  background: #1a1a1a;
+  border: 1px solid #333;
+  border-left: 4px solid #c8a84b;
+  border-radius: 0 6px 6px 0;
+  padding: 14px 18px;
+}
+.dl-row .dl-label { color: #c8a84b; font-weight: bold; min-width: 220px; font-size: 0.95em; }
+.dl-row .dl-ver { color: #fff; font-weight: bold; flex: 1; }
+.dl-row a { color: #e94560; font-size: 0.9em; white-space: nowrap; }
+
+/* Side-by-side: image left, text right */
+.side { display: flex; gap: 28px; align-items: flex-start; margin: 24px 0; flex-wrap: wrap; }
+.side img { flex: 0 0 auto; max-width: 300px; width: 100%; border: 3px solid #c8a84b; border-radius: 4px; }
+.side .text { flex: 1 1 280px; }
+
+/* Feature list */
+.fp ul { padding-left: 22px; }
+.fp ul li { margin-bottom: 6px; line-height: 1.6; }
+
+/* All-in-one installer banner */
+.installer-link { display: block; margin: 24px 0; }
+.installer-link img { width: 100%; max-width: 694px; border: 3px solid #c8a84b; border-radius: 4px; display: block; transition: opacity 0.15s; }
+.installer-link img:hover { opacity: 0.85; }
+
+/* Video links */
+.video-list { list-style: none; padding: 0; margin: 14px 0; }
+.video-list li { margin-bottom: 8px; }
+.video-list li a { color: #e94560; font-weight: bold; text-decoration: none; }
+.video-list li a:hover { text-decoration: underline; }
+.video-list li a::before { content: "▶ "; color: #c8a84b; }
+
+.note { border-left: 4px solid #c8a84b; padding: 10px 16px; background: rgba(200,168,75,0.07); font-size: 0.92em; margin: 14px 0; border-radius: 0 4px 4px 0; }
+
+@media (max-width: 600px) {
+  .side { flex-direction: column; }
+  .side img { max-width: 100%; }
+  .dl-row { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .dl-row .dl-label { min-width: unset; }
+}
+</style>
+
+<div class="fp">
+
+<img src="https://static.wixstatic.com/media/8d31f8_323837499814465c9f5f3a8fd3410391~mv2.png"
+     alt="Future Pinball header" class="hero">
+
+<p>Future Pinball is a real time Pinball Development System. It allows you to design and play your very own pinball simulation in True real time 3D. It uses Advanced Physics to provide the best possible simulation of a true to life pinball machine.</p>
+
+<h2>Downloads</h2>
+
+<div class="dl-grid">
+  <div class="dl-row">
+    <span class="dl-label">Current FP Version</span>
+    <span class="dl-ver">1.9.1.20101231</span>
+    <a href="http://members.iinet.net.au/~cleathley/downloads/FuturePinballSetup_v1.9.1.20101231.exe" target="_blank">⬇ Download</a>
+    <a href="https://futurepinball.com/" target="_blank">FP Site</a>
+  </div>
+  <div class="dl-row">
+    <span class="dl-label">Current BAM Version</span>
+    <span class="dl-ver">v.1.5-365</span>
+    <a href="https://www.ravarcade.pl/" target="_blank">BAM Website</a>
+  </div>
+  <div class="dl-row">
+    <span class="dl-label">Future Pinball Tables</span>
+    <span class="dl-ver"></span>
+    <a href="https://pinballnirvana.com/forums/resources/categories/future-pinball.3/" target="_blank">Pinball Nirvana</a>
+  </div>
+</div>
+
+<h2>About Future Pinball</h2>
+
+<div class="side">
+  <img src="https://static.wixstatic.com/media/8d31f8_86a2dfa5f2974d1f834d6e41ff45e3d6~mv2.png"
+       alt="Future Pinball — Sonic table">
+  <div class="text">
+    <p>Future Pinball has been around for many years. It is a platform that allows creators to build tables <strong>without using ROMs</strong>. Unfortunately Future Pinball development stopped in 2010.</p>
+    <p>There are excellent tables on Future Pinball. Some very good table designers like <strong>Terry Red</strong>, <strong>SlamTilt</strong>, <strong>Shiva</strong>, <strong>Ravarcade</strong> and many more have created breathtaking tables.</p>
+  </div>
+</div>
+
+<h2>BAM — Better Arcade Mode</h2>
+
+<p>A major game changer for Future Pinball is the amazing work from <strong>Ravarcade</strong>, creator of <strong>BAM (Better Arcade Mode)</strong>. The freeware is available to download for free and is a must in order to run any modern FP tables. Ravarcade also offers an all-in-one installer for Future Pinball and BAM — this will optimize the perspective of your gameplay.</p>
+
+<div class="note">⚠️ BAM is required to run most modern Future Pinball tables.</div>
+
+<h3>BAM Features</h3>
+<ul>
+  <li>Future Pinball bugs fixed</li>
+  <li>Light settings</li>
+  <li>Per-pixel lighting and new rendering engine</li>
+  <li>Camera settings (work in progress)</li>
+  <li>Post-processing effects (blur, gamma correction, brightness, saturation)</li>
+  <li>Plugin system</li>
+  <li>Improved high score (values above 2 billion)</li>
+  <li>New features on tables (custom game rooms, custom balls, animated mini-playfields)</li>
+  <li>Physics settings defined per table</li>
+  <li>All for free — BAM is Freeware</li>
+</ul>
+
+<h3>BAM for Pinball Cabinet</h3>
+<ul>
+  <li>BAM view — perspective calculated for viewer eye position</li>
+  <li>Head-tracking — best way to recreate the impression of a real pinball machine</li>
+  <li>Stereo 3D — many glasses and display types supported</li>
+  <li>Easy to setup table position/size and back-box position/size</li>
+  <li>Special effects designed for cabs</li>
+</ul>
+
+<h3>BAM for VR</h3>
+<ul>
+  <li>All main VR headsets supported: Oculus Rift, HTC Vive, phone headset via OpenVR and RiftCat</li>
+  <li>Room scale and sitting modes</li>
+</ul>
+
+<h2>How-to / Video Tutorials</h2>
+
+<ul class="video-list">
+  <li><a href="https://www.youtube.com/watch?v=jpIf85P4UqY" target="_blank">Major Frenchy — Future Pinball Setup</a></li>
+  <li><a href="https://www.youtube.com/watch?v=p5zofnnOXJM" target="_blank">Terry Red — Future Pinball Guide</a></li>
+</ul>
+
+<h2>All-in-One Installer</h2>
+
+<p>The easiest way to get started — Future Pinball + BAM essentials in a single installer from Pinball Nirvana:</p>
+
+<a href="https://pinballnirvana.com/forums/resources/future-pinball-and-bam-essentials-all-in-one.8159/"
+   target="_blank" class="installer-link">
+  <img src="https://static.wixstatic.com/media/8d31f8_f2b7610280aa4979b39a0d723623fdf1~mv2.png"
+       alt="Future Pinball and BAM Essentials All-in-One installer — click to download">
+</a>
+
+---
+
+<p><strong>Related:</strong> <a href="/vpx/">Visual Pinball X</a> · <a href="/software/">Software</a> · <a href="/parts/">Parts</a></p>
+
+</div>

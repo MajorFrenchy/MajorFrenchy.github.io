@@ -41,7 +41,7 @@ This is to merge you existing Virtual pinball tables and media collection to a V
 <br>
 <br>
 ## Installation 
- <a href="https://www.w3schools.com/](https://github.com/MajorFrenchy/VPX-Standalone-Merging-Tool">Refer to the Installation page</a>
+ <a href="https://github.com/MajorFrenchy/VPX-Standalone-Merging-Tool">Refer to the Installation page</a>
 <br>
 Install Python  <a href="https://www.python.org/downloads/">Python Website</a>
 

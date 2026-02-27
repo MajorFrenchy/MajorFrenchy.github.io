@@ -4,252 +4,680 @@ title: Visual Pinball X (VPX)
 permalink: /vpx/
 ---
 
-
-
-  <img ssrc="/Screenshots/linux-cab/linux-cab.png" alt="coming soon">
-  <div><strong>Comiong Soon</strong><br></div>
-</div>
-**Source:** [GitHub](https://github.com/vpinball/vpinball/releases) &nbsp;·&nbsp; **Current version:** 10.8 RC6
-
----
-
-## Quick Navigation
-
-- [What is Visual Pinball?](#description)
-- [Downloads](#downloads)
-- [Installation](#installation)
-- [Upgrading VPX](#upgrading-vpx)
-- [Upgrading VPinMAME](#upgrading-vpinmame)
-- [Video Tutorials](#video-tutorials)
-
----
-
-## What is Visual Pinball? {#description}
-
-Visual Pinball is the most used platform among the Virtual Pinball community. There is a very large community creating original tables and real machine recreations.
-
-**VPX Features:**
-- Simulates pinball table physics and renders the table with DirectX or OpenGL
-- Simple editor to (re-)create any kind of pinball table
-- Live editing in the rendered viewport
-- Table logic controlled via Visual Basic Script
-- Over 1050 real/unique pinball machines recreated, plus 550+ originals
-- Emulation of real pinball machines via VPinMAME
-- Configurable camera views for cabinet mode
-- Support for Tablet/Touch input and specialized pinball controllers
-- Support for Stereo3D, Head Tracking via BAM, and VR HMD rendering
-
----
-
-## Downloads {#downloads}
-
-| Software | Link | Version |
-|----------|------|---------|
-| **VPX** | [GitHub](https://github.com/vpinball/vpinball/releases) | 10.8 RC6 |
-| **VPinMAME** | [GitHub](https://github.com/vpinball/pinmame/releases) | 3.6 |
-| **B2S Server** | [GitHub](https://github.com/vpinball/b2s-backglass/releases) | 2.1.2 |
-
----
-
-## Installing Visual Pinball {#installation}
-
-<div class="steps">
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_9f8a86c7272d4830b9a9605f91536c72~mv2.png" alt="Step 1">
-  <div><strong>1. Download from GitHub</strong><br>Download Visual Pinball X from the official GitHub. Download the full installer first before upgrading to 10.8.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_67548cad5deb48b79bf112e441725bc1~mv2.png" alt="Step 2">
-  <div><strong>2. Unblock the file</strong><br>Right-click the installation file and select Properties.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_d87f75c872854e3c94b9cbe1a394a07e~mv2.png" alt="Step 3">
-  <div><strong>3. Check Unblock</strong><br>Check the Unblock box and click Apply.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_e5976c2b99ba491fa1173f1bd3a1cb1c~mv2.png" alt="Step 4">
-  <div><strong>4. Run the installer</strong><br>Double-click to install and follow the prompts.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_919c48854fee430cb3c08b06feee2d6c~mv2.png" alt="Step 5">
-  <div><strong>5. Choose install path</strong><br>You can install it anywhere. A good practice is to create a folder called <code>Vpinball</code> and install all related software inside it.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_05b6ce91eaae433aa54eea8ccb31f7e8~mv2.png" alt="Step 6">
-  <div><strong>6. Select components</strong><br>Select B2S Backglass and .Net. If you have a real DMD, you can also select PinDMD.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_fc127819a8994012b7216fb5b3f66d22~mv2.png" alt="Step 7">
-  <div><strong>7. Launch VPX</strong><br>Double-click the VisualPinballX shortcut on your desktop. Go to Preferences → Video/Graphic options.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_14f47a6c5a41470c9f24dd02af8bdca4~mv2.png" alt="Step 8">
-  <div><strong>8. Configure video settings</strong><br>Select your video card and monitor resolution. Uncheck Force Exclusive Fullscreen. Adjust the texture slider to reduce lag or memory errors.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_33e68e27878949e9b0ebbce6ab039068~mv2.png" alt="Step 9">
-  <div><strong>9. Find tables via VPS</strong><br>The <a href="https://virtual-pinball-spreadsheet.web.app/" target="_blank">Virtual Pinball Spreadsheet</a> helps you find tables by keywords, along with hosting site, versions, ROM, Backglass, and media files.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_f8cecfc0601447f4bccaa3e08aa3037d~mv2.png" alt="Step 10">
-  <div><strong>10. Table hosts</strong><br>Tables are hosted on VPUniverse, VPForums, and Pinball Nirvana. Location is decided by the table author.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_da4ea326e0d340c1bfe0c7c3b9980b48~mv2.png" alt="Step 11">
-  <div><strong>11. Read the file details</strong><br>Familiarize yourself with important details such as what version of software is required.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_3b101d40d94e42a48d11fc629a4f2289~mv2.png" alt="Step 12">
-  <div><strong>12. ROMs</strong><br>Real table recreations require a ROM for emulation. Original tables do not need a ROM. VPS includes a link to find the ROM for each table.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_9f87d65bc99e44a8882aefbb221a864f~mv2.png" alt="Step 13">
-  <div><strong>13. Download the backglass</strong><br>On the VPS site, backglasses are also listed. Download one and extract it to your <code>VisualPinball/Table</code> folder.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_f1e62c2a0d7f4f9bb8a48b140365f5b4~mv2.png" alt="Step 14">
-  <div><strong>14. Rename the backglass</strong><br>Rename the <code>.directb2s</code> file to match your table name exactly and move it to your <code>VisualPinball/Table</code> folder.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_fec0d7a6290c45cbb79ff5f18cdc6400~mv2.png" alt="Step 15">
-  <div><strong>15. Launch VPX</strong><br>Double-click the desktop shortcut, then go to File → Open and select a VPX table to open it in editor mode.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_f3b211d78cff42cbb9840f3f1a9d3ae3~mv2.png" alt="Step 16">
-  <div><strong>16. Editor mode</strong><br>In editor mode you can view the script, launch the interactive view, or launch the table directly.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_449342fa32d5464b983ce0d69e511755~mv2.png" alt="Step 17">
-  <div><strong>17. Launch the table</strong><br>Press F5 or click the launch icon to start the table.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_da4ea326e0d340c1bfe0c7c3b9980b48~mv2.png" alt="Step 18">
-  <div><strong>18. Play!</strong><br>If you get an error, it's most likely due to the wrong version of software. Check that you meet the minimum requirements (VPX 10.8, VPinMAME 3.6).</div>
-</div>
-
-</div>
-
----
-
-## Upgrading VPX {#upgrading-vpx}
-
-<div class="steps">
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_95b698d37a3b4280b48cc82052ae2bb3~mv2.png" alt="Check version">
-  <div><strong>1. Check your current version</strong><br>Open VPX and go to Help → About.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_744e4c9a89504ded906016d48ad8da07~mv2.png" alt="Download newer VPX">
-  <div><strong>2. Download the upgrade</strong><br>You only need the full installer once. For upgrades, just drop in the new files. Always backup the old files first. Beta versions are on GitHub.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_0958ae9756b443cd8a5996f99906648f~mv2.png" alt="Pick the right version">
-  <div><strong>3. Pick the right build</strong><br>Choose the Release-Win version. You can use the X86 version.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_6d25a805035e4a81a211d10f4de43289~mv2.png" alt="Unblock">
-  <div><strong>4. Unblock the file</strong><br>Right-click → Properties → check Unblock → Apply.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_28be9cece0994aac8ecd13474fdf83f0~mv2.png" alt="Extract">
-  <div><strong>5. Extract the zip</strong><br>Extract the downloaded archive.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_74c5d2b587d447e989e909a736e717b8~mv2.png" alt="Copy files">
-  <div><strong>6. Copy and replace</strong><br>Move the extracted files into your VisualPinball folder. When prompted to overwrite, say Yes. You're done!</div>
-</div>
-
-</div>
-
----
-
-## Upgrading VPinMAME {#upgrading-vpinmame}
-
-<div class="steps">
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_16125026dcbf4449820f6a55fd845aa8~mv2.png" alt="Check version">
-  <div><strong>1. Check current version</strong><br>Navigate to your <code>VisualPinball/VPinMAME</code> folder and double-click <code>Setup.exe</code>.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_6f3ce1a04160489888b0e79caec3f7a0~mv2.png" alt="Version shown">
-  <div><strong>2. Note your version</strong><br>The setup will display your currently installed version.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_9db1b1fddeb34ea6b00a85be7e4535a2~mv2.png" alt="GitHub">
-  <div><strong>3. Download from GitHub</strong><br>Go to the <a href="https://github.com/vpinball/pinmame/releases" target="_blank">VPinMAME GitHub releases</a>. Pick the Release-Win X86 version.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_2e1cfe31751440d0b0f2259cbf77f93b~mv2.png" alt="Unblock">
-  <div><strong>4. Unblock the file</strong><br>Right-click → Properties → check Unblock → Apply.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_561d6711e6164e38b3c19030e0783f3b~mv2.png" alt="Extract">
-  <div><strong>5. Extract the zip</strong><br>Extract the downloaded archive.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_96dc4e1cba06405aad3ecd5b092952cb~mv2.png" alt="Copy files">
-  <div><strong>6. Copy and replace</strong><br>If you have a VPMalias file with content, keep the old one. Copy and replace all other files into the VPinMAME folder.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_9aa74209442a404d8d961ab70326360d~mv2.png" alt="Run setup">
-  <div><strong>7. Run Setup.exe</strong><br>Open <code>Setup.exe</code> from the VPinMAME folder. The new version number should be highlighted. Click Install and follow the prompts.</div>
-</div>
-
-<div class="step">
-  <img src="https://static.wixstatic.com/media/8d31f8_048826bc1d534e6187b6c960d413f50e~mv2.png" alt="Check paths">
-  <div><strong>8. Check paths</strong><br>Click the Path button and verify your paths are set correctly.</div>
-</div>
-
-</div>
-
----
-
-## Video Tutorials {#video-tutorials}
-
-- [Major Frenchy — VPX Tutorial](https://www.youtube.com/watch?v=jpIf85P4UqY)
-- [Way of the Wrench](https://www.youtube.com/watch?v=5m2sHJ6k8Co)
-- [Terry Red](https://www.youtube.com/watch?v=p5zofnnOXJM)
-- [Baller Installer — All-in-one VPX software installer](https://www.youtube.com/watch?v=5m2sHJ6k8Co)
-
----
-
-← [Back to Software](/software/)
-
 <style>
-.steps { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 1rem; margin: 1.5rem 0; }
-.step { background: var(--card-bg); border: 1px solid var(--border); border-radius: 8px; padding: 1rem; display: flex; flex-direction: column; gap: 0.75rem; }
-.step img { width: 100%; border-radius: 6px; object-fit: cover; max-height: 180px; }
-.step div { font-size: 0.875rem; color: var(--text); line-height: 1.5; }
-.step strong { color: #fff; }
+/* ── Lightbox ── */
+.lb-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.88); z-index: 9999;
+  align-items: center; justify-content: center; cursor: zoom-out;
+}
+.lb-overlay.open { display: flex; }
+.lb-overlay img {
+  max-width: 90vw; max-height: 88vh;
+  border: 3px solid #c8a84b; border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.8);
+}
+.lb-close {
+  position: absolute; top: 18px; right: 26px;
+  font-size: 2em; color: #fff; cursor: pointer; user-select: none;
+}
+
+/* ── Page ── */
+.vpx { max-width: 900px; margin: 0 auto; }
+.vpx h2 { border-bottom: 2px solid #e94560; padding-bottom: 6px; margin-top: 44px; }
+
+/* Hero banner */
+.vpx img.hero {
+  width: 100%; border: 3px solid #c8a84b; border-radius: 6px;
+  display: block; cursor: zoom-in; margin-bottom: 20px;
+}
+.vpx img.hero:hover { opacity: 0.9; }
+
+/* Quick nav */
+.quick-nav {
+  background: #1a1a1a; border: 1px solid #333;
+  border-left: 4px solid #c8a84b; border-radius: 0 6px 6px 0;
+  padding: 14px 20px; margin: 20px 0;
+}
+.quick-nav strong { color: #c8a84b; display: block; margin-bottom: 10px; }
+.quick-nav ul { list-style: none; padding: 0; margin: 0; columns: 2; gap: 10px; }
+.quick-nav ul li { margin-bottom: 5px; }
+.quick-nav ul li a { color: #e94560; text-decoration: none; font-size: 0.92em; }
+.quick-nav ul li a:hover { text-decoration: underline; }
+
+/* Feature list */
+.feature-list { padding-left: 22px; }
+.feature-list li { margin-bottom: 5px; line-height: 1.6; color: #ccc; font-size: 0.9em; }
+
+/* Download cards */
+.dl-grid { display: flex; gap: 14px; flex-wrap: wrap; margin: 18px 0; }
+.dl-card {
+  background: #1a1a1a; border: 1px solid #333; border-left: 4px solid #c8a84b;
+  border-radius: 0 6px 6px 0; padding: 14px 18px; flex: 1 1 180px;
+}
+.dl-card .name { color: #c8a84b; font-weight: bold; font-size: 0.95em; }
+.dl-card .ver  { color: #888; font-size: 0.8em; margin: 2px 0 8px; }
+.dl-card a { color: #e94560; font-size: 0.88em; text-decoration: none; }
+.dl-card a:hover { text-decoration: underline; }
+
+/* Step card grid — 2 columns */
+.card-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+  margin: 18px 0;
+}
+.card {
+  background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 8px;
+  display: flex; gap: 12px; align-items: flex-start; padding: 12px;
+  transition: border-color 0.15s;
+}
+.card:hover { border-color: #c8a84b; }
+.card .num {
+  background: rgba(200,168,75,0.15); color: #c8a84b;
+  font-weight: bold; font-size: 1em; border-radius: 6px;
+  min-width: 32px; height: 32px; display: flex;
+  align-items: center; justify-content: center; flex-shrink: 0;
+}
+.card .body { flex: 1; min-width: 0; }
+.card .body strong { display: block; color: #fff; font-size: 0.9em; margin-bottom: 5px; }
+.card .body p { color: #aaa; font-size: 0.82em; margin: 0 0 8px; line-height: 1.5; }
+.card .thumb img {
+  width: 90px; height: 90px; object-fit: cover;
+  border: 2px solid #c8a84b; border-radius: 4px;
+  cursor: zoom-in; flex-shrink: 0;
+  transition: opacity 0.15s;
+}
+.card .thumb img:hover { opacity: 0.8; }
+
+.note { border-left: 4px solid #c8a84b; padding: 10px 16px; background: rgba(200,168,75,0.07); font-size: 0.9em; margin: 14px 0; border-radius: 0 4px 4px 0; }
+.warn { border-left: 4px solid #e94560; padding: 10px 16px; background: rgba(233,69,96,0.07); font-size: 0.9em; margin: 14px 0; border-radius: 0 4px 4px 0; }
+
+/* Section title with number badge */
+.section-num {
+  display: inline-flex; align-items: center; gap: 10px; margin-bottom: 16px;
+}
+.section-num .badge {
+  background: #e94560; color: #fff; font-weight: bold;
+  border-radius: 50%; width: 32px; height: 32px;
+  display: flex; align-items: center; justify-content: center; font-size: 0.9em;
+}
+
+/* Video links */
+.video-links { display: flex; flex-direction: column; gap: 10px; margin: 16px 0; }
+.video-link {
+  display: flex; align-items: center; gap: 12px;
+  background: #1a1a1a; border: 1px solid #333; border-radius: 6px;
+  padding: 10px 16px; text-decoration: none; color: #ddd;
+  transition: border-color 0.15s;
+}
+.video-link:hover { border-color: #e94560; color: #fff; }
+.video-link .play { color: #e94560; font-size: 1.3em; }
+
+@media (max-width: 640px) {
+  .card-grid { grid-template-columns: 1fr; }
+  .quick-nav ul { columns: 1; }
+  .dl-grid { flex-direction: column; }
+  .card .thumb img { width: 70px; height: 70px; }
+}
 </style>
+
+<!-- Lightbox -->
+<div class="lb-overlay" id="lb" onclick="closeLb()">
+  <span class="lb-close" onclick="closeLb()">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLb(s,a){document.getElementById('lb-img').src=s;document.getElementById('lb-img').alt=a||'';document.getElementById('lb').classList.add('open');}
+function closeLb(){document.getElementById('lb').classList.remove('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+</script>
+
+<div class="vpx">
+
+<!-- Hero -->
+<img src="https://static.wixstatic.com/media/8d31f8_268aa955c20049d2b842a30a7d60a3f4~mv2.png"
+     alt="Visual Pinball X banner" class="hero"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_268aa955c20049d2b842a30a7d60a3f4~mv2.png','Visual Pinball X')">
+
+<p><em>Click any image to enlarge it.</em></p>
+
+<!-- Quick nav -->
+<div class="quick-nav">
+  <strong>Quick Navigation</strong>
+  <ul>
+    <li><a href="#description">What is Visual Pinball X</a></li>
+    <li><a href="#downloads">Download Section</a></li>
+    <li><a href="#installation">Installation Steps</a></li>
+    <li><a href="#upgrade-vpx">Upgrading VPX</a></li>
+    <li><a href="#upgrade-vpinmame">Upgrading VPinMAME</a></li>
+    <li><a href="#videos">Video Tutorials</a></li>
+  </ul>
+</div>
+
+<!-- Hero screenshot -->
+<img src="https://static.wixstatic.com/media/8d31f8_a163eb60db824b449755edcd6d40a148f000.jpg"
+     alt="Cirqus Voltaire in Visual Pinball X" class="hero"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_a163eb60db824b449755edcd6d40a148f000.jpg','Cirqus Voltaire VPX')">
+
+<!-- Description -->
+<h2 id="description">What is Visual Pinball X?</h2>
+
+<p>Visual Pinball X is the most used platform in the virtual pinball community. A very large community creates original tables — such as <a href="https://orbitalpin.com/downloads/" target="_blank">Harry Potter and the Goblet of Fire</a> by Scott Wickberg of Orbitalpin.com, the <a href="https://vpuniverse.com/files/file/12603-iron-maiden-legacy-of-the-beast-original-2022-vpw/" target="_blank">Iron Maiden Legacy of the Beast</a> from the <a href="http://vpinworkshop.com/" target="_blank">VPinWorkshop team</a>, and real table recreations like <a href="https://www.vpforums.org/index.php?app=downloads&showfile=15560" target="_blank">JP's Indiana Jones (Stern 2008)</a> by the legendary <a href="https://pinballmag.fr/en/interview-of-vpins-legend-jp-salas/" target="_blank">JPSalas</a>.</p>
+
+<ul class="feature-list">
+  <li>Simulates pinball table physics rendered via DirectX or OpenGL</li>
+  <li>Simple editor to (re-)create any kind of pinball table with live viewport editing</li>
+  <li>Table logic and game rules controlled via Visual Basic Script</li>
+  <li>Over 1,050 real pinball machines from ~100 manufacturers recreated, plus 550+ originals (3,000+ including MODs and variants)</li>
+  <li>Emulation of real pinball machines via <a href="https://github.com/vpinball/pinmame" target="_blank">Visual PinMAME</a></li>
+  <li>Configurable camera views for virtual pinball cabinet display</li>
+  <li>Tablet/touch input and specialized pinball controller support</li>
+  <li>Stereo 3D output and head tracking via BAM</li>
+  <li>VR HMD rendering with PUP, B2S backglass and DMD output support</li>
+</ul>
+
+<!-- Downloads -->
+<h2 id="downloads">Visual Pinball Downloads</h2>
+
+<div class="dl-grid">
+  <div class="dl-card">
+    <div class="name">VPX</div>
+    <div class="ver">Current: 10.7.3</div>
+    <a href="https://github.com/vpinball/vpinball/releases" target="_blank">⬇ Download from GitHub</a>
+  </div>
+  <div class="dl-card">
+    <div class="name">VPinMAME</div>
+    <div class="ver">Current: 3.6</div>
+    <a href="https://github.com/vpinball/pinmame/releases" target="_blank">⬇ Download from GitHub</a>
+  </div>
+  <div class="dl-card">
+    <div class="name">B2S Server</div>
+    <div class="ver">Current: 2.0.3</div>
+    <a href="https://github.com/vpinball/b2s-backglass/releases" target="_blank">⬇ Download from GitHub</a>
+  </div>
+</div>
+
+<!-- Installation -->
+<h2 id="installation">Installing Visual Pinball X</h2>
+
+<div class="card-grid">
+
+  <div class="card">
+    <div class="num">1</div>
+    <div class="body">
+      <strong>Download from GitHub</strong>
+      <p>Download Visual Pinball X from the official GitHub. Download the full installer first before upgrading to 10.8.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_9f8a86c7272d4830b9a9605f91536c72~mv2.png"
+           alt="Download VPX from GitHub"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_9f8a86c7272d4830b9a9605f91536c72~mv2.png','Download VPX')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">2</div>
+    <div class="body">
+      <strong>Unblocking</strong>
+      <p>Right-click the installation file and select Properties.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_67548cad5deb48b79bf112e441725bc1~mv2.png"
+           alt="Right-click Properties"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_67548cad5deb48b79bf112e441725bc1~mv2.png','Right-click Properties')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">3</div>
+    <div class="body">
+      <strong>Select Unblock</strong>
+      <p>Check the Unblock box and click Apply.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_d87f75c872854e3c94b9cbe1a394a07e~mv2.png"
+           alt="Check Unblock box"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_d87f75c872854e3c94b9cbe1a394a07e~mv2.png','Unblock checkbox')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">4</div>
+    <div class="body">
+      <strong>Launch the Installer</strong>
+      <p>Double-click the installer and follow the prompts just like any other program.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_e5976c2b99ba491fa1173f1bd3a1cb1c~mv2.png"
+           alt="Launch installer"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_e5976c2b99ba491fa1173f1bd3a1cb1c~mv2.png','Launch installer')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">5</div>
+    <div class="body">
+      <strong>Installation Path</strong>
+      <p>Install anywhere you like — just remember the path. Good practice: create a <code>Vpinball</code> folder and install all software inside it.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_919c48854fee430cb3c08b06feee2d6c~mv2.png"
+           alt="Installation path"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_919c48854fee430cb3c08b06feee2d6c~mv2.png','Installation path')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">6</div>
+    <div class="body">
+      <strong>VPX Options</strong>
+      <p>Select <strong>B2S Backglass</strong> and <strong>.NET</strong>. If you have a real DMD, also select PinDMD.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_05b6ce91eaae433aa54eea8ccb31f7e8~mv2.png"
+           alt="VPX feature options"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_05b6ce91eaae433aa54eea8ccb31f7e8~mv2.png','VPX options')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">7</div>
+    <div class="body">
+      <strong>Launch VPX</strong>
+      <p>Double-click the VisualPinballX shortcut on your desktop. Go to <strong>Preferences → Video/Graphic Options</strong>.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_fc127819a8994012b7216fb5b3f66d22~mv2.png"
+           alt="Launch VPX"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_fc127819a8994012b7216fb5b3f66d22~mv2.png','Launch VPX')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">8</div>
+    <div class="body">
+      <strong>Video Options</strong>
+      <p>Select your video card and monitor resolution. <strong>Uncheck Force Exclusive Fullscreen.</strong> Adjust the texture slider to reduce lag or out-of-memory errors. Ambient occlusion can also cause memory errors.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_14f47a6c5a41470c9f24dd02af8bdca4~mv2.png"
+           alt="Video options"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_14f47a6c5a41470c9f24dd02af8bdca4~mv2.png','Video options')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">9</div>
+    <div class="body">
+      <strong>Virtual Pinball Spreadsheet (VPS)</strong>
+      <p>Use the <a href="https://virtual-pinball-spreadsheet.web.app/" target="_blank">VPS site</a> to find tables by keyword and locate the hosting site, version, ROM, backglass, POV, and media files.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_33e68e27878949e9b0ebbce6ab039068~mv2.png"
+           alt="Virtual Pinball Spreadsheet"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_33e68e27878949e9b0ebbce6ab039068~mv2.png','VPS site')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">10</div>
+    <div class="body">
+      <strong>Table Hosts</strong>
+      <p>Tables are hosted on <strong>VPUniverse</strong>, <strong>VPForums</strong>, and <strong>Pinball Nirvana</strong>. The location is decided by the table author(s).</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_f8cecfc0601447f4bccaa3e08aa3037d~mv2.png"
+           alt="Table hosting sites"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_f8cecfc0601447f4bccaa3e08aa3037d~mv2.png','Table hosts')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">11</div>
+    <div class="body">
+      <strong>Read the Table Description</strong>
+      <p>Take time to read the important details — especially what minimum software version is required.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_da4ea326e0d340c1bfe0c7c3b9980b48~mv2.png"
+           alt="Read table requirements"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_da4ea326e0d340c1bfe0c7c3b9980b48~mv2.png','Table description')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">12</div>
+    <div class="body">
+      <strong>ROMs</strong>
+      <p>Real pinball recreations require a ROM for emulation. Tables with no ROM are called "Original tables." The VPS site links to the ROM for each table (e.g. Cirqus Voltaire).</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_3b101d40d94e42a48d11fc629a4f2289~mv2.png"
+           alt="Finding the ROM on VPS"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_3b101d40d94e42a48d11fc629a4f2289~mv2.png','ROMs on VPS')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">13</div>
+    <div class="body">
+      <strong>Download the Backglass</strong>
+      <p>Backglasses are listed on the VPS site. Download one and extract it into the <code>VisualPinball/Tables</code> folder.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_9f87d65bc99e44a8882aefbb221a864f~mv2.png"
+           alt="Download backglass from VPS"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_9f87d65bc99e44a8882aefbb221a864f~mv2.png','Download backglass')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">14</div>
+    <div class="body">
+      <strong>Rename the Backglass</strong>
+      <p>Rename the downloaded <code>.directB2S</code> file to match your table's filename exactly. Move it into <code>VisualPinball/Tables</code>.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_f1e62c2a0d7f4f9bb8a48b140365f5b4~mv2.png"
+           alt="Rename directB2S file"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_f1e62c2a0d7f4f9bb8a48b140365f5b4~mv2.png','Rename backglass')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">15</div>
+    <div class="body">
+      <strong>Open a Table</strong>
+      <p>Double-click the VPX desktop shortcut. Go to <strong>File → Open</strong> and select a <code>.vpx</code> table file to open it in editor mode.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_fec0d7a6290c45cbb79ff5f18cdc6400~mv2.png"
+           alt="Open table in VPX editor"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_fec0d7a6290c45cbb79ff5f18cdc6400~mv2.png','Open table')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">16</div>
+    <div class="body">
+      <strong>Editor Mode</strong>
+      <p>In editor mode you can view the script, launch the interactive view, and launch the table.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_f3b211d78cff42cbb9840f3f1a9d3ae3~mv2.png"
+           alt="VPX editor mode"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_f3b211d78cff42cbb9840f3f1a9d3ae3~mv2.png','Editor mode')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">17</div>
+    <div class="body">
+      <strong>Launch the Table</strong>
+      <p>Press <strong>F5</strong> or click the launch icon shown in the picture to start the table.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_449342fa32d5464b983ce0d69e511755~mv2.png"
+           alt="Press F5 to launch table"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_449342fa32d5464b983ce0d69e511755~mv2.png','Launch table F5')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">18</div>
+    <div class="body">
+      <strong>Play!</strong>
+      <p>The table should launch. If you get an error it usually means the wrong software version is installed — upgrade to the minimum specs required (e.g. VPX 10.8 and VPinMAME 3.6).</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_a163eb60db824b449755edcd6d40a148f000.jpg"
+           alt="Table running"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_a163eb60db824b449755edcd6d40a148f000.jpg','Table running')">
+    </div>
+  </div>
+
+</div>
+
+<!-- Upgrade VPX -->
+<h2 id="upgrade-vpx">Upgrading VPX to a Newer Version</h2>
+
+<div class="note">💡 You only need to install the full package once. For upgrades, just drop in the new files. Always back up the old files first.</div>
+
+<div class="card-grid">
+
+  <div class="card">
+    <div class="num">1</div>
+    <div class="body">
+      <strong>Check Your Current Version</strong>
+      <p>Open VPX and go to <strong>Help → About</strong> to see your installed version.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_95b698d37a3b4280b48cc82052ae2bb3~mv2.png"
+           alt="Help About VPX version"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_95b698d37a3b4280b48cc82052ae2bb3~mv2.png','VPX version')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">2</div>
+    <div class="body">
+      <strong>Download Newer VPX</strong>
+      <p>All beta versions are on GitHub. Read the release notes and check forums for community feedback before upgrading.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_744e4c9a89504ded906016d48ad8da07~mv2.png"
+           alt="Download VPX from GitHub"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_744e4c9a89504ded906016d48ad8da07~mv2.png','Download newer VPX')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">3</div>
+    <div class="body">
+      <strong>Pick the Right Build</strong>
+      <p>You'll see many versions (Debug, GL, etc). Pick the <strong>Release-Win</strong> version. Choose <strong>x86</strong> for now.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_0958ae9756b443cd8a5996f99906648f~mv2.png"
+           alt="Pick Release-Win x86"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_0958ae9756b443cd8a5996f99906648f~mv2.png','Release-Win build')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">4</div>
+    <div class="body">
+      <strong>Always Unblock</strong>
+      <p>Right-click the downloaded file → Properties → check <strong>Unblock</strong> → Apply.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_6d25a805035e4a81a211d10f4de43289~mv2.png"
+           alt="Unblock VPX zip"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_6d25a805035e4a81a211d10f4de43289~mv2.png','Unblock VPX')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">5</div>
+    <div class="body">
+      <strong>Extract the ZIP</strong>
+      <p>Extract the contents of the downloaded archive.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_28be9cece0994aac8ecd13474fdf83f0~mv2.png"
+           alt="Extract VPX zip"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_28be9cece0994aac8ecd13474fdf83f0~mv2.png','Extract VPX zip')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">6</div>
+    <div class="body">
+      <strong>Copy &amp; Replace</strong>
+      <p>Select the new VPX 10.8 files and move them to the <code>VisualPinball</code> folder. When asked to overwrite, say <strong>Yes</strong>. You're done!</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_74c5d2b587d447e989e909a736e717b8~mv2.png"
+           alt="Copy and replace VPX files"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_74c5d2b587d447e989e909a736e717b8~mv2.png','Copy replace VPX')">
+    </div>
+  </div>
+
+</div>
+
+<!-- Upgrade VPinMAME -->
+<h2 id="upgrade-vpinmame">Upgrading VPinMAME</h2>
+
+<div class="card-grid">
+
+  <div class="card">
+    <div class="num">1</div>
+    <div class="body">
+      <strong>Check Current Version</strong>
+      <p>Navigate to your <code>VisualPinball/VPinMAME</code> folder and double-click <strong>Setup.exe</strong>.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_16125026dcbf4449820f6a55fd845aa8~mv2.png"
+           alt="VPinMAME Setup.exe"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_16125026dcbf4449820f6a55fd845aa8~mv2.png','VPinMAME Setup')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">2</div>
+    <div class="body">
+      <strong>View Installed Version</strong>
+      <p>Setup.exe will tell you the currently installed VPinMAME version.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_6f3ce1a04160489888b0e79caec3f7a0~mv2.png"
+           alt="VPinMAME version shown"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_6f3ce1a04160489888b0e79caec3f7a0~mv2.png','VPinMAME version')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">3</div>
+    <div class="body">
+      <strong>Download from GitHub</strong>
+      <p>Go to <a href="https://github.com/vpinball/pinmame/releases" target="_blank">VPinMAME GitHub</a>. Pick the <strong>Release-Win x86</strong> version.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_9db1b1fddeb34ea6b00a85be7e4535a2~mv2.png"
+           alt="VPinMAME GitHub releases"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_9db1b1fddeb34ea6b00a85be7e4535a2~mv2.png','VPinMAME GitHub')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">4</div>
+    <div class="body">
+      <strong>Always Unblock</strong>
+      <p>Right-click the downloaded file → Properties → check <strong>Unblock</strong> → Apply.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_2e1cfe31751440d0b0f2259cbf77f93b~mv2.png"
+           alt="Unblock VPinMAME download"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_2e1cfe31751440d0b0f2259cbf77f93b~mv2.png','Unblock VPinMAME')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">5</div>
+    <div class="body">
+      <strong>Extract the ZIP</strong>
+      <p>Extract the contents of the downloaded archive.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_561d6711e6164e38b3c19030e0783f3b~mv2.png"
+           alt="Extract VPinMAME zip"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_561d6711e6164e38b3c19030e0783f3b~mv2.png','Extract VPinMAME')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">6</div>
+    <div class="body">
+      <strong>Copy &amp; Replace</strong>
+      <p>Copy and replace files in the VPinMAME folder. <strong>Keep your existing VPMalias file</strong> if it has content you've already added.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_96dc4e1cba06405aad3ecd5b092952cb~mv2.png"
+           alt="Copy replace VPinMAME files"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_96dc4e1cba06405aad3ecd5b092952cb~mv2.png','Copy VPinMAME files')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">7</div>
+    <div class="body">
+      <strong>Run Setup.exe &amp; Install</strong>
+      <p>In the VPinMAME folder, open <strong>Setup.exe</strong>. It should reflect the new version. Click <strong>Install</strong> and follow the prompts.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_9aa74209442a404d8d961ab70326360d~mv2.png"
+           alt="Install new VPinMAME version"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_9aa74209442a404d8d961ab70326360d~mv2.png','Install VPinMAME')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">8</div>
+    <div class="body">
+      <strong>Check Your Paths</strong>
+      <p>Click the <strong>Path</strong> button in Setup and make sure all paths are set correctly.</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_048826bc1d534e6187b6c960d413f50e~mv2.png"
+           alt="Check VPinMAME paths"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_048826bc1d534e6187b6c960d413f50e~mv2.png','VPinMAME paths')">
+    </div>
+  </div>
+
+  <div class="card">
+    <div class="num">9</div>
+    <div class="body">
+      <strong>Done!</strong>
+      <p>You've upgraded both VPX and VPinMAME to the latest versions. Launch a table and enjoy!</p>
+    </div>
+    <div class="thumb">
+      <img src="https://static.wixstatic.com/media/8d31f8_256e8ce733f84a909e6df5199f8069bf~mv2.png"
+           alt="Gameplay"
+           onclick="openLb('https://static.wixstatic.com/media/8d31f8_256e8ce733f84a909e6df5199f8069bf~mv2.png','Gameplay')">
+    </div>
+  </div>
+
+</div>
+
+<!-- Video Tutorials -->
+<h2 id="videos">Video Tutorials</h2>
+
+<img src="https://static.wixstatic.com/media/8d31f8_202d4dba15714a718e3931472d69e196~mv2.png"
+     alt="Baller Installer" style="border:3px solid #c8a84b; border-radius:4px; max-width:380px; width:100%; display:block; margin:0 0 18px; cursor:zoom-in;"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_202d4dba15714a718e3931472d69e196~mv2.png','Baller Installer')">
+
+<div class="video-links">
+  <a href="https://www.youtube.com/watch?v=jpIf85P4UqY" target="_blank" class="video-link">
+    <span class="play">▶</span>
+    <span><strong>Major Frenchy</strong> — VPX Tutorial</span>
+  </a>
+  <a href="https://www.youtube.com/watch?v=5m2sHJ6k8Co" target="_blank" class="video-link">
+    <span class="play">▶</span>
+    <span><strong>Way of the Wrench</strong> — VPX Setup</span>
+  </a>
+  <a href="https://www.youtube.com/watch?v=p5zofnnOXJM" target="_blank" class="video-link">
+    <span class="play">▶</span>
+    <span><strong>Terry Red</strong> — VPX Guide</span>
+  </a>
+  <a href="https://www.youtube.com/watch?v=5m2sHJ6k8Co" target="_blank" class="video-link">
+    <span class="play">▶</span>
+    <span><strong>Baller Installer</strong> — All-in-one Virtual Pinball software installer</span>
+  </a>
+</div>
+
+---
+
+<p><strong>Related:</strong> <a href="/freezy/">Freezy / DMD Ext</a> · <a href="/popper/">PinUP Popper</a> · <a href="/dof/">DOF Setup</a> · <a href="/software/">Software</a></p>
+
+</div>

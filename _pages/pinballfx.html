@@ -1,0 +1,391 @@
+---
+layout: page
+title: Pinball FX
+permalink: /pinballfx/
+---
+
+<style>
+/* ── Lightbox ── */
+.lb-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.88); z-index: 9999;
+  align-items: center; justify-content: center; cursor: zoom-out;
+}
+.lb-overlay.open { display: flex; }
+.lb-overlay img {
+  max-width: 90vw; max-height: 88vh;
+  border: 3px solid #c8a84b; border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.8);
+}
+.lb-close {
+  position: absolute; top: 18px; right: 26px;
+  font-size: 2em; color: #fff; cursor: pointer; user-select: none;
+}
+
+/* ── Page ── */
+.pfx { max-width: 900px; margin: 0 auto; }
+.pfx h2 { border-bottom: 2px solid #e94560; padding-bottom: 6px; margin-top: 44px; }
+
+.pfx img.z {
+  border: 3px solid #c8a84b; border-radius: 4px;
+  display: block; cursor: zoom-in; transition: opacity 0.15s;
+}
+.pfx img.z:hover { opacity: 0.85; }
+.pfx img.full { width: 100%; max-width: 860px; margin: 14px 0; }
+.pfx img.med  { max-width: 600px; width: 100%; margin: 14px 0; }
+.pfx img.sm   { max-width: 400px; width: 100%; margin: 14px 0; }
+
+/* Store buttons */
+.store-grid { display: flex; gap: 12px; flex-wrap: wrap; margin: 18px 0; }
+.store-btn {
+  display: flex; align-items: center; gap: 8px;
+  background: #1a1a1a; border: 1px solid #333; border-radius: 6px;
+  padding: 10px 18px; text-decoration: none; color: #e0e0e0;
+  font-size: 0.9em; transition: border-color 0.15s;
+}
+.store-btn:hover { border-color: #c8a84b; color: #fff; }
+
+/* Path box */
+.path-box {
+  background: #111; border: 1px solid #333; border-left: 4px solid #c8a84b;
+  border-radius: 0 6px 6px 0; padding: 12px 18px; margin: 14px 0;
+  font-family: monospace; font-size: 0.88em; color: #c8a84b;
+  word-break: break-all;
+}
+
+/* Step title */
+.step-title {
+  font-size: 1.05em; font-weight: bold; color: #e94560;
+  margin: 30px 0 10px; padding-left: 12px;
+  border-left: 4px solid #e94560;
+}
+
+/* Download cards */
+.dl-links { display: flex; gap: 14px; flex-wrap: wrap; margin: 16px 0; align-items: flex-start; }
+.dl-card {
+  background: #1a1a1a; border: 2px solid #c8a84b; border-radius: 6px;
+  padding: 10px 14px; text-align: center; text-decoration: none; color: #e0e0e0;
+  font-size: 0.85em; transition: background 0.15s;
+  display: flex; flex-direction: column; align-items: center; gap: 8px;
+}
+.dl-card:hover { background: rgba(200,168,75,0.12); }
+.dl-card img { border-radius: 4px; display: block; }
+.dl-card span { color: #c8a84b; font-size: 0.82em; }
+
+/* Image pair */
+.img-pair { display: flex; gap: 16px; flex-wrap: wrap; margin: 14px 0; align-items: flex-start; }
+.img-pair img { flex: 1 1 200px; max-width: 49%; }
+
+.note { border-left: 4px solid #c8a84b; padding: 10px 16px; background: rgba(200,168,75,0.07); font-size: 0.9em; margin: 12px 0; border-radius: 0 4px 4px 0; }
+
+/* ── Searchable table list ── */
+.search-wrap { margin: 18px 0 8px; }
+.search-wrap input {
+  width: 100%; max-width: 420px;
+  background: #1a1a1a; border: 2px solid #c8a84b; border-radius: 6px;
+  padding: 9px 14px; color: #fff; font-size: 0.95em; outline: none;
+}
+.search-wrap input::placeholder { color: #666; }
+.search-wrap input:focus { border-color: #e94560; }
+#tbl-count { font-size: 0.82em; color: #777; margin: 6px 0 12px; }
+
+.tbl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 5px;
+  max-height: 500px;
+  overflow-y: auto;
+  padding-right: 4px;
+}
+.tbl-grid::-webkit-scrollbar { width: 5px; }
+.tbl-grid::-webkit-scrollbar-track { background: #111; }
+.tbl-grid::-webkit-scrollbar-thumb { background: #c8a84b; border-radius: 3px; }
+
+.trow {
+  background: #1a1a1a; border: 1px solid #252525; border-radius: 4px;
+  padding: 7px 12px; display: flex; justify-content: space-between;
+  align-items: center; font-size: 0.84em;
+}
+.trow .tn { color: #ddd; flex: 1; }
+.trow .tid { color: #c8a84b; font-weight: bold; font-family: monospace; margin-left: 10px; white-space: nowrap; }
+.trow.hidden { display: none; }
+
+@media (max-width: 600px) {
+  .img-pair img { max-width: 100%; }
+  .tbl-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- Lightbox -->
+<div class="lb-overlay" id="lb" onclick="closeLb()">
+  <span class="lb-close" onclick="closeLb()">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLb(s,a){document.getElementById('lb-img').src=s;document.getElementById('lb-img').alt=a||'';document.getElementById('lb').classList.add('open');}
+function closeLb(){document.getElementById('lb').classList.remove('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+</script>
+
+<div class="pfx">
+
+<p><em>Click any image to enlarge it.</em></p>
+
+<p>Pinball FX is the successor to the very popular Zen Studios Pinball FX3. Many tables have been ported to this new platform. This is <strong>commercial software</strong> — tables must be purchased. Great titles include Indiana Jones and Jurassic Park. The strength of Pinball FX is the stunning <strong>3D animations</strong> built into the tables.</p>
+
+<h2>Store</h2>
+
+<p>Tables can be purchased on multiple platforms. Unfortunately, buying on one platform does not grant access on another — and those who purchased all tables for Pinball FX3 will need to repurchase them for FX.</p>
+
+<div class="store-grid">
+  <a href="https://store.steampowered.com/app/2328760/Pinball_FX/" target="_blank" class="store-btn">🎮 Steam</a>
+  <a href="https://store.playstation.com/en-us/concept/10005308" target="_blank" class="store-btn">🎮 PlayStation</a>
+  <a href="https://www.xbox.com/en-us/games/store/pinball-fx/9pltp0xj75gs" target="_blank" class="store-btn">🎮 Xbox</a>
+  <a href="https://www.nintendo.com/us/store/products/pinball-fx-switch/" target="_blank" class="store-btn">🎮 Nintendo Switch</a>
+</div>
+
+<h2>Cabinet Installation</h2>
+
+<p>You will need <strong>Steam</strong> installed on your PC to run Pinball FX. Once installed, purchase tables on Steam or within the game (which redirects back to Steam).</p>
+
+<p>Once Pinball FX is launched you can set up <strong>cabinet mode</strong> and configure your screens.</p>
+
+<div class="step-title">Step 1 — Configure Cabinet Screens</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_b365ffa71086489481d83a39d77ef424~mv2.png"
+     alt="Pinball FX cabinet screen configuration" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_b365ffa71086489481d83a39d77ef424~mv2.png','Cabinet screen config')">
+
+<p>The cabinet settings tab lets you set the <strong>Width, Height, Horizontal and Vertical position</strong> of the DMD and Backglass for each of your displays.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_74b146d738424bd786905c23361cc9ecf000.jpg"
+     alt="Pinball FX glowing window border" class="z full"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_74b146d738424bd786905c23361cc9ecf000.jpg','Glowing window border')">
+
+<p>A helpful visual feature: the <strong>perimeter of each window glows</strong> so you can clearly see exactly where it sits on screen while positioning it.</p>
+
+<div class="step-title">Step 2 — Install Backglasses</div>
+
+<p>By default Pinball FX includes <strong>no backglasses</strong>. Download them from the community links below and install them here:</p>
+
+<div class="path-box">C:\Program Files (x86)\Steam\steamapps\common\Pinball FX\PinballFX\Mods\Cabinet</div>
+
+<p>The <strong>filename must exactly match the table's internal name</strong> (e.g. <code>Table_109</code> for Medieval Madness). Use the searchable list below to find any table's number.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_7978b2971e524175ae86cb0c102582fb~mv2.png"
+     alt="Backglass file naming example" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_7978b2971e524175ae86cb0c102582fb~mv2.png','File naming')">
+
+<h2>Table Number Reference</h2>
+
+<p>Search by table name or number to find the correct filename for your backglass files.</p>
+
+<div class="search-wrap">
+  <input type="text" id="tbl-search" placeholder="🔍  Search tables… (e.g. Indiana, Williams, Star Wars)" oninput="filterTables()">
+</div>
+<div id="tbl-count"></div>
+
+<div class="tbl-grid" id="tbl-list">
+  <div class="trow"><span class="tn">Civil War</span><span class="tid">Table_1</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Masters of the Force</span><span class="tid">Table_2</span></div>
+  <div class="trow"><span class="tn">South Park™: Super Sweet Pinball</span><span class="tid">Table_4</span></div>
+  <div class="trow"><span class="tn">Fear Itself</span><span class="tid">Table_5</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Starfighter Assault</span><span class="tid">Table_6</span></div>
+  <div class="trow"><span class="tn">Thor</span><span class="tid">Table_7</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Battle of Mimban</span><span class="tid">Table_07</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Han Solo</span><span class="tid">Table_10</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Episode IV A New Hope</span><span class="tid">Table_12</span></div>
+  <div class="trow"><span class="tn">Marvel's The Avengers</span><span class="tid">Table_17</span></div>
+  <div class="trow"><span class="tn">Ghost Rider</span><span class="tid">Table_21</span></div>
+  <div class="trow"><span class="tn">Deadpool</span><span class="tid">Table_22</span></div>
+  <div class="trow"><span class="tn">Pasha</span><span class="tid">Table_23</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Episode VI Return of the Jedi</span><span class="tid">Table_24</span></div>
+  <div class="trow"><span class="tn">Biolab</span><span class="tid">Table_27</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Darth Vader</span><span class="tid">Table_28</span></div>
+  <div class="trow"><span class="tn">Adventure Land</span><span class="tid">Table_29</span></div>
+  <div class="trow"><span class="tn">Doctor Strange</span><span class="tid">Table_30</span></div>
+  <div class="trow"><span class="tn">Rome</span><span class="tid">Table_31</span></div>
+  <div class="trow"><span class="tn">Sorcerer's Lair</span><span class="tid">Table_33</span></div>
+  <div class="trow"><span class="tn">Fantastic Four</span><span class="tid">Table_38</span></div>
+  <div class="trow"><span class="tn">CastleStorm</span><span class="tid">Table_40</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Episode V The Empire Strikes Back</span><span class="tid">Table_43</span></div>
+  <div class="trow"><span class="tn">Blade</span><span class="tid">Table_45</span></div>
+  <div class="trow"><span class="tn">Spider-Man</span><span class="tid">Table_46</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: The Clone Wars</span><span class="tid">Table_47</span></div>
+  <div class="trow"><span class="tn">Captain America</span><span class="tid">Table_48</span></div>
+  <div class="trow"><span class="tn">Moon Knight</span><span class="tid">Table_49</span></div>
+  <div class="trow"><span class="tn">Marvel's Guardians of the Galaxy</span><span class="tid">Table_50</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Boba Fett</span><span class="tid">Table_53</span></div>
+  <div class="trow"><span class="tn">South Park™: Butters' Very Own Pinball Game</span><span class="tid">Table_55</span></div>
+  <div class="trow"><span class="tn">World War Hulk</span><span class="tid">Table_56</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Droids™</span><span class="tid">Table_58</span></div>
+  <div class="trow"><span class="tn">X-Men</span><span class="tid">Table_59</span></div>
+  <div class="trow"><span class="tn">The Infinity Gauntlet</span><span class="tid">Table_60</span></div>
+  <div class="trow"><span class="tn">Iron Man</span><span class="tid">Table_65</span></div>
+  <div class="trow"><span class="tn">Secrets of the Deep</span><span class="tid">Table_66</span></div>
+  <div class="trow"><span class="tn">Wolverine</span><span class="tid">Table_71</span></div>
+  <div class="trow"><span class="tn">Venom</span><span class="tid">Table_73</span></div>
+  <div class="trow"><span class="tn">Wild West Rampage</span><span class="tid">Table_75</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Star Wars Rebels™</span><span class="tid">Table_77</span></div>
+  <div class="trow"><span class="tn">Marvel's Avengers: Age of Ultron</span><span class="tid">Table_78</span></div>
+  <div class="trow"><span class="tn">Marvel's Ant-Man</span><span class="tid">Table_79</span></div>
+  <div class="trow"><span class="tn">Son of Zeus</span><span class="tid">Table_80</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: The Force Awakens™</span><span class="tid">Table_88</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Might of the First Order</span><span class="tid">Table_89</span></div>
+  <div class="trow"><span class="tn">Marvel's Women of Power: A-Force</span><span class="tid">Table_93</span></div>
+  <div class="trow"><span class="tn">Marvel's Women of Power: Champions</span><span class="tid">Table_94</span></div>
+  <div class="trow"><span class="tn">Jaws™ Pinball</span><span class="tid">Table_95</span></div>
+  <div class="trow"><span class="tn">E.T.™ Pinball</span><span class="tid">Table_96</span></div>
+  <div class="trow"><span class="tn">Back to the Future™ Pinball</span><span class="tid">Table_97</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Rogue One™</span><span class="tid">Table_98</span></div>
+  <div class="trow"><span class="tn">Jurassic Park™ Pinball</span><span class="tid">Table_100</span></div>
+  <div class="trow"><span class="tn">Jurassic World™ Pinball</span><span class="tid">Table_101</span></div>
+  <div class="trow"><span class="tn">Jurassic Park Pinball Mayhem™</span><span class="tid">Table_102</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: The Last Jedi™</span><span class="tid">Table_103</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Ahch-To Island</span><span class="tid">Table_104</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Solo</span><span class="tid">Table_105</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Calrissian Chronicles</span><span class="tid">Table_106</span></div>
+  <div class="trow"><span class="tn">Fish Tales</span><span class="tid">Table_108</span></div>
+  <div class="trow"><span class="tn">Williams™️ Medieval Madness™</span><span class="tid">Table_109</span></div>
+  <div class="trow"><span class="tn">Williams™️ JunkYard™</span><span class="tid">Table_110</span></div>
+  <div class="trow"><span class="tn">Williams™️ The Getaway: High Speed II™</span><span class="tid">Table_111</span></div>
+  <div class="trow"><span class="tn">Curse of the Mummy</span><span class="tid">Table_112</span></div>
+  <div class="trow"><span class="tn">Sky Pirates: Treasures of the Clouds</span><span class="tid">Table_113</span></div>
+  <div class="trow"><span class="tn">Williams™️ Theatre of Magic™</span><span class="tid">Table_117</span></div>
+  <div class="trow"><span class="tn">Williams™️ Black Rose™</span><span class="tid">Table_118</span></div>
+  <div class="trow"><span class="tn">Williams™️ Attack from Mars™</span><span class="tid">Table_119</span></div>
+  <div class="trow"><span class="tn">Williams™️ The Party Zone™</span><span class="tid">Table_120</span></div>
+  <div class="trow"><span class="tn">Williams™️ The Champion Pub™</span><span class="tid">Table_121</span></div>
+  <div class="trow"><span class="tn">Williams™️ Safe Cracker™</span><span class="tid">Table_122</span></div>
+  <div class="trow"><span class="tn">Pinball Noir</span><span class="tid">Table_123</span></div>
+  <div class="trow"><span class="tn">Williams™️ White Water™</span><span class="tid">Table_124</span></div>
+  <div class="trow"><span class="tn">Williams™️ Red and Ted's Road Show™</span><span class="tid">Table_125</span></div>
+  <div class="trow"><span class="tn">Williams™️ Hurricane™</span><span class="tid">Table_126</span></div>
+  <div class="trow"><span class="tn">Williams™️ Cirqus Voltaire™</span><span class="tid">Table_127</span></div>
+  <div class="trow"><span class="tn">Williams™️ No Good Gofers™</span><span class="tid">Table_128</span></div>
+  <div class="trow"><span class="tn">Williams™️ Space Station™️</span><span class="tid">Table_129</span></div>
+  <div class="trow"><span class="tn">Williams™️ Monster Bash™</span><span class="tid">Table_130</span></div>
+  <div class="trow"><span class="tn">Williams™️ Creature from the Black Lagoon™</span><span class="tid">Table_131</span></div>
+  <div class="trow"><span class="tn">Williams™️ Tales of the Arabian Nights™</span><span class="tid">Table_132</span></div>
+  <div class="trow"><span class="tn">Williams™️ Indiana Jones™: The Pinball Adventure</span><span class="tid">Table_133</span></div>
+  <div class="trow"><span class="tn">Williams™️ FunHouse™️</span><span class="tid">Table_134</span></div>
+  <div class="trow"><span class="tn">Williams™️ Dr. Dude and his Excellent Ray™️</span><span class="tid">Table_135</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: The Mandalorian</span><span class="tid">Table_136</span></div>
+  <div class="trow"><span class="tn">Star Wars™ Pinball: Classic Collectibles</span><span class="tid">Table_137</span></div>
+  <div class="trow"><span class="tn">Hasbro's MY LITTLE PONY</span><span class="tid">Table_138</span></div>
+  <div class="trow"><span class="tn">DreamWorks Kung Fu Panda Pinball</span><span class="tid">Table_139</span></div>
+  <div class="trow"><span class="tn">DreamWorks Trolls Pinball</span><span class="tid">Table_140</span></div>
+  <div class="trow"><span class="tn">DreamWorks How to Train Your Dragon Pinball</span><span class="tid">Table_141</span></div>
+  <div class="trow"><span class="tn">Garfield Pinball</span><span class="tid">Table_145</span></div>
+  <div class="trow"><span class="tn">Peanuts' Snoopy Pinball</span><span class="tid">Table_146</span></div>
+  <div class="trow"><span class="tn">Wrath of the Elder Gods</span><span class="tid">Table_147</span></div>
+  <div class="trow"><span class="tn">Williams™️ The Machine™️: Bride of Pin·Bot™️</span><span class="tid">Table_148</span></div>
+  <div class="trow"><span class="tn">Williams™️ Swords of Fury™</span><span class="tid">Table_149</span></div>
+  <div class="trow"><span class="tn">Homeworld®️: Journey to Hiigara Pinball</span><span class="tid">Table_150</span></div>
+  <div class="trow"><span class="tn">Brothers in Arms®: Win the War Pinball</span><span class="tid">Table_151</span></div>
+  <div class="trow"><span class="tn">Borderlands®: Vault Hunter Pinball</span><span class="tid">Table_152</span></div>
+  <div class="trow"><span class="tn">Kong Pinball</span><span class="tid">Table_153</span></div>
+  <div class="trow"><span class="tn">World War Z Pinball</span><span class="tid">Table_154</span></div>
+  <div class="trow"><span class="tn">Grimm Tales</span><span class="tid">Table_155</span></div>
+  <div class="trow"><span class="tn">Williams™️ The Addams Family</span><span class="tid">Table_156</span></div>
+  <div class="trow"><span class="tn">Williams™️ World Cup Soccer</span><span class="tid">Table_157</span></div>
+  <div class="trow"><span class="tn">Godzilla Pinball</span><span class="tid">Table_158</span></div>
+  <div class="trow"><span class="tn">Godzilla vs Kong Pinball</span><span class="tid">Table_160</span></div>
+  <div class="trow"><span class="tn">Crypt of the NecroDancer Pinball</span><span class="tid">Table_161</span></div>
+  <div class="trow"><span class="tn">Williams™️ Twilight Zone</span><span class="tid">Table_162</span></div>
+  <div class="trow"><span class="tn">Williams™ Pinball: Star Trek™: The Next Generation</span><span class="tid">Table_163</span></div>
+  <div class="trow"><span class="tn">Verne's Mysterious Island</span><span class="tid">Table_164</span></div>
+  <div class="trow"><span class="tn">A Samurai's Vengeance</span><span class="tid">Table_165</span></div>
+  <div class="trow"><span class="tn">Williams™️ Whirlwind</span><span class="tid">Table_168</span></div>
+</div>
+
+<script>
+function filterTables() {
+  var q = document.getElementById('tbl-search').value.toLowerCase();
+  var rows = document.querySelectorAll('#tbl-list .trow');
+  var vis = 0;
+  rows.forEach(function(r){
+    var show = r.textContent.toLowerCase().includes(q);
+    r.classList.toggle('hidden', !show);
+    if(show) vis++;
+  });
+  document.getElementById('tbl-count').textContent = vis + ' of ' + rows.length + ' tables shown';
+}
+filterTables();
+</script>
+
+<h2>Download Backglasses &amp; Wheels</h2>
+
+<p>Created by members of the community — thank you!</p>
+
+<div class="dl-links">
+  <a href="https://mega.nz/file/7INCgLja#ukfk3wnbm2MGllbQEjxLVz3gzKyuV_cEbG9yFfpqveo"
+     target="_blank" class="dl-card">
+    <img src="https://static.wixstatic.com/media/8d31f8_2c1246a6ef584eb48e154a478a73b980~mv2.png"
+         alt="Nailbuster pack" style="width:120px;">
+    <span>Nailbuster / Hawkeyes88</span>
+  </a>
+  <a href="https://mega.nz/file/vEtR2IgJ#ixBByT2BBU-abW9kX3oQMYjPlHWu9e1FiO-WwXeD5RE"
+     target="_blank" class="dl-card">
+    <img src="https://static.wixstatic.com/media/8d31f8_0321a52f00874c129e9738cbda98cd79~mv2.png"
+         alt="3 screens pack" style="width:220px;">
+    <span>3-Screen Backglass Pack</span>
+  </a>
+  <a href="https://mega.nz/file/fMsR0CAL#WUbzhvOUrxJ61bqLhb5ZvutVf6IymKUJ34ctN-psM2c"
+     target="_blank" class="dl-card">
+    <img src="https://static.wixstatic.com/media/8d31f8_03574472119c41549b73b2a808d456ee~mv2.png"
+         alt="2 screens pack" style="width:220px;">
+    <span>2-Screen Backglass Pack</span>
+  </a>
+</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_98084bfb04dc4e70a589599dca666f49~mv2.png"
+     alt="Pinball FX cabinet with backglass installed" class="z full"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_98084bfb04dc4e70a589599dca666f49~mv2.png','Cabinet with backglass')">
+
+<h2>Adding Pinball FX to PinUP Popper</h2>
+
+<p>Nailbuster (creator of PinUP Popper) has full instructions on his wiki:<br>
+<a href="https://www.nailbuster.com/wikipinup/doku.php?id=pinball_fx_stream" target="_blank">nailbuster.com/wikipinup — Pinball FX Stream</a></p>
+
+<div class="step-title">Step 1 — Add a New Emulator</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_0e6c4653207b4efeac55be8779bd1c42~mv2.png"
+     alt="Add Pinball FX emulator in Popper setup" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_0e6c4653207b4efeac55be8779bd1c42~mv2.png','Add emulator')">
+
+<p>In Emulator Setup, press <strong>+</strong> to add a new emulator. Fill in all red fields (paths and game extension). The game extension is <strong>pxp</strong>. Press the checkmark when done.</p>
+
+<div class="step-title">Step 2 — Add Launch &amp; Close Scripts</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_158a1de7a5be43c38ac82983f950e960~mv2.png"
+     alt="Launch and close scripts for Pinball FX" class="z med"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_158a1de7a5be43c38ac82983f950e960~mv2.png','Launch close scripts')">
+
+<p>Add the launch and close scripts for Pinball FX. Get the latest scripts directly from Nailbuster's site — they get updated so there's no point reposting them here:<br>
+<a href="https://www.nailbuster.com/wikipinup/doku.php?id=pinball_fx_stream" target="_blank">nailbuster.com/wikipinup — Pinball FX Stream</a></p>
+
+<div class="step-title">Step 3 — Import Games</div>
+
+<p>Go to <strong>Game Manager</strong>, right-click in the left pane, and select <strong>Import New Games from file</strong>. The import file is provided by Nailbuster — find it at the link above.</p>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_e91aa6b84fa74547ac65747372180455~mv2.png"
+       alt="Import games file" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_e91aa6b84fa74547ac65747372180455~mv2.png','Game import')">
+  <img src="https://static.wixstatic.com/media/8d31f8_b4d864a0e5d74a85a5ea9a9a50782c0f~mv2.png"
+       alt="Games imported" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_b4d864a0e5d74a85a5ea9a9a50782c0f~mv2.png','Games imported')">
+</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_6b3373ece18546eba0c85f2a9609b895~mv2.png"
+     alt="Pinball FX tables in Popper front end" class="z sm"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_6b3373ece18546eba0c85f2a9609b895~mv2.png','FX in Popper')">
+
+<p>You are now ready to set up media for your Pinball FX tables. See the <a href="/popper/">PinUP Popper page</a> for help with media setup.</p>
+
+---
+
+<p><strong>Related:</strong> <a href="/popper/">PinUP Popper</a> · <a href="/vpx/">Visual Pinball X</a> · <a href="/fp/">Future Pinball</a> · <a href="/software/">Software</a></p>
+
+</div>

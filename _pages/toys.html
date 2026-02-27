@@ -1,0 +1,376 @@
+---
+layout: page
+title: Force Feedback (Toys)
+permalink: /toys/
+---
+
+<style>
+/* ── Lightbox ── */
+.lb-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.88); z-index: 9999;
+  align-items: center; justify-content: center; cursor: zoom-out;
+}
+.lb-overlay.open { display: flex; }
+.lb-overlay img {
+  max-width: 90vw; max-height: 88vh;
+  border: 3px solid #c8a84b; border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.8);
+}
+.lb-close {
+  position: absolute; top: 18px; right: 26px;
+  font-size: 2em; color: #fff; cursor: pointer; user-select: none;
+}
+
+/* ── Page ── */
+.toys { max-width: 900px; margin: 0 auto; }
+.toys h2 { border-bottom: 2px solid #e94560; padding-bottom: 6px; margin-top: 44px; }
+.toys h3 { color: #c8a84b; margin-top: 24px; margin-bottom: 8px; }
+
+.toys img.z {
+  border: 3px solid #c8a84b; border-radius: 4px;
+  display: block; cursor: zoom-in; transition: opacity 0.15s;
+}
+.toys img.z:hover { opacity: 0.85; }
+.toys img.full { width: 100%; max-width: 860px; margin: 14px 0; }
+.toys img.med  { max-width: 560px; width: 100%; margin: 14px 0; }
+.toys img.sm   { max-width: 380px; width: 100%; margin: 14px 0; }
+
+/* Quick nav */
+.quick-nav {
+  background: #1a1a1a; border: 1px solid #333;
+  border-left: 4px solid #c8a84b; border-radius: 0 6px 6px 0;
+  padding: 14px 20px; margin: 20px 0;
+}
+.quick-nav strong { color: #c8a84b; display: block; margin-bottom: 10px; }
+.quick-nav a { color: #e94560; text-decoration: none; margin-right: 18px; font-size: 0.92em; }
+.quick-nav a:hover { text-decoration: underline; }
+
+/* Toy type tag list */
+.toy-types {
+  display: flex; flex-wrap: wrap; gap: 10px; margin: 18px 0;
+}
+.toy-tag {
+  background: #1a1a1a; border: 1px solid #c8a84b;
+  border-radius: 20px; padding: 6px 16px;
+  color: #c8a84b; font-size: 0.85em; font-weight: bold;
+}
+
+/* Image row — 2 or 3 images side by side */
+.img-pair { display: flex; gap: 16px; flex-wrap: wrap; margin: 14px 0; align-items: flex-start; }
+.img-pair img { flex: 1 1 200px; max-width: 49%; }
+.img-trio { display: flex; gap: 14px; flex-wrap: wrap; margin: 14px 0; align-items: flex-start; }
+.img-trio img { flex: 1 1 160px; max-width: 32%; }
+
+/* Side layout */
+.side { display: flex; gap: 24px; align-items: flex-start; margin: 18px 0; flex-wrap: wrap; }
+.side img { flex: 0 0 auto; }
+.side .text { flex: 1 1 260px; }
+
+/* Controller cards grid */
+.ctrl-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px; margin: 20px 0;
+}
+.ctrl-card {
+  background: #1a1a1a; border: 1px solid #333; border-radius: 8px;
+  padding: 16px; display: flex; flex-direction: column; gap: 10px;
+  transition: border-color 0.15s;
+}
+.ctrl-card:hover { border-color: #c8a84b; }
+.ctrl-card img { width: 100%; max-height: 160px; object-fit: contain; border-radius: 4px; border: 2px solid #c8a84b; cursor: zoom-in; }
+.ctrl-card h3 { color: #c8a84b; margin: 0; font-size: 1em; }
+.ctrl-card p { color: #ccc; font-size: 0.85em; margin: 0; line-height: 1.5; flex: 1; }
+.ctrl-card .links { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 4px; }
+.ctrl-card .links a { color: #e94560; font-size: 0.82em; text-decoration: none; }
+.ctrl-card .links a:hover { text-decoration: underline; }
+.ctrl-card .badge {
+  display: inline-block; background: rgba(200,168,75,0.15);
+  color: #c8a84b; font-size: 0.75em; padding: 2px 8px; border-radius: 10px;
+  border: 1px solid #c8a84b; width: fit-content;
+}
+
+/* Connection wiring list */
+.wiring {
+  background: #1a1a1a; border: 1px solid #333; border-left: 4px solid #c8a84b;
+  border-radius: 0 6px 6px 0; padding: 14px 20px; margin: 16px 0;
+}
+.wiring li { color: #ddd; margin-bottom: 6px; font-size: 0.9em; line-height: 1.6; }
+
+/* Solenoid list */
+.sol-list {
+  background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 6px;
+  padding: 14px 20px; margin: 16px 0;
+}
+.sol-list li { margin-bottom: 5px; font-size: 0.9em; line-height: 1.6; color: #ddd; }
+
+.note { border-left: 4px solid #c8a84b; padding: 10px 16px; background: rgba(200,168,75,0.07); font-size: 0.9em; margin: 12px 0; border-radius: 0 4px 4px 0; }
+.warn { border-left: 4px solid #e94560; padding: 10px 16px; background: rgba(233,69,96,0.07); font-size: 0.9em; margin: 12px 0; border-radius: 0 4px 4px 0; }
+
+.video-link {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: #e94560; color: #fff; padding: 8px 16px;
+  border-radius: 4px; text-decoration: none; font-size: 0.88em;
+  font-weight: bold; margin: 6px 6px 6px 0;
+}
+.video-link:hover { background: #c73650; color: #fff; }
+.dl-btn { display: inline-block; background: #c8a84b; color: #111; padding: 7px 15px; border-radius: 4px; text-decoration: none; font-weight: bold; font-size: 0.88em; margin: 4px 6px 4px 0; }
+.dl-btn:hover { background: #a88830; }
+
+@media (max-width: 620px) {
+  .side { flex-direction: column; }
+  .img-pair img, .img-trio img { max-width: 100%; }
+  .ctrl-grid { grid-template-columns: 1fr; }
+}
+</style>
+
+<!-- Lightbox -->
+<div class="lb-overlay" id="lb" onclick="closeLb()">
+  <span class="lb-close" onclick="closeLb()">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLb(s,a){document.getElementById('lb-img').src=s;document.getElementById('lb-img').alt=a||'';document.getElementById('lb').classList.add('open');}
+function closeLb(){document.getElementById('lb').classList.remove('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+</script>
+
+<div class="toys">
+
+<p><em>Click any image to enlarge it.</em></p>
+
+<p>Physical force feedback means adding hardware to your virtual pinball cabinet — shaker motors, solenoids, fans, chimes, gear motors, beacons, strobes. In virtual pinball we call these devices <strong>toys</strong>.</p>
+
+<p>The purpose is to make the hardware react to the table code. For example: the shaker motor turns on automatically in Jurassic Park VPX when the dinosaur eats the ball. When the ball hits the bumpers, connected solenoids trigger and add a real physical sound. You can also use a real plunger to launch the ball.</p>
+
+<div class="quick-nav">
+  <strong>Jump to section</strong>
+  <a href="#solenoids">Solenoids</a>
+  <a href="#controllers">Controller Boards</a>
+  <a href="#shaker">Shaker Motor</a>
+  <a href="#aled-link">Addressable LEDs</a>
+</div>
+
+<div class="toy-types">
+  <span class="toy-tag">🔧 Solenoids</span>
+  <span class="toy-tag">⚡ Shaker Motor</span>
+  <span class="toy-tag">💡 Beacons &amp; Strobes</span>
+  <span class="toy-tag">🌬️ Blowing Fan</span>
+  <span class="toy-tag">🔔 Chime / Knocker</span>
+  <span class="toy-tag">⚙️ Gear Motor</span>
+  <span class="toy-tag">🌈 Addressable LEDs</span>
+</div>
+
+<img src="https://static.wixstatic.com/media/8d31f8_854bc671a11e4faebfb17dd786faf07f~mv2.png"
+     alt="Force feedback toys overview" class="z full"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_854bc671a11e4faebfb17dd786faf07f~mv2.png','Force feedback toys overview')">
+
+<!-- ── SOLENOIDS ── -->
+<h2 id="solenoids">Adding Solenoids</h2>
+
+<div class="side">
+  <img src="https://static.wixstatic.com/media/8d31f8_9c67bb49101a48e88c1eff98b7559505~mv2.png"
+       alt="Solenoid" class="z"
+       style="max-width:140px;"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_9c67bb49101a48e88c1eff98b7559505~mv2.png','Solenoid')">
+  <div class="text">
+    <p>In <a href="https://youtu.be/IQoWhMMDYoo?si=Ay29hXBiGYGVzyRB" target="_blank">this video</a> I show how to prepare solenoids for your cabinet. This consists of adding a <strong>Diode <a href="https://amzn.to/3rdIYFc" target="_blank">1N4007</a></strong> on the positive terminal of the solenoid. This allows current to flow in only one direction — a safety feature to prevent back-EMF from blowing your controller.</p>
+    <a href="https://youtu.be/IQoWhMMDYoo?si=Ay29hXBiGYGVzyRB" target="_blank" class="video-link">▶ Watch Video</a>
+  </div>
+</div>
+
+<div class="img-pair">
+  <img src="https://static.wixstatic.com/media/8d31f8_23894416a70c4aee8bbd94b5d547bfd5~mv2.png"
+       alt="Diode on solenoid — 1N4007" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_23894416a70c4aee8bbd94b5d547bfd5~mv2.png','Diode on solenoid')">
+  <img src="https://static.wixstatic.com/media/8d31f8_0f8e22dae5b943dba226f39ddd23effe~mv2.png"
+       alt="Solenoid wiring detail" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_0f8e22dae5b943dba226f39ddd23effe~mv2.png','Solenoid wiring')">
+</div>
+
+<p>The <strong>grey bar of the diode</strong> connects to the positive terminal of the solenoid; the other side connects to the negative terminal.</p>
+
+<p>To connect solenoids to your cabinet you will need a controller board — options include a SainSmart relay board, a KL25Z with booster MOSFET cards, a Pinscape, a Rigmaster, or similar.</p>
+
+<div class="wiring">
+  <strong style="color:#c8a84b;">Wiring:</strong>
+  <ul class="sol-list" style="margin:8px 0 0;">
+    <li>Positive (+) terminal of the solenoid → <strong>12V+ of your power supply</strong></li>
+    <li>Negative (−) terminal of the solenoid → <strong>a port on the controller board</strong></li>
+  </ul>
+</div>
+
+<p>A typical virtual pinball setup uses <strong>10 solenoids</strong> installed as follows:</p>
+
+<h3>Solenoid Recommendations</h3>
+
+<p>After testing many solenoids and contactor assemblies over the years, here are my recommendations:</p>
+
+<ul class="sol-list">
+  <li><strong>6 × 12V Car/Truck starter solenoids</strong> for the bumpers (no specific brand required)</li>
+  <li><strong>2 × Real pinball flipper assembly</strong></li>
+  <li><strong>2 × Real pinball slingshot assembly</strong></li>
+  <li><strong>1 × Real pinball knocker</strong></li>
+</ul>
+
+<div class="note">
+  💡 Car/truck solenoids work well with a 12V 20A power supply.<br>
+  Real pinball assemblies are designed for 50V but are still extremely loud at 24V.<br>
+  The knocker is also designed for higher voltage but 24V is already very loud.
+</div>
+
+<div class="img-trio">
+  <img src="https://static.wixstatic.com/media/8d31f8_6423ad57478e46c08e2744fd774f5da1~mv2.png"
+       alt="Car starter solenoids for bumpers" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_6423ad57478e46c08e2744fd774f5da1~mv2.png','Bumper solenoids')">
+  <img src="https://static.wixstatic.com/media/8d31f8_d44b779767744561af529bd990c64a98~mv2.png"
+       alt="Real pinball flipper assembly" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_d44b779767744561af529bd990c64a98~mv2.png','Flipper assembly')">
+  <img src="https://static.wixstatic.com/media/8d31f8_cdfca485774b4894aea646393e48bbd8~mv2.png"
+       alt="Real pinball slingshot assembly" class="z"
+       onclick="openLb('https://static.wixstatic.com/media/8d31f8_cdfca485774b4894aea646393e48bbd8~mv2.png','Slingshot assembly')">
+</div>
+
+<!-- ── CONTROLLERS ── -->
+<h2 id="controllers">Controller Boards</h2>
+
+<p>To use DOF (Direct Output Framework) on your computer, you need DOF-compatible hardware to connect your toys. Below is a list of compatible controllers. You can also see these in the <a href="http://configtool.vpuniverse.com/login.php" target="_blank">Online DOF Config Tool</a>.</p>
+
+<img src="https://static.wixstatic.com/media/8d31f8_6ec04dfcc69c44f0901a775f991eed37~mv2.png"
+     alt="DOF compatible controllers overview" class="z sm"
+     onclick="openLb('https://static.wixstatic.com/media/8d31f8_6ec04dfcc69c44f0901a775f991eed37~mv2.png','Controllers overview')">
+
+<div class="ctrl-grid">
+
+  <!-- Cleveland / Pinscape -->
+  <div class="ctrl-card">
+    <img src="https://static.wixstatic.com/media/8d31f8_b73bc92be3b6427c8fcb190e76055b36~mv2.png"
+         alt="Cleveland Software Pinscape board"
+         onclick="openLb('https://static.wixstatic.com/media/8d31f8_b73bc92be3b6427c8fcb190e76055b36~mv2.png','Cleveland Pinscape board')">
+    <h3>Cleveland Software Pinscape Board</h3>
+    <span class="badge">KL25Z-based</span>
+    <p>Connects and boosts all your toys using the KL25Z board. Well built with good support. Popular in the community with consistently positive feedback.</p>
+    <div class="links">
+      <a href="https://www.clevelandsoftwaredesign.com/pinball-parts/p/pinone-main-virtual-pinball-connection-board" target="_blank">PinOne Board</a>
+      <a href="https://www.clevelandsoftwaredesign.com/pinball-parts/p/21-output-kl25z-board" target="_blank">21-Output KL25Z Board</a>
+    </div>
+  </div>
+
+  <!-- Rigmaster -->
+  <div class="ctrl-card">
+    <img src="https://static.wixstatic.com/media/8d31f8_85098ae3d3474bb2ae269e886cc0cc4c~mv2.png"
+         alt="Arnoz Rigmaster"
+         onclick="openLb('https://static.wixstatic.com/media/8d31f8_85098ae3d3474bb2ae269e886cc0cc4c~mv2.png','Arnoz Rigmaster')">
+    <h3>Arnoz Rigmaster</h3>
+    <span class="badge">All-in-One</span>
+    <p>All-in-one solution for connecting buttons and toys. Has on-board fuses — a very nice safety feature. I tested this board and it's quite good. Note: the PWM for the shaker motor doesn't seem to work. Has 16 outputs (8 PWM ports) and supports expansion boards for more devices and LEDs.</p>
+    <div class="links">
+      <a href="https://shop.arnoz.com/en/basic-kl25z/74-the-rig-master.html" target="_blank">Arnoz Shop</a>
+      <a href="https://youtu.be/lXGWvaKvl9M?si=NZPv87hX9F1jyMq_" target="_blank">▶ Video Tutorial</a>
+    </div>
+  </div>
+
+  <!-- KLshield -->
+  <div class="ctrl-card">
+    <img src="https://static.wixstatic.com/media/8d31f8_63638cba2d52471fa990ae5662557f78~mv2.png"
+         alt="Arnoz KLshield"
+         onclick="openLb('https://static.wixstatic.com/media/8d31f8_63638cba2d52471fa990ae5662557f78~mv2.png','Arnoz KLshield')">
+    <h3>Arnoz KLshield</h3>
+    <span class="badge">KL25Z Expansion</span>
+    <p>Expansion board for the KL25Z — makes button wiring much easier. Has 10 outputs for toys that require a power booster (e.g. MOSFET board). Also supports connecting a plunger.</p>
+    <div class="links">
+      <a href="https://shop.arnoz.com/en/basic-kl25z/5-kl-shield.html" target="_blank">Arnoz Shop</a>
+    </div>
+  </div>
+
+  <!-- SainSmart -->
+  <div class="ctrl-card">
+    <img src="https://static.wixstatic.com/media/8d31f8_9ebcb84923d9433daea34fd05effd09a~mv2.png"
+         alt="SainSmart USB relay board"
+         onclick="openLb('https://static.wixstatic.com/media/8d31f8_9ebcb84923d9433daea34fd05effd09a~mv2.png','SainSmart USB relay')">
+    <h3>SainSmart USB 8-Port Relay</h3>
+    <span class="badge">USB Relay</span>
+    <p>Relay board that connects up to 8 power toys such as solenoids and a shaker motor. Can handle up to 10A per port.</p>
+    <div class="links">
+      <a href="https://amzn.to/3Qp9lR7" target="_blank">Buy on Amazon</a>
+      <a href="/sainsmart/">SainSmart Tutorial</a>
+    </div>
+  </div>
+
+  <!-- KL25Z standalone -->
+  <div class="ctrl-card">
+    <img src="https://static.wixstatic.com/media/8d31f8_c0f3f0ca4c02479494683fc1f9abb68b~mv2.png"
+         alt="KL25Z development board"
+         onclick="openLb('https://static.wixstatic.com/media/8d31f8_c0f3f0ca4c02479494683fc1f9abb68b~mv2.png','KL25Z board')">
+    <h3>KL25Z</h3>
+    <span class="badge">Core Board</span>
+    <p>The main development board used in many controller expansion boards (Rigmaster, KLshield, Pinscape). Can also be used standalone for buttons and toys. Requires a power booster board (e.g. MOSFET) for driving toys.</p>
+    <div class="links">
+      <a href="https://amzn.to/3Quf748" target="_blank">Buy on Amazon</a>
+      <a href="/kl25z/">KL25Z Tutorial</a>
+    </div>
+  </div>
+
+  <!-- Pinscape AIO -->
+  <div class="ctrl-card">
+    <img src="https://static.wixstatic.com/media/8d31f8_7bfcc2f9500848fa8f6c44887a09f4f3~mv2.png"
+         alt="Pinscape Oak Micro AIO"
+         onclick="openLb('https://static.wixstatic.com/media/8d31f8_7bfcc2f9500848fa8f6c44887a09f4f3~mv2.png','Pinscape AIO')">
+    <h3>Pinscape Oak Micro AIO</h3>
+    <span class="badge">Discontinued</span>
+    <p>Honestly, the best board I ever tested — I'm still using it in my main cab. Unfortunately it has been discontinued and is no longer available. Listed here for reference.</p>
+    <div class="links">
+      <a href="https://15d8bcc6-012b-4bb3-8a00-bdc555e13578.filesusr.com/ugd/8d31f8_5c3f826d2a6b4100ba42a914958003dd.pdf" target="_blank">Connection Guide (PDF)</a>
+      <a href="https://youtu.be/LuYUNY6B8no?si=Eg0nAsvmSpFshhSF" target="_blank">▶ Video Tutorial</a>
+    </div>
+  </div>
+
+</div>
+
+<!-- ── SHAKER ── -->
+<h2 id="shaker">Adding a Shaker Motor</h2>
+
+<div class="side">
+  <a href="https://www.pinballlife.com/shaker-motor-kit-rev-c-for-stern-spike-spike-2-system-games.html" target="_blank">
+    <img src="https://static.wixstatic.com/media/8d31f8_d3bd00d08d01489bbc0cd50b6e7fe05f~mv2.png"
+         alt="Stern shaker motor" class="z"
+         style="max-width:160px;"
+         onclick="event.stopPropagation(); openLb('https://static.wixstatic.com/media/8d31f8_d3bd00d08d01489bbc0cd50b6e7fe05f~mv2.png','Stern shaker motor')">
+  </a>
+  <div class="text">
+    <p>A shaker motor is a fantastic addition to your cabinet — it does exactly what it's designed to do: <strong>shake</strong>. After testing a few options, I still believe the only truly viable choice is an authentic pinball shaker motor like the <a href="https://www.pinballlife.com/shaker-motor-kit-rev-c-for-stern-spike-spike-2-system-games.html" target="_blank">Stern shaker</a>.</p>
+    <p>The shaker motor has been programmed into <strong>more than 300 virtual pinball tables</strong>.</p>
+  </div>
+</div>
+
+<h3>Connecting the Shaker Motor</h3>
+
+<p>Every toy connects the same way:</p>
+
+<div class="wiring">
+  <ul class="sol-list">
+    <li>Add a <strong>Diode <a href="https://amzn.to/3rdIYFc" target="_blank">1N4007</a></strong> if there is a magnetic field (motors, solenoids)</li>
+    <li>Connect the <strong>Positive</strong> to the power supply</li>
+    <li>Connect a <strong>fuse</strong> between the negative and the controller port</li>
+    <li>Connect the <strong>Negative</strong> to a port on your controller board</li>
+  </ul>
+</div>
+
+<h3>DIY Shaker Motor (Cheap Alternative)</h3>
+
+<p>If you want to build a cheap shaker using a Chinese gear motor, there's a TinkerCAD design available:</p>
+<a href="https://www.tinkercad.com/things/cX68ks4pXgs-shakergear-motor-exercise" target="_blank" class="dl-btn">🔧 TinkerCAD Shaker Design</a>
+
+<!-- ── ALED LINK ── -->
+<h2 id="aled-link">Addressable LEDs</h2>
+
+<p>Addressable LEDs (ALED) are another popular toy for virtual pinball cabinets, adding reactive RGB lighting effects synchronized with the gameplay. See the dedicated guide:</p>
+
+<a href="/aled/" class="dl-btn">💡 ALED Setup Guide →</a>
+
+---
+
+<p><strong>Related:</strong> <a href="/dof/">DOF Setup</a> · <a href="/sainsmart/">SainSmart Tutorial</a> · <a href="/kl25z/">KL25Z Tutorial</a> · <a href="/aled/">Addressable LEDs</a></p>
+
+</div>

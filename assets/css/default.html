@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{% if page.title %}{{ page.title }} | {{ site.title }}{% else %}{{ site.title }}{% endif %}</title>
+  <meta name="description" content="{{ site.description }}">
+  <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Hardware dropdown ── */
+    .nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .nav-dropdown-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #e0e0e0;
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
+      margin: 0;
+      line-height: 1.7;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-dropdown-toggle::after {
+      content: ' ▾';
+      font-size: 0.75em;
+    }
+    .nav-dropdown-toggle:hover {
+      background: #e94560;
+      color: #fff;
+    }
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      background: #16213e;
+      border: 1px solid #2a2a4a;
+      border-radius: 8px;
+      min-width: 210px;
+      z-index: 999;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown.open .nav-dropdown-menu {
+      display: block;
+    }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 0.5rem 0.75rem;
+      color: #e0e0e0;
+      text-decoration: none;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-bottom: 1px solid #2a2a4a;
+      transition: background 0.2s, color 0.2s;
+    }
+    .nav-dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+    .nav-dropdown-menu a:hover {
+      background: #e94560;
+      color: #fff;
+    }
+    /* Mobile */
+    @media (max-width: 768px) {
+      .nav-dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        border-left: 3px solid #e94560;
+        border-radius: 0;
+        background: transparent;
+        display: none;
+        margin-left: 12px;
+      }
+      .nav-dropdown.open .nav-dropdown-menu {
+        display: block;
+      }
+      .nav-dropdown-menu a {
+        padding: 0.5rem 0.75rem;
+        border-bottom: none;
+        font-size: 0.875rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a href="{{ '/' | relative_url }}" class="site-logo">
+        <img src="/assets/css/images/8d31f8_5ae51096cd694971a35ff477876b0fdd~mv2.png" alt="Major Frenchy" height="50">
+      </a>
+      <div class="site-brand-text">
+        <span class="site-title">Major Frenchy</span>
+        <span class="site-tagline">{{ site.tagline }}</span>
+      </div>
+      <button class="nav-toggle" id="navToggle">☰</button>
+      <nav class="site-nav" id="siteNav">
+        {% for link in site.nav_links %}
+          <a href="{{ link.url | relative_url }}" class="nav-link {% if page.url == link.url %}active{% endif %}">{{ link.title }}</a>
+        {% endfor %}
+
+        <!-- Hardware dropdown -->
+        <div class="nav-dropdown" id="hwDropdown">
+          <button class="nav-dropdown-toggle" id="hwToggle">Hardware</button>
+          <div class="nav-dropdown-menu">
+            <a href="/toys/">🔧 Toys / Force Feedback</a>
+            <a href="/aled/">💡 Addressable LEDs</a>
+            <a href="/sainsmart/">⚡ SainSmart</a>
+            <a href="/kl25z/">🔌 KL25Z</a>
+          </div>
+        </div>
+
+      </nav>
+    </div>
+  </header>
+
+  <main class="main-content">
+    <div class="container">
+      {{ content }}
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© 2023 by Major Frenchy. All rights reserved.</p>
+      <div class="footer-links">
+        <a href="https://www.youtube.com/Majorfrenchy" target="_blank">YouTube</a>
+        <a href="https://bit.ly/virtualpinball" target="_blank">Discord</a>
+        <a href="https://github.com/MajorFrenchy" target="_blank">GitHub</a>
+        <a href="https://paypal.me/majorfrenchy" target="_blank">☕ Support</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Mobile nav toggle
+    document.getElementById('navToggle').addEventListener('click', function() {
+      document.getElementById('siteNav').classList.toggle('open');
+    });
+
+    // Hardware dropdown — click for mobile
+    document.getElementById('hwToggle').addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.getElementById('hwDropdown').classList.toggle('open');
+    });
+
+    // Close when clicking outside
+    document.addEventListener('click', function() {
+      document.getElementById('hwDropdown').classList.remove('open');
+    });
+  </script>
+
+</body>
+</html>

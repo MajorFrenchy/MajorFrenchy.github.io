@@ -1,0 +1,506 @@
+---
+layout: page
+title: KL25Z Freescale
+permalink: /kl25z/
+---
+
+<style>
+/* ── Lightbox ── */
+.lb-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.88); z-index: 9999;
+  align-items: center; justify-content: center; cursor: zoom-out;
+}
+.lb-overlay.open { display: flex; }
+.lb-overlay img {
+  max-width: 90vw; max-height: 88vh;
+  border: 3px solid #c8a84b; border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.8);
+}
+.lb-close {
+  position: absolute; top: 18px; right: 26px;
+  font-size: 2em; color: #fff; cursor: pointer; user-select: none;
+}
+
+/* ── Page ── */
+.kl { max-width: 900px; margin: 0 auto; }
+.kl h2 { border-bottom: 2px solid #e94560; padding-bottom: 6px; margin-top: 44px; }
+.kl h3 { color: #c8a84b; margin-top: 24px; margin-bottom: 8px; }
+
+.kl img.z {
+  border: 3px solid #c8a84b; border-radius: 4px;
+  display: block; cursor: zoom-in; transition: opacity 0.15s;
+}
+.kl img.z:hover { opacity: 0.85; }
+.kl img.full { width: 100%; max-width: 860px; margin: 14px 0; }
+.kl img.med  { max-width: 600px; width: 100%; margin: 14px 0; }
+.kl img.sm   { max-width: 360px; width: 100%; margin: 14px 0; }
+
+/* Side layout */
+.side { display: flex; gap: 24px; align-items: flex-start; margin: 18px 0; flex-wrap: wrap; }
+.side .text { flex: 1 1 280px; }
+
+/* Image pair / trio */
+.img-pair { display: flex; gap: 14px; flex-wrap: wrap; margin: 14px 0; align-items: flex-start; }
+.img-pair img { flex: 1 1 180px; max-width: 49%; }
+.img-quad { display: flex; gap: 10px; flex-wrap: wrap; margin: 14px 0; align-items: flex-start; }
+.img-quad img { flex: 1 1 120px; max-width: 24%; }
+
+/* Step title */
+.step-title {
+  font-size: 1em; font-weight: bold; color: #e94560;
+  margin: 28px 0 10px; padding-left: 12px;
+  border-left: 4px solid #e94560;
+}
+
+/* Notes / warnings */
+.note { border-left: 4px solid #c8a84b; padding: 10px 16px; background: rgba(200,168,75,0.07); font-size: 0.9em; margin: 14px 0; border-radius: 0 4px 4px 0; }
+.warn { border-left: 4px solid #e94560; padding: 10px 16px; background: rgba(233,69,96,0.07); font-size: 0.9em; margin: 14px 0; border-radius: 0 4px 4px 0; }
+
+/* Pro/Con */
+.pro-con { display: flex; gap: 16px; flex-wrap: wrap; margin: 16px 0; }
+.pro-con .box {
+  flex: 1 1 180px; background: #1a1a1a; border: 1px solid #2a2a2a;
+  border-radius: 6px; padding: 12px 16px;
+}
+.pro-con .box h4 { margin-bottom: 8px; font-size: 0.9em; }
+.pro-con .pros h4 { color: #4caf50; }
+.pro-con .cons h4 { color: #e94560; }
+.pro-con .box ul { list-style: none; padding: 0; margin: 0; }
+.pro-con .box li { font-size: 0.85em; color: #ccc; padding: 3px 0; }
+.pro-con .pros li::before { content: '✓ '; color: #4caf50; }
+.pro-con .cons li::before { content: '✗ '; color: #e94560; }
+
+/* 4 functions grid */
+.functions {
+  display: grid; grid-template-columns: repeat(auto-fill, minmax(200px,1fr));
+  gap: 12px; margin: 16px 0;
+}
+.fn-card {
+  background: #1a1a1a; border: 1px solid #333; border-left: 4px solid #c8a84b;
+  border-radius: 0 6px 6px 0; padding: 12px 14px;
+}
+.fn-card .num { color: #c8a84b; font-weight: bold; font-size: 0.8em; margin-bottom: 4px; }
+.fn-card .name { color: #fff; font-weight: bold; font-size: 0.9em; margin-bottom: 4px; }
+.fn-card p { color: #aaa; font-size: 0.82em; margin: 0; line-height: 1.5; }
+
+/* Doc links */
+.doc-links { display: flex; flex-direction: column; gap: 8px; margin: 16px 0; }
+.doc-link {
+  display: flex; align-items: center; gap: 10px;
+  background: #1a1a1a; border: 1px solid #333; border-radius: 6px;
+  padding: 10px 16px; text-decoration: none; color: #ddd;
+  font-size: 0.88em; transition: border-color 0.15s;
+}
+.doc-link:hover { border-color: #c8a84b; color: #fff; }
+.doc-link .icon { font-size: 1.2em; }
+
+.dl-btn {
+  display: inline-block; background: #c8a84b; color: #111;
+  padding: 7px 16px; border-radius: 4px; text-decoration: none;
+  font-weight: bold; font-size: 0.88em; margin: 4px 6px 4px 0;
+}
+.dl-btn:hover { background: #a88830; color: #111; }
+
+@media (max-width: 620px) {
+  .side { flex-direction: column; }
+  .img-pair img { max-width: 100%; }
+  .img-quad img { max-width: 48%; }
+}
+</style>
+
+<!-- Lightbox -->
+<div class="lb-overlay" id="lb" onclick="closeLb()">
+  <span class="lb-close" onclick="closeLb()">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLb(s,a){document.getElementById('lb-img').src=s;document.getElementById('lb-img').alt=a||'';document.getElementById('lb').classList.add('open');}
+function closeLb(){document.getElementById('lb').classList.remove('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+</script>
+
+<div class="kl">
+
+<p><em>Click any image to enlarge it.</em></p>
+
+<div class="side">
+  <img src="/assets/css/images/8d31f8_a84a8a7796bb4eff96f9e830bf0671fb~mv2.jpg"
+       alt="KL25Z Freescale board" class="z"
+       style="max-width:200px;"
+       onclick="openLb('/assets/css/images/8d31f8_a84a8a7796bb4eff96f9e830bf0671fb~mv2.jpg','KL25Z board')">
+  <div class="text">
+    <p>The <strong>FRDM-KL25Z</strong> is a hardware platform featuring the Freescale open standard embedded serial and debug adapter (OpenSDA). For virtual pinball, we use it in combination with the <strong>Pinscape software</strong>.</p>
+    <a href="https://amzn.to/3Quf748" target="_blank" class="dl-btn">Order on Amazon</a>
+  </div>
+</div>
+
+<h2>Why Use This Board?</h2>
+
+<div class="side">
+  <div style="display:flex; flex-direction:column; gap:12px;">
+    <img src="/assets/css/images/8d31f8_68f8b91dbc224353920ba65b66ec1a14~mv2.png"
+         alt="Cabinet buttons" class="z" style="max-width:80px;"
+         onclick="openLb('/assets/css/images/8d31f8_68f8b91dbc224353920ba65b66ec1a14~mv2.png','Cabinet buttons')">
+    <img src="/assets/css/images/8d31f8_10f657fe9de84ab68a218573668b22be~mv2.jpeg"
+         alt="Toys/solenoids" class="z" style="max-width:120px;"
+         onclick="openLb('/assets/css/images/8d31f8_10f657fe9de84ab68a218573668b22be~mv2.jpeg','Toys')">
+    <img src="/assets/css/images/8d31f8_5a205007bee74bfe94ccfae29531770c~mv2.png"
+         alt="RGB flasher lights" class="z" style="max-width:190px;"
+         onclick="openLb('/assets/css/images/8d31f8_5a205007bee74bfe94ccfae29531770c~mv2.png','RGB lights')">
+  </div>
+  <div class="text">
+    <p>🎮 <strong>Cabinet Buttons</strong> — Configure with Pinscape and Visual Pinball so pressing cabinet buttons triggers the correct in-game actions.</p>
+    <p>🔧 <strong>Toys</strong> — Connect solenoids, shaker motors, and other force feedback devices. When combined with Pinscape and <a href="/dof/">DOF</a>, toys activate during gameplay.</p>
+    <p>💡 <strong>RGB Flasher Lights</strong> — Connect RGB/flasher lights. With Pinscape and DOF, they react to gameplay events.</p>
+  </div>
+</div>
+
+<div class="pro-con">
+  <div class="box pros">
+    <h4>PRO</h4>
+    <ul>
+      <li>Costs about $30</li>
+      <li>Very common board</li>
+      <li>Used by Pinscape, Arnoz, Cleveland Software</li>
+    </ul>
+  </div>
+  <div class="box cons">
+    <h4>CON</h4>
+    <ul>
+      <li>Availability can be limited</li>
+      <li>Requires power booster for toys</li>
+      <li>Limited number of ports</li>
+    </ul>
+  </div>
+</div>
+
+<h2>Getting Started</h2>
+
+<p>Before using this board, familiarise yourself with it. Below are the official KL25Z manuals and MJR guides. <em>Michael J Roberts (MJR) is the creator of the Pinscape software.</em></p>
+
+<div class="doc-links">
+  <a href="https://8d31f8ea-5614-4a45-94cc-4d07bda29674.usrfiles.com/ugd/8d31f8_648ea05fe6ef4a5082614cc31c893ea1.pdf" target="_blank" class="doc-link">
+    <span class="icon">📄</span> KL25Z User Manual
+  </a>
+  <a href="https://8d31f8ea-5614-4a45-94cc-4d07bda29674.usrfiles.com/ugd/8d31f8_241bf0f6868248158646f19c4b26cd7b.pdf" target="_blank" class="doc-link">
+    <span class="icon">📌</span> KL25Z User Pinouts
+  </a>
+  <a href="https://os.mbed.com/media/uploads/mjr/the_pinscape_controller_20170218.pdf" target="_blank" class="doc-link">
+    <span class="icon">📘</span> MJR Pinscape Controller Guide
+  </a>
+  <a href="http://mjrnet.org/pinscape/BuildGuideV2/BuildGuide.php?sid=psOutputsStandalone" target="_blank" class="doc-link">
+    <span class="icon">🔗</span> MJR Pinscape KL25Z Standalone Guide
+  </a>
+</div>
+
+<img src="/assets/css/images/8d31f8_6f2d68fddca4452d9e3f93a0b5cd0bd5~mv2.png"
+     alt="KL25Z pinout overview" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_6f2d68fddca4452d9e3f93a0b5cd0bd5~mv2.png','KL25Z pinout overview')">
+
+<h2>Preparing the KL25Z</h2>
+
+<p>Depending on where you purchased your KL25Z, it may or may not have pin headers soldered. Some suppliers will solder them for you on request. If ordering headers separately, look for <strong>2.54mm pitch (0.1")</strong> headers.</p>
+
+<div class="img-pair">
+  <div>
+    <a href="https://www.mouser.com/ProductDetail/855-M20-9760846?R=855-M20-9760846" target="_blank">
+      <img src="/assets/css/images/8d31f8_6ccc330308b14e78aa55e6f52c172e7a~mv2.png"
+           alt="2.54mm pin headers from Mouser" class="z"
+           onclick="event.stopPropagation(); openLb('/assets/css/images/8d31f8_6ccc330308b14e78aa55e6f52c172e7a~mv2.png','Pin headers')">
+    </a>
+    <p style="font-size:0.82em; color:#aaa; margin-top:6px;">2.54mm pin headers — order from Mouser</p>
+  </div>
+  <div>
+    <img src="/assets/css/images/8d31f8_38019baba5bd4ff5a03103768a3780c9~mv2.png"
+         alt="Pins setup for expansion board" class="z"
+         onclick="openLb('/assets/css/images/8d31f8_38019baba5bd4ff5a03103768a3780c9~mv2.png','Pins — expansion board')">
+    <p style="font-size:0.82em; color:#aaa; margin-top:6px;">Pin setup for expansion board use</p>
+  </div>
+  <div>
+    <img src="/assets/css/images/8d31f8_cb8f830d1d294d3680ab547c35bf8786~mv2.png"
+         alt="Pins setup standalone" class="z"
+         onclick="openLb('/assets/css/images/8d31f8_cb8f830d1d294d3680ab547c35bf8786~mv2.png','Pins — standalone')">
+    <p style="font-size:0.82em; color:#aaa; margin-top:6px;">Pin setup for standalone use</p>
+  </div>
+</div>
+
+<p>You will need to solder the pins — get yourself a magnifying glass and a soldering iron.</p>
+
+<div class="img-pair">
+  <div>
+    <a href="https://amzn.to/3QuoUIB" target="_blank">
+      <img src="/assets/css/images/8d31f8_8cba7bcf77da4a39a33b1bcf88aff708~mv2.png"
+           alt="Soldering iron" class="z"
+           onclick="event.stopPropagation(); openLb('/assets/css/images/8d31f8_8cba7bcf77da4a39a33b1bcf88aff708~mv2.png','Soldering iron')">
+    </a>
+  </div>
+  <div>
+    <img src="/assets/css/images/8d31f8_4cbdbfe0213048dabf6c7c62816be9d2~mv2.png"
+         alt="PCB plastic legs for mounting" class="z"
+         onclick="openLb('/assets/css/images/8d31f8_4cbdbfe0213048dabf6c7c62816be9d2~mv2.png','PCB legs')">
+    <p style="font-size:0.82em; color:#aaa; margin-top:6px;"><a href="https://amzn.to/3QuoUIB" target="_blank">Mount the KL25Z with PCB plastic legs</a></p>
+  </div>
+</div>
+
+<h2>Flashing the KL25Z with Pinscape</h2>
+
+<p>Head to the <a href="http://mjrnet.org/pinscape/swversions.php" target="_blank">MJR site</a> and download:</p>
+<ul style="margin:10px 0 16px 24px;">
+  <li>The <strong>Pinscape Config Tool</strong> (Windows)</li>
+  <li>The <strong>KL25Z firmware</strong></li>
+</ul>
+
+<div class="step-title">Step 1 — Download Pinscape</div>
+<img src="/assets/css/images/8d31f8_fbc00a77c81d4365aa3597db1bf086ef~mv2.png"
+     alt="Download Pinscape software" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_fbc00a77c81d4365aa3597db1bf086ef~mv2.png','Download Pinscape')">
+
+<div class="step-title">Step 2 — Connect via USB</div>
+<p>Connect a <strong>Mini-B USB cable</strong> to the <strong>SDA USB port</strong> on the KL25Z and plug it into your computer.</p>
+
+<div class="img-pair">
+  <img src="/assets/css/images/8d31f8_2644ad5cc7fd4bfdb30a55d2ef6470c8~mv2.png"
+       alt="USB connection to KL25Z SDA port" class="z"
+       onclick="openLb('/assets/css/images/8d31f8_2644ad5cc7fd4bfdb30a55d2ef6470c8~mv2.png','USB connection')">
+  <img src="/assets/css/images/8d31f8_66a6507c76634e9ea25bb4f287aea7b5f000.jpg"
+       alt="KL25Z connected to computer" class="z"
+       onclick="openLb('/assets/css/images/8d31f8_66a6507c76634e9ea25bb4f287aea7b5f000.jpg','KL25Z connected')">
+</div>
+
+<div class="step-title">Step 3 — Launch PinscapeConfigTool</div>
+<img src="/assets/css/images/8d31f8_20b2128a39ea4ec88b1d8dd7a1af7f19~mv2.png"
+     alt="Pinscape Config Tool main screen" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_20b2128a39ea4ec88b1d8dd7a1af7f19~mv2.png','Pinscape Config Tool')">
+
+<img src="/assets/css/images/8d31f8_58d59755d83c431c8195ff12ee8fc00b~mv2.png"
+     alt="Setup new KL25Z option" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_58d59755d83c431c8195ff12ee8fc00b~mv2.png','Setup new KL25Z')">
+
+<p>Launch <strong>PinscapeConfigTool.exe</strong> and choose <strong>Setup a New KL25Z</strong>.</p>
+
+<div class="step-title">Step 4 — Follow the Wizard</div>
+
+<img src="/assets/css/images/8d31f8_818aa9582e414e13aa825e70b09da77a~mv2.png"
+     alt="Pinscape wizard step" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_818aa9582e414e13aa825e70b09da77a~mv2.png','Pinscape wizard')">
+
+<img src="/assets/css/images/8d31f8_57a1fe30a6e842578c2101c66c642d08~mv2.png"
+     alt="Pinscape firmware flash" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_57a1fe30a6e842578c2101c66c642d08~mv2.png','Firmware flash')">
+
+<img src="/assets/css/images/8d31f8_21ee179a478749358d0860d8d9dd50f5~mv2.png"
+     alt="Multiple KL25Z selection (rare)" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_21ee179a478749358d0860d8d9dd50f5~mv2.png','Multiple KL25Z')">
+
+<div class="note">💡 The multiple KL25Z selection only applies if you have more than one — which is rare.</div>
+
+<img src="/assets/css/images/8d31f8_a4825d28a7074603a3fe90e4f328e388~mv2.png"
+     alt="Click continue" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_a4825d28a7074603a3fe90e4f328e388~mv2.png','Click continue')">
+
+<p>Click <strong>Continue</strong>. The software is well designed — it tells you exactly what to do and when.</p>
+
+<img src="/assets/css/images/8d31f8_876d7224d78a419a98041ef6e86d8006~mv2.png"
+     alt="Pinscape flashing progress" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_876d7224d78a419a98041ef6e86d8006~mv2.png','Flashing progress')">
+
+<h2>Configuring Pinscape</h2>
+
+<div class="step-title">Select Standalone KL25Z</div>
+<img src="/assets/css/images/8d31f8_58db47b8841d40c4b59687f879b6b947~mv2.png"
+     alt="Select standalone KL25Z" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_58db47b8841d40c4b59687f879b6b947~mv2.png','Select standalone')">
+
+<img src="/assets/css/images/8d31f8_164050d769d3469ca10b8f16396d2086~mv2.png"
+     alt="Pinscape config" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_164050d769d3469ca10b8f16396d2086~mv2.png','Pinscape config')">
+
+<img src="/assets/css/images/8d31f8_cda9b161d6664ac88cab5875e60da015~mv2.png"
+     alt="Pinscape config step" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_cda9b161d6664ac88cab5875e60da015~mv2.png','Config step')">
+
+<img src="/assets/css/images/8d31f8_647a2c3a5e2a4d728a0c76371b418b73~mv2.png"
+     alt="Pinscape config step 2" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_647a2c3a5e2a4d728a0c76371b418b73~mv2.png','Config step 2')">
+
+<img src="/assets/css/images/8d31f8_a95c506acc894cd8bb7be8ed9cd5b33f~mv2.png"
+     alt="Pinscape config step 3" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_a95c506acc894cd8bb7be8ed9cd5b33f~mv2.png','Config step 3')">
+
+<div class="step-title">Accelerometer / Nudge Setup</div>
+<img src="/assets/css/images/8d31f8_0677c3c2d0d04789aa9908653aeab3b5~mv2.png"
+     alt="Accelerometer orientation setup" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_0677c3c2d0d04789aa9908653aeab3b5~mv2.png','Accelerometer setup')">
+<p>The KL25Z has a built-in <strong>accelerometer</strong> — this lets you physically push your cabinet to nudge the ball. Select the orientation of your KL25Z to match your setup. It can be mounted in any direction as long as it's level.</p>
+
+<img src="/assets/css/images/8d31f8_28613e515af142e2ad6585d701caafbb~mv2.png"
+     alt="Accelerometer orientation" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_28613e515af142e2ad6585d701caafbb~mv2.png','Orientation')">
+
+<div class="step-title">Plunger Setup</div>
+<img src="/assets/css/images/8d31f8_0e50ec5edc494bfcb1f276a0a8c06b0c~mv2.png"
+     alt="Plunger sensor selection" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_0e50ec5edc494bfcb1f276a0a8c06b0c~mv2.png','Plunger setup')">
+<p>If you want to connect a plunger, select your sensor type from the dropdown. Most people use a potentiometer. Set to <strong>None</strong> for now if you don't have one — a full plunger tutorial will cover this.</p>
+
+<div class="step-title">Button Inputs</div>
+
+<img src="/assets/css/images/8d31f8_9f1ba170475d4e26a2ab6230a58a9d1d~mv2.png"
+     alt="Button inputs configuration" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_9f1ba170475d4e26a2ab6230a58a9d1d~mv2.png','Button inputs')">
+
+<p>This section maps the button inputs (PTC2, PTC3, etc.) on the KL25Z. Click the <strong>Test button</strong> to see which physical port corresponds to each input as you scroll through buttons 1–24.</p>
+
+<img src="/assets/css/images/8d31f8_cf1ab5d64da948d19a724efaef3a1b0a~mv2.png"
+     alt="Pinscape button test" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_cf1ab5d64da948d19a724efaef3a1b0a~mv2.png','Button test')">
+
+<img src="/assets/css/images/8d31f8_a874d3c4f4114210b37671605317831b~mv2.png"
+     alt="KL25Z button connection diagram" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_a874d3c4f4114210b37671605317831b~mv2.png','Button connections')">
+
+<p>An arcade button has 2 pins — a signal and a ground. It doesn't matter which pin connects to ground as it simply completes the circuit:</p>
+<ul style="margin: 8px 0 14px 24px;">
+  <li>One wire → <strong>GROUND</strong></li>
+  <li>One wire → <strong>one of the white button ports</strong> on the diagram above</li>
+</ul>
+
+<div class="img-quad">
+  <img src="/assets/css/images/8d31f8_79b6677613e8464c921ec05f621a0fe0~mv2.jpg"
+       alt="Button wiring example 1" class="z"
+       onclick="openLb('/assets/css/images/8d31f8_79b6677613e8464c921ec05f621a0fe0~mv2.jpg','Button wiring 1')">
+  <img src="/assets/css/images/8d31f8_d53bef1bea084f319165629d5735e4a8~mv2.jpg"
+       alt="Button wiring example 2" class="z"
+       onclick="openLb('/assets/css/images/8d31f8_d53bef1bea084f319165629d5735e4a8~mv2.jpg','Button wiring 2')">
+  <img src="/assets/css/images/8d31f8_907a689e038642358b21c3b2c13c30e3~mv2.jpg"
+       alt="Button wiring example 3" class="z"
+       onclick="openLb('/assets/css/images/8d31f8_907a689e038642358b21c3b2c13c30e3~mv2.jpg','Button wiring 3')">
+  <img src="/assets/css/images/8d31f8_37e00e7a4eae4530be2db13d2889bd79~mv2.png"
+       alt="Button wiring example 4" class="z"
+       onclick="openLb('/assets/css/images/8d31f8_37e00e7a4eae4530be2db13d2889bd79~mv2.png','Button wiring 4')">
+</div>
+
+<img src="/assets/css/images/8d31f8_6dc30317a4484ade80f1d7dda1d4087ef000.jpg"
+     alt="KL25Z button wiring full diagram" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_6dc30317a4484ade80f1d7dda1d4087ef000.jpg','Full button wiring')">
+
+<p>Scrolling through buttons 1–24 highlights the corresponding port on the KL25Z.</p>
+
+<img src="/assets/css/images/8d31f8_3bdb011dd38d482c974d062d2caabfa6f000.jpg"
+     alt="Scrolling through outputs 1-24" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_3bdb011dd38d482c974d062d2caabfa6f000.jpg','Outputs 1-24')">
+
+<p>Scrolling through outputs 1–24 shows the corresponding port. <strong>Ports 1–9 have a slider bar</strong> — these support PWM (dimming).</p>
+
+<h2>Buttons, Inputs &amp; Toy Outputs</h2>
+
+<p>There are 4 types of useful functions on this board for virtual pinball:</p>
+
+<div class="functions">
+  <div class="fn-card">
+    <div class="num">1</div>
+    <div class="name">Button Inputs</div>
+    <p>Connect cabinet buttons (flipper, start, exit, etc.)</p>
+  </div>
+  <div class="fn-card">
+    <div class="num">2</div>
+    <div class="name">Toy Outputs</div>
+    <p>Knocker, solenoids, gear motor, strobe, beacon</p>
+  </div>
+  <div class="fn-card">
+    <div class="num">3</div>
+    <div class="name">PWM Outputs</div>
+    <p>Pulse Width Modulation — supports dimming for lights and shaker speed</p>
+  </div>
+  <div class="fn-card">
+    <div class="num">4</div>
+    <div class="name">Power Output</div>
+    <p>5V and 3.3V available for powering small devices</p>
+  </div>
+</div>
+
+<h2>KL25Z Pinout Diagram</h2>
+
+<p>The diagram below labels all the ports. Download it and use it as a reference while wiring.</p>
+
+<img src="/assets/css/images/8d31f8_8d5a02ae83434142b95788836d3f5cca~mv2.png"
+     alt="KL25Z pinout diagram for Virtual Pinball" class="z sm"
+     onclick="openLb('/assets/css/images/8d31f8_8d5a02ae83434142b95788836d3f5cca~mv2.png','KL25Z pinout diagram')">
+
+<h2>Connecting Toys</h2>
+
+<div class="warn">
+  ⚠️ <strong>WARNING:</strong> The KL25Z is very sensitive to power variation. <strong>Do NOT connect any power supply voltage to it.</strong> Only connect the <strong>ground</strong> of your devices. The board gets its 3.3V from the computer USB.<br><br>
+  A <strong>separate power booster is required</strong> for toys — the KL25Z provides a maximum of 4mA per port. Use a <a href="/glossary/">MOSFET booster board</a> or LED power booster. Buttons do NOT need a booster.
+</div>
+
+<div class="note">
+  ⚠️ Some people report issues with the <strong>red MOSFET board</strong> (no isolation between input and output). See the <a href="https://drive.google.com/file/d/1NxAcO7KDhHtE5mOSsq8OX13dn5kQKlR7/view" target="_blank">white paper by Adam Sullivan</a>. The <strong>green MOSFET board</strong> is a reliable alternative.
+</div>
+
+<img src="/assets/css/images/8d31f8_b4fc95f08956442db8ad4eee7caac198~mv2.jpg"
+     alt="12V shaker motor connected via KL25Z and MOSFET" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_b4fc95f08956442db8ad4eee7caac198~mv2.jpg','Shaker via MOSFET')">
+
+<p>Example: 12V shaker motor connected using a KL25Z and a MOSFET board. Use <strong>signal Pin #1</strong> of each MOSFET channel. There are 4 channels per board — add more boards for more devices. Use a separate board for each voltage (e.g. a dedicated board for 24V toys).</p>
+
+<img src="/assets/css/images/8d31f8_0ab8d9c0c4e84e9084e1490a75771da6~mv2.jpg"
+     alt="12V RGB light connected via KL25Z and MOSFET" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_0ab8d9c0c4e84e9084e1490a75771da6~mv2.jpg','RGB via MOSFET')">
+
+<p>Example: 12V RGB light connected using Arnoz 12V RGB + MOSFET board. For a 5-LED flash bar you need <strong>15 ports</strong> (1 per colour × 3 per RGB LED), which requires 4 MOSFET boards.</p>
+
+<h2>Testing Toy Connections</h2>
+
+<p>Use the <a href="#kl25z-pinout">KL25Z Pinout diagram</a> to find the toy output ports (purple and yellow). Test one toy at a time using the Pinscape software.</p>
+
+<img src="/assets/css/images/8d31f8_2878962df714499e9dd5fb6ae18f722b~mv2.png"
+     alt="Pinscape output section" class="z sm"
+     onclick="openLb('/assets/css/images/8d31f8_2878962df714499e9dd5fb6ae18f722b~mv2.png','Pinscape output section')">
+
+<img src="/assets/css/images/8d31f8_b9345901db7e496eb0cb167b8acdd019~mv2.png"
+     alt="Pinscape ports vs KL25Z ports" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_b9345901db7e496eb0cb167b8acdd019~mv2.png','Pinscape ports vs KL25Z')">
+
+<p>Pinscape software ports (left) mapped to KL25Z header pins (right). For example:</p>
+<ul style="margin: 8px 0 14px 24px;">
+  <li>Toy on <strong>Pin #2, Header J1</strong> → Pinscape <strong>Port No. 1</strong></li>
+  <li>Toy on <strong>Pin #4, Header J1</strong> → Pinscape <strong>Port No. 2</strong></li>
+</ul>
+
+<img src="/assets/css/images/8d31f8_293eba237e6743f9b80ad2cc3b58aebd~mv2.png"
+     alt="Port mapping diagram" class="z full"
+     onclick="openLb('/assets/css/images/8d31f8_293eba237e6743f9b80ad2cc3b58aebd~mv2.png','Port mapping')">
+
+<img src="/assets/css/images/8d31f8_41c9924055bb448e9ea1d96fbdb190aa~mv2.png"
+     alt="Test Output button in Pinscape" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_41c9924055bb448e9ea1d96fbdb190aa~mv2.png','Test Output button')">
+
+<img src="/assets/css/images/8d31f8_e140f46204f445c6986f8ecee33b1d0d~mv2.png"
+     alt="Output test screen" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_e140f46204f445c6986f8ecee33b1d0d~mv2.png','Output test screen')">
+
+<p>The Output screen lets you click <strong>ON</strong> to test each toy on its matching port. The slider bar dims lights or controls shaker motor speed.</p>
+
+<div class="warn">
+  ⚡ Once your toys are wired and tested, you need to set up <a href="/dof/">DOF (Direct Output Framework)</a> to make the tables communicate with the Pinscape and trigger force feedback during gameplay.
+</div>
+
+<h2>Alternative Controllers</h2>
+
+<p>Other devices can be used as a replacement or extension for the KL25Z:</p>
+<ul style="margin: 8px 0 14px 24px; line-height: 2;">
+  <li><strong>Rigmaster</strong> — All-in-one board using the KL25Z with extra ports</li>
+  <li><strong>KLShield</strong> — KL25Z extension board for more connections</li>
+  <li><strong>LEDWIZ</strong> — Buttons and devices solution similar to KL25Z</li>
+  <li><strong>Pinscape Oak Micros AIO</strong> — KL25Z expansion with many extra ports</li>
+</ul>
+
+<p>See the <a href="/toys/">Toys / Force Feedback</a> page for a full comparison of all controller boards.</p>
+
+---
+
+<p><strong>Related:</strong> <a href="/dof/">DOF Setup</a> · <a href="/sainsmart/">SainSmart Tutorial</a> · <a href="/toys/">Toys / Force Feedback</a> · <a href="/aled/">Addressable LEDs</a></p>
+
+</div>

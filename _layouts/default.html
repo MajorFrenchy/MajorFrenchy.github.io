@@ -18,29 +18,33 @@
       background: none;
       border: none;
       cursor: pointer;
-      font-family: inherit;
-      font-size: inherit;
-      font-weight: inherit;
-      letter-spacing: inherit;
-      color: inherit;
-      padding: 0;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      font-weight: 500;
+      color: #e0e0e0;
+      padding: 0.4rem 0.75rem;
+      border-radius: 8px;
       margin: 0;
-      line-height: inherit;
-      vertical-align: baseline;
+      line-height: 1.7;
+      transition: background 0.2s, color 0.2s;
     }
     .nav-dropdown-toggle::after {
       content: ' ▾';
       font-size: 0.75em;
+    }
+    .nav-dropdown-toggle:hover {
+      background: #e94560;
+      color: #fff;
     }
     .nav-dropdown-menu {
       display: none;
       position: absolute;
       top: calc(100% + 8px);
       left: 0;
-      background: #1a1a1a;
-      border: 1px solid #333;
-      border-radius: 6px;
-      min-width: 200px;
+      background: #16213e;
+      border: 1px solid #2a2a4a;
+      border-radius: 8px;
+      min-width: 210px;
       z-index: 999;
       box-shadow: 0 8px 24px rgba(0,0,0,0.4);
       overflow: hidden;
@@ -51,27 +55,28 @@
     }
     .nav-dropdown-menu a {
       display: block;
-      padding: 10px 16px;
-      color: #ddd;
+      padding: 0.5rem 0.75rem;
+      color: #e0e0e0;
       text-decoration: none;
-      font-size: 0.9em;
-      border-bottom: 1px solid #252525;
-      transition: background 0.15s, color 0.15s;
+      font-size: 0.875rem;
+      font-weight: 500;
+      border-bottom: 1px solid #2a2a4a;
+      transition: background 0.2s, color 0.2s;
     }
     .nav-dropdown-menu a:last-child {
       border-bottom: none;
     }
     .nav-dropdown-menu a:hover {
-      background: rgba(200,168,75,0.15);
-      color: #c8a84b;
+      background: #e94560;
+      color: #fff;
     }
-    /* Mobile — show dropdown items inline */
+    /* Mobile */
     @media (max-width: 768px) {
       .nav-dropdown-menu {
         position: static;
         box-shadow: none;
         border: none;
-        border-left: 3px solid #c8a84b;
+        border-left: 3px solid #e94560;
         border-radius: 0;
         background: transparent;
         display: none;
@@ -81,9 +86,9 @@
         display: block;
       }
       .nav-dropdown-menu a {
-        padding: 8px 12px;
+        padding: 0.5rem 0.75rem;
         border-bottom: none;
-        font-size: 0.88em;
+        font-size: 0.875rem;
       }
     }
   </style>
@@ -107,7 +112,7 @@
 
         <!-- Hardware dropdown -->
         <div class="nav-dropdown" id="hwDropdown">
-          <button class="nav-link nav-dropdown-toggle" id="hwToggle">Hardware</button>
+          <button class="nav-dropdown-toggle" id="hwToggle">Hardware</button>
           <div class="nav-dropdown-menu">
             <a href="/toys/">🔧 Toys / Force Feedback</a>
             <a href="/aled/">💡 Addressable LEDs</a>
@@ -144,13 +149,13 @@
       document.getElementById('siteNav').classList.toggle('open');
     });
 
-    // Hardware dropdown — click toggle for mobile, hover handled by CSS on desktop
+    // Hardware dropdown — click for mobile
     document.getElementById('hwToggle').addEventListener('click', function(e) {
       e.stopPropagation();
       document.getElementById('hwDropdown').classList.toggle('open');
     });
 
-    // Close dropdown when clicking outside
+    // Close when clicking outside
     document.addEventListener('click', function() {
       document.getElementById('hwDropdown').classList.remove('open');
     });

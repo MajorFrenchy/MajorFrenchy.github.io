@@ -8,13 +8,87 @@
   <link rel="stylesheet" href="{{ '/assets/css/style.css' | relative_url }}">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    /* ── Hardware dropdown ── */
+    .nav-dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .nav-dropdown-toggle {
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-family: inherit;
+      font-size: inherit;
+      color: inherit;
+      padding: 0;
+    }
+    .nav-dropdown-toggle::after {
+      content: ' ▾';
+      font-size: 0.75em;
+    }
+    .nav-dropdown-menu {
+      display: none;
+      position: absolute;
+      top: calc(100% + 8px);
+      left: 0;
+      background: #1a1a1a;
+      border: 1px solid #333;
+      border-radius: 6px;
+      min-width: 200px;
+      z-index: 999;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.4);
+      overflow: hidden;
+    }
+    .nav-dropdown:hover .nav-dropdown-menu,
+    .nav-dropdown.open .nav-dropdown-menu {
+      display: block;
+    }
+    .nav-dropdown-menu a {
+      display: block;
+      padding: 10px 16px;
+      color: #ddd;
+      text-decoration: none;
+      font-size: 0.9em;
+      border-bottom: 1px solid #252525;
+      transition: background 0.15s, color 0.15s;
+    }
+    .nav-dropdown-menu a:last-child {
+      border-bottom: none;
+    }
+    .nav-dropdown-menu a:hover {
+      background: rgba(200,168,75,0.15);
+      color: #c8a84b;
+    }
+    /* Mobile — show dropdown items inline */
+    @media (max-width: 768px) {
+      .nav-dropdown-menu {
+        position: static;
+        box-shadow: none;
+        border: none;
+        border-left: 3px solid #c8a84b;
+        border-radius: 0;
+        background: transparent;
+        display: none;
+        margin-left: 12px;
+      }
+      .nav-dropdown.open .nav-dropdown-menu {
+        display: block;
+      }
+      .nav-dropdown-menu a {
+        padding: 8px 12px;
+        border-bottom: none;
+        font-size: 0.88em;
+      }
+    }
+  </style>
 </head>
 <body>
 
   <header class="site-header">
     <div class="container header-inner">
       <a href="{{ '/' | relative_url }}" class="site-logo">
-        <img src="https://static.wixstatic.com/media/8d31f8_5ae51096cd694971a35ff477876b0fdd~mv2.png/v1/crop/x_0,y_0,w_710,h_440,q_85,enc_avif,quality_auto/8d31f8_5ae51096cd694971a35ff477876b0fdd~mv2.png" alt="Major Frenchy" height="50">
+        <img src="/assets/css/images/8d31f8_5ae51096cd694971a35ff477876b0fdd~mv2.png" alt="Major Frenchy" height="50">
       </a>
       <div class="site-brand-text">
         <span class="site-title">Major Frenchy</span>
@@ -25,6 +99,18 @@
         {% for link in site.nav_links %}
           <a href="{{ link.url | relative_url }}" class="nav-link {% if page.url == link.url %}active{% endif %}">{{ link.title }}</a>
         {% endfor %}
+
+        <!-- Hardware dropdown -->
+        <div class="nav-dropdown" id="hwDropdown">
+          <button class="nav-link nav-dropdown-toggle" id="hwToggle">Hardware</button>
+          <div class="nav-dropdown-menu">
+            <a href="/toys/">🔧 Toys / Force Feedback</a>
+            <a href="/aled/">💡 Addressable LEDs</a>
+            <a href="/sainsmart/">⚡ SainSmart</a>
+            <a href="/kl25z/">🔌 KL25Z</a>
+          </div>
+        </div>
+
       </nav>
     </div>
   </header>
@@ -48,8 +134,20 @@
   </footer>
 
   <script>
+    // Mobile nav toggle
     document.getElementById('navToggle').addEventListener('click', function() {
       document.getElementById('siteNav').classList.toggle('open');
+    });
+
+    // Hardware dropdown — click toggle for mobile, hover handled by CSS on desktop
+    document.getElementById('hwToggle').addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.getElementById('hwDropdown').classList.toggle('open');
+    });
+
+    // Close dropdown when clicking outside
+    document.addEventListener('click', function() {
+      document.getElementById('hwDropdown').classList.remove('open');
     });
   </script>
 

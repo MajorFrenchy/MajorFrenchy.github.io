@@ -1,0 +1,212 @@
+---
+layout: page
+title: SainSmart Relay Board
+permalink: /sainsmart/
+---
+
+<style>
+/* ── Lightbox ── */
+.lb-overlay {
+  display: none; position: fixed; inset: 0;
+  background: rgba(0,0,0,0.88); z-index: 9999;
+  align-items: center; justify-content: center; cursor: zoom-out;
+}
+.lb-overlay.open { display: flex; }
+.lb-overlay img {
+  max-width: 90vw; max-height: 88vh;
+  border: 3px solid #c8a84b; border-radius: 4px;
+  box-shadow: 0 0 60px rgba(0,0,0,0.8);
+}
+.lb-close {
+  position: absolute; top: 18px; right: 26px;
+  font-size: 2em; color: #fff; cursor: pointer; user-select: none;
+}
+
+/* ── Page ── */
+.ss { max-width: 900px; margin: 0 auto; }
+.ss h2 { border-bottom: 2px solid #e94560; padding-bottom: 6px; margin-top: 44px; }
+.ss h3 { color: #c8a84b; margin-top: 24px; margin-bottom: 8px; }
+
+.ss img.z {
+  border: 3px solid #c8a84b; border-radius: 4px;
+  display: block; cursor: zoom-in; transition: opacity 0.15s;
+}
+.ss img.z:hover { opacity: 0.85; }
+.ss img.full { width: 100%; max-width: 860px; margin: 14px 0; }
+.ss img.med  { max-width: 580px; width: 100%; margin: 14px 0; }
+.ss img.sm   { max-width: 340px; width: 100%; margin: 14px 0; }
+
+/* Side layout */
+.side { display: flex; gap: 24px; align-items: flex-start; margin: 18px 0; flex-wrap: wrap; }
+.side .text { flex: 1 1 280px; }
+
+/* img pair */
+.img-pair { display: flex; gap: 16px; flex-wrap: wrap; margin: 14px 0; align-items: flex-start; }
+.img-pair img { flex: 1 1 200px; max-width: 49%; }
+
+.note { border-left: 4px solid #c8a84b; padding: 10px 16px; background: rgba(200,168,75,0.07); font-size: 0.9em; margin: 14px 0; border-radius: 0 4px 4px 0; }
+.warn { border-left: 4px solid #e94560; padding: 10px 16px; background: rgba(233,69,96,0.07); font-size: 0.9em; margin: 14px 0; border-radius: 0 4px 4px 0; }
+
+/* Comparison table */
+.compare {
+  width: 100%; border-collapse: collapse; margin: 18px 0; font-size: 0.88em;
+}
+.compare th {
+  background: #0f3460; color: #fff; padding: 10px 14px;
+  text-align: left; border: 1px solid #2a2a4a;
+}
+.compare td {
+  padding: 9px 14px; border: 1px solid #2a2a4a; color: #ddd;
+}
+.compare tr:nth-child(even) td { background: #1a1a2e; }
+.compare .yes { color: #4caf50; font-weight: bold; }
+.compare .no  { color: #e94560; }
+
+/* Link buttons */
+.dl-btn {
+  display: inline-block; background: #c8a84b; color: #111;
+  padding: 7px 16px; border-radius: 4px; text-decoration: none;
+  font-weight: bold; font-size: 0.88em; margin: 4px 6px 4px 0;
+  transition: background 0.15s;
+}
+.dl-btn:hover { background: #a88830; color: #111; }
+.dl-btn.outline {
+  background: transparent; color: #c8a84b;
+  border: 2px solid #c8a84b;
+}
+.dl-btn.outline:hover { background: rgba(200,168,75,0.15); }
+
+@media (max-width: 600px) {
+  .side { flex-direction: column; }
+  .img-pair img { max-width: 100%; }
+}
+</style>
+
+<!-- Lightbox -->
+<div class="lb-overlay" id="lb" onclick="closeLb()">
+  <span class="lb-close" onclick="closeLb()">&#x2715;</span>
+  <img id="lb-img" src="" alt="">
+</div>
+<script>
+function openLb(s,a){document.getElementById('lb-img').src=s;document.getElementById('lb-img').alt=a||'';document.getElementById('lb').classList.add('open');}
+function closeLb(){document.getElementById('lb').classList.remove('open');}
+document.addEventListener('keydown',function(e){if(e.key==='Escape')closeLb();});
+</script>
+
+<div class="ss">
+
+<p><em>Click any image to enlarge it.</em></p>
+
+<div class="side">
+  <img src="/assets/css/images/8d31f8_35fb2b45fca84dc98c19c71c53d5c5b4~mv2.png"
+       alt="SainSmart relay board" class="z"
+       style="max-width:240px;"
+       onclick="openLb('/assets/css/images/8d31f8_35fb2b45fca84dc98c19c71c53d5c5b4~mv2.png','SainSmart relay board')">
+  <div class="text">
+    <p>This is an upgraded version using <strong>solid state technology</strong>. It allows you to connect up to 8 toys on your virtual pinball cabinet. This is a 5V 2A board.</p>
+    <p>For virtual pinball use, you should use the <strong>8-port version</strong> — the 16-port version is <strong>NOT supported</strong>.</p>
+    <a href="https://www.sainsmart.com/products/8-channel-5v-solid-state-relay-module" target="_blank" class="dl-btn">SainSmart Website</a>
+    <a href="http://s3.amazonaws.com/s3.image.smart/download/101-70-111/8_solid_relay.zip" target="_blank" class="dl-btn outline">⬇ Manual</a>
+  </div>
+</div>
+
+<h2>Solid State vs Mechanical</h2>
+
+<div class="side">
+  <img src="/assets/css/images/8d31f8_1638fcb1b2404c8abd4397043e238c85~mv2.png"
+       alt="Solid state vs mechanical relay" class="z"
+       style="max-width:220px;"
+       onclick="openLb('/assets/css/images/8d31f8_1638fcb1b2404c8abd4397043e238c85~mv2.png','Solid state vs mechanical')">
+  <div class="text">
+    <p>There are a few different versions of the SainSmart board: USB, Non-USB, and Solid State. Here's how they compare:</p>
+  </div>
+</div>
+
+<table class="compare">
+  <tr>
+    <th></th>
+    <th>Solid State (SSR)</th>
+    <th>Mechanical Relay</th>
+  </tr>
+  <tr>
+    <td>Max current</td>
+    <td>2A per port</td>
+    <td>10A per port</td>
+  </tr>
+  <tr>
+    <td>PWM support</td>
+    <td class="yes">✓ Yes</td>
+    <td class="no">✗ No</td>
+  </tr>
+  <tr>
+    <td>Clicking noise</td>
+    <td class="yes">✓ Silent</td>
+    <td class="no">✗ Audible click</td>
+  </tr>
+  <tr>
+    <td>Switching speed</td>
+    <td class="yes">✓ Very fast</td>
+    <td class="no">✗ Slower</td>
+  </tr>
+  <tr>
+    <td>Shock/vibration resistant</td>
+    <td class="yes">✓ Epoxy sealed</td>
+    <td class="no">✗ Mechanical parts</td>
+  </tr>
+  <tr>
+    <td>Longevity</td>
+    <td class="yes">✓ No wear parts</td>
+    <td class="no">✗ Contacts wear</td>
+  </tr>
+</table>
+
+<div class="note">
+  💡 If you have a toy requiring more than 2A, use the <strong>Mechanical relay board</strong> (up to 10A). For most toys the SSR is the better choice due to speed and silence.
+</div>
+
+<h2>Solid State Relay Board Connections</h2>
+
+<p>Here is an example of a shaker motor connected to the SainSmart relay board and to the KL25Z (<a href="/kl25z/">KL25Z Tutorial</a>).</p>
+
+<img src="/assets/css/images/8d31f8_3c94fa812e9f4db5b2e1e6df09e8e8fd~mv2.png"
+     alt="SainSmart 8-channel solid state relay board connections diagram" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_3c94fa812e9f4db5b2e1e6df09e8e8fd~mv2.png','SSR connections diagram')">
+
+<img src="/assets/css/images/8d31f8_801fc402f76b4c7393dc4d80a80b6251~mv2.png"
+     alt="Shaker motor wired to SainSmart and KL25Z" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_801fc402f76b4c7393dc4d80a80b6251~mv2.png','Shaker wired to SainSmart + KL25Z')">
+
+<p>The KL25Z has power limitations when triggering toys like a shaker motor. The signal must be amplified — in this setup, the SainSmart board acts as a booster (essentially a top-notch MOSFET board).</p>
+
+<div class="warn">
+  ⚡ After connecting all your toys to the SainSmart board, you will need to set up <a href="/dof/">DOF (Direct Output Framework)</a> to make the tables communicate with your SainSmart.
+</div>
+
+<h2>USB SainSmart Board</h2>
+
+<div class="side">
+  <img src="/assets/css/images/8d31f8_37e00214cc9c44ceb78cc5c0c5287606~mv2.png"
+       alt="SainSmart USB relay board" class="z"
+       style="max-width:260px;"
+       onclick="openLb('/assets/css/images/8d31f8_37e00214cc9c44ceb78cc5c0c5287606~mv2.png','SainSmart USB board')">
+  <div class="text">
+    <p>This is the board most people start with, and the one I used for quite some time. It's a solid solution for adding force feedback to your cabinet and much easier to set up than the solid state version above.</p>
+    <p>This amplifies the signal up to <strong>10A</strong> — meaning you'll never have issues triggering even a real pinball flipper assembly.</p>
+  </div>
+</div>
+
+<p>Here's a shaker motor connected to the SainSmart 8-port USB board:</p>
+
+<img src="/assets/css/images/8d31f8_a5495b6cb68140aa97483818bd9b969b~mv2.png"
+     alt="Shaker motor wired to SainSmart USB board" class="z med"
+     onclick="openLb('/assets/css/images/8d31f8_a5495b6cb68140aa97483818bd9b969b~mv2.png','Shaker wired to USB board')">
+
+<div class="warn">
+  ⚡ After connecting all your toys to the SainSmart board, you will need to set up <a href="/dof/">DOF (Direct Output Framework)</a> to make the tables communicate with your SainSmart.
+</div>
+
+---
+
+<p><strong>Related:</strong> <a href="/kl25z/">KL25Z Tutorial</a> · <a href="/dof/">DOF Setup</a> · <a href="/toys/">Toys / Force Feedback</a> · <a href="/aled/">Addressable LEDs</a></p>
+
+</div>

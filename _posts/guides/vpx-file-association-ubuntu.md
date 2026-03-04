@@ -7,6 +7,8 @@ Associate `.vpx` files with VPinballX BGFX and add a custom icon in the file man
 </p>
 
 ---
+<br>
+The purpose of this is to associate VPX_BGFX as your default program to open a .VPX table. Also this will allow you to add a .vpx image on your table icon. 
 
 ## Paths Used in This Guide
 

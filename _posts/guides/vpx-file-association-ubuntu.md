@@ -12,11 +12,12 @@ Associate `.vpx` files with VPinballX BGFX and add a custom icon in the file man
 
 | Item | Path |
 |------|------|
-| VPinballX BGFX | `/home/yourusername/VPX/VPinballX_BGFX` |    GOLD(0x6),/**
+| VPinballX BGFX | `/home/yourusername/VPX/VPinballX_BGFX` |    
 | Icon source | `/home/yourusername/Pictures/vpinball.png` |
 | VPX tables | `/home/yourusername/VPX/tables/` |
 
 > Replace `yourusername` with your actual Linux username (e.g. `mf`).
+<span style="color: #FFD700;">Replace `yourusername` with your actual Linux username (e.g. `mf`).</span>
 
 ---
 

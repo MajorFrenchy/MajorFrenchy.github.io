@@ -3,29 +3,36 @@
 Associate `.vpx` files with VPinballX BGFX and add a custom icon in the file manager.
 
 ---
-<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/linux-cab/Visual_Pinball_X_logo.png" 
-     width="25%"
-     alt="Screenshot">
 
-## Requirements
+## Paths Used in This Guide
 
-- VPinballX BGFX installed at `/home/mf/Downloads/VPX/VPinballX_BGFX`
-- A `vpinball.png` icon image
+| Item | Path |
+|------|------|
+| VPinballX BGFX | `/home/yourusername/VPX/VPinballX_BGFX` |
+| Icon source | `/home/yourusername/Pictures/vpinball.png` |
+| VPX tables | `/home/yourusername/VPX/tables/` |
+
+> Replace `yourusername` with your actual Linux username (e.g. `mf`).
 
 ---
 
-## Step 1 — Set Up Icon
+## Step 1 — Copy the Icon
 
 ```bash
+# Create icon directories
 mkdir -p ~/.local/share/icons/hicolor/48x48/mimetypes
-mkdir -p ~/.local/share/icons
 
-# Copy your PNG icon
-cp /path/to/vpinball.png ~/.local/share/icons/vpinball.png
-cp ~/.local/share/icons/vpinball.png ~/.local/share/icons/hicolor/48x48/mimetypes/application-x-vpinball.png
+# Copy icon to your local icons folder
+cp ~/Pictures/vpinball.png ~/.local/share/icons/vpinball.png
+
+# Copy to hicolor (fallback)
+sudo cp ~/Pictures/vpinball.png /usr/share/icons/hicolor/48x48/mimetypes/application-x-vpinball.png
+
+# Copy to Yaru (Ubuntu 24.04 default theme — required!)
+sudo cp ~/Pictures/vpinball.png /usr/share/icons/Yaru/48x48/mimetypes/application-x-vpinball.png
 ```
 
-
+> **Note:** Ubuntu 24.04 uses the **Yaru** icon theme by default. Without copying the icon there, it will not appear on `.vpx` files in the file manager even if everything else is configured correctly.
 
 ---
 
@@ -39,11 +46,14 @@ cat > ~/.local/share/mime/packages/vpinball.xml << 'EOF'
 <mime-info xmlns="http://www.freedesktop.org/standards/shared-mime-info">
   <mime-type type="application/x-vpinball">
     <comment>Visual Pinball Table</comment>
-    <icon name="vpinball"/>
+    <icon name="application-x-vpinball"/>
     <glob pattern="*.vpx"/>
   </mime-type>
 </mime-info>
 EOF
+
+# Install system-wide
+sudo cp ~/.local/share/mime/packages/vpinball.xml /usr/share/mime/packages/vpinball.xml
 ```
 
 ---
@@ -54,29 +64,49 @@ EOF
 cat > ~/.local/share/applications/vpinball.desktop << 'EOF'
 [Desktop Entry]
 Name=VPinballX BGFX
-Exec=/home/mf/Downloads/VPX/VPinballX_BGFX %f
-Icon=/home/mf/.local/share/icons/vpinball.png
+Exec=/home/yourusername/VPX/VPinballX_BGFX %f
+Icon=/home/yourusername/.local/share/icons/vpinball.png
 Type=Application
 MimeType=application/x-vpinball;
 Categories=Game;
 EOF
 ```
 
+> Remember to replace `yourusername` with your actual username.
+
 ---
 
 ## Step 4 — Set as Default & Refresh
 
 ```bash
+# Rebuild MIME database
+sudo update-mime-database /usr/share/mime
 update-mime-database ~/.local/share/mime
+
+# Rebuild icon caches
+sudo gtk-update-icon-cache /usr/share/icons/hicolor --force
+sudo gtk-update-icon-cache /usr/share/icons/Yaru --force
+
+# Update desktop database
 update-desktop-database ~/.local/share/applications
-gtk-update-icon-cache ~/.local/share/icons/hicolor
+
+# Set VPinballX as default for .vpx files
 xdg-mime default vpinball.desktop application/x-vpinball
+
+# Restart file manager
+nautilus -q && nautilus &
 ```
 
-Restart the file manager to apply changes:
+---
+
+## Verify It Worked
 
 ```bash
-nautilus -q && nautilus &
+# Should return: application/x-vpinball
+xdg-mime query filetype ~/VPX/tables/yourtable.vpx
+
+# Should show the .vpx glob
+grep "vpx" /usr/share/mime/globs2
 ```
 
 ---

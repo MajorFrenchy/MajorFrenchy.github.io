@@ -12,7 +12,7 @@ Associate `.vpx` files with VPinballX BGFX and add a custom icon in the file man
 
 | Item | Path |
 |------|------|
-| VPinballX BGFX | `/home/yourusername/VPX/VPinballX_BGFX` |
+| VPinballX BGFX | `/home/yourusername/VPX/VPinballX_BGFX` |    GOLD(0x6),/**
 | Icon source | `/home/yourusername/Pictures/vpinball.png` |
 | VPX tables | `/home/yourusername/VPX/tables/` |
 

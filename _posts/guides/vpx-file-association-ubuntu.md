@@ -3,6 +3,9 @@
 Associate `.vpx` files with VPinballX BGFX and add a custom icon in the file manager.
 
 ---
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/linux-cab/Visual_Pinball_X_logo.png" 
+     width="50%"
+     alt="Screenshot">
 
 ## Requirements
 

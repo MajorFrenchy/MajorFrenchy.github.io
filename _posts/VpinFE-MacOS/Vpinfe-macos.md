@@ -8,5 +8,6 @@ image: /Screenshots/VpinFE-MacOS/VpinFe.jpg
 I always wanted a virtual pinball cabinet that works like a Ron Popeil infomercial: "SET IT AND FORGET IT!"
 This is possible on Linux <br>
 
-![VpinFE-MacOS](/Screenshots/VPinFE.jpg)
-<img src="/Screenshots/VpinFE.jpg" alt="" width="50%"> 
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/_posts/VpinFE-MacOS/Screenshots/VPinFE.jpg" 
+     width="50%"
+     alt="Screenshot">

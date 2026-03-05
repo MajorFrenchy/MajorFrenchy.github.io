@@ -6,15 +6,12 @@ categories: [Front-end, Pinball, Mac]
 image: /Screenshots/VpinFE-MacOS/VpinFe.jpg
 ---
 
-
-
-
-
-
-
-I always wanted a virtual pinball cabinet that works like a Ron Popeil infomercial: "SET IT AND FORGET IT!"
-This is possible on Linux <br>
+This is a Cross Platform Front end for Virtual Pinball. This post is about setting it up on MacOS <br>
 
 <img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/_posts/VpinFE-MacOS/Screenshots/VPinFE.jpg" 
      width="50%"
      alt="Screenshot">
+     <br>
+
+     
+     

@@ -6,7 +6,7 @@ categories: [Software, Pinball]
 image: /Screenshots/vpx-merging-tool/vpxmt.png
 ---
 
-This is a Python tool allowing you to copy all reqired files on your Virtual Pinball Cab and extract the required files into a Standalone folder structure. 
+This tool will copy all required files from your Virtual Pinball Cab and copy the required files into a Standalone folder structure. 
 <br>
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/vpx-merging-tool/vpxmt.png" 
      style="width: 50%; height: auto;" 

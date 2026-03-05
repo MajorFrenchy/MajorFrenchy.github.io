@@ -7,4 +7,4 @@
 <a href="https://www.majorfrenchy.com/rom-lookup/">ROM LOOKUP DESKTOP</a>
 <br>
 <br>
-<a href="https://www.majorfrenchy.com/rom%20lookup_M.html">ROM LOOKUP MOBILE</a>
+<a href="https://www.majorfrenchy.com/rom-lookup/mobile/">ROM LOOKUP MOBILE</a>

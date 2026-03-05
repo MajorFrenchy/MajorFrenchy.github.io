@@ -108,7 +108,18 @@
       <button class="nav-toggle" id="navToggle">☰</button>
       <nav class="site-nav" id="siteNav">
         {% for link in site.nav_links %}
-          <a href="{{ link.url | relative_url }}" class="nav-link {% if page.url == link.url %}active{% endif %}">{{ link.title }}</a>
+          {% if link.title == "Software" %}
+            <div class="nav-dropdown" id="swDropdown">
+              <button class="nav-dropdown-toggle" id="swToggle">Software</button>
+              <div class="nav-dropdown-menu">
+                <a href="{{ link.url | relative_url }}">🧰 Software Home</a>
+                <a href="/rom-lookup/">🎯 ROM Lookup</a>
+                <a href="/rom-lookup/mobile/">📱 ROM Lookup Mobile</a>
+              </div>
+            </div>
+          {% else %}
+            <a href="{{ link.url | relative_url }}" class="nav-link {% if page.url == link.url %}active{% endif %}">{{ link.title }}</a>
+          {% endif %}
         {% endfor %}
 
         <!-- Hardware dropdown -->
@@ -156,9 +167,16 @@
       document.getElementById('hwDropdown').classList.toggle('open');
     });
 
+    // Software dropdown — click for mobile
+    document.getElementById('swToggle').addEventListener('click', function(e) {
+      e.stopPropagation();
+      document.getElementById('swDropdown').classList.toggle('open');
+    });
+
     // Close when clicking outside
     document.addEventListener('click', function() {
       document.getElementById('hwDropdown').classList.remove('open');
+      document.getElementById('swDropdown').classList.remove('open');
     });
   </script>
 

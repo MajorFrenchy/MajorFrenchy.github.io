@@ -5,7 +5,7 @@ date: 2026-02-20
 categories: [Software, Pinball]
 image: /Screenshots/vpx-merging-tool/vpxmt.png
 ---
-VPXmerge streamlines your VPX table collection by automating exports, script fixes, media organization, and asset detection — to a VPX standalone supported folder structure
+VPXmerge streamlines your VPX table collection by automating exports, script fixes, media organization, and asset detection — to a VPX standalone supported folder structure<br>
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/vpx-merging-tool/vpxmt.png" 
      style="width: 50%; height: auto;" 
      alt="VPX Merging Tool">

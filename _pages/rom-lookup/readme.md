@@ -4,7 +4,7 @@
      width="50%"
      alt="Screenshot">
 
-<a href="https://majorfrenchy.github.io/rom-lookup/rom-lookup.html">ROM LOOKUP DESKTOP</a>
+<a href="https://www.majorfrenchy.com/rom-lookup/">ROM LOOKUP DESKTOP</a>
 <br>
 <br>
-<a href="https://majorfrenchy.github.io/rom-lookup/rom%20lookup_M.html">ROM LOOKUP MOBILE</a>
+<a href="https://www.majorfrenchy.com/rom%20lookup_M.html">ROM LOOKUP MOBILE</a>

@@ -36,7 +36,7 @@ permalink: /rom-lookup/
   td { padding: 9px 16px; }
   td.name { color: #e6edf3; font-weight: 500; white-space: nowrap; }
   td.combined { color: #8b949e; font-size: 0.78rem; max-width: 300px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-  td.rom { font-family: 'Consolas', 'Courier New', monospace; color: #3fb950; font-size: 0.82rem; white-space: nowrap; }
+  td.rom { font-family: 'Consolas', 'Courier New', monospace; color: #f7d24c; font-size: 0.82rem; white-space: nowrap; }
   td.rom.em { color: #484f58; font-style: italic; }
   td.manuf { color: #8b949e; white-space: nowrap; }
   td.year { color: #8b949e; text-align: center; white-space: nowrap; }
@@ -56,7 +56,7 @@ permalink: /rom-lookup/
   .modal-title { font-size: 1.1rem; font-weight: 700; color: #e6edf3; margin-bottom: 4px; padding-right: 40px; }
   .modal-meta { font-size: 0.8rem; color: #8b949e; margin-bottom: 16px; }
   .modal-meta span { margin-right: 12px; }
-  .modal-meta .rom-tag { font-family: monospace; color: #3fb950; background: #1a2d1a; padding: 1px 6px; border-radius: 3px; }
+  .modal-meta .rom-tag { font-family: monospace; color: #f7d24c; background: #2d2614; padding: 1px 6px; border-radius: 3px; }
   .img-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 12px; }
   .img-card { background: #0d1117; border: 1px solid #21262d; border-radius: 8px; overflow: hidden; }
   .img-card-label { font-size: 0.7rem; color: #8b949e; text-transform: uppercase; letter-spacing: 0.05em; padding: 6px 10px; border-bottom: 1px solid #21262d; }
@@ -224,7 +224,7 @@ function render(q) {
   tbody.innerHTML = filtered.map((r, idx) => {
     const romClass = r.rom ? 'rom' : 'rom em';
     const romDisplay = r.rom ? escHtml(r.rom) : 'EM / No ROM';
-    const romBracket = r.rom ? ` <span style="color:#3fb950;font-size:0.78rem;font-weight:400">(${escHtml(r.rom)})</span>` : '';
+    const romBracket = r.rom ? ` <span style="color:#f7d24c;font-size:0.78rem;font-weight:400">(${escHtml(r.rom)})</span>` : '';
     const links = `<div style="display:flex;gap:6px;align-items:center">${r.gameId ? previewBtn(idx) : ''}${vpsLink(r.gameId)}</div>`;
     return `<tr>
       <td class="name">${escHtml(r.name)}${romBracket}</td>

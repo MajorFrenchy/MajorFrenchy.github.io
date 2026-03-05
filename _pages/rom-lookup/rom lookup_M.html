@@ -30,7 +30,7 @@ permalink: /rom-lookup/mobile/
   .card { padding: 14px 16px; border-bottom: 1px solid #21262d; }
   .card-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 8px; margin-bottom: 6px; }
   .card-name { font-size: 0.95rem; font-weight: 600; color: #e6edf3; flex: 1; }
-  .card-rom { font-family: 'Courier New', monospace; font-size: 0.9rem; color: #3fb950; background: #1a2332; display: inline-block; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; }
+  .card-rom { font-family: 'Courier New', monospace; font-size: 0.9rem; color: #f7d24c; background: #1a2332; display: inline-block; padding: 3px 8px; border-radius: 4px; margin-bottom: 8px; }
   .card-rom.em { color: #484f58; background: #161b22; font-style: italic; }
   .card-meta { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; margin-bottom: 10px; }
   .meta-item { font-size: 0.75rem; color: #8b949e; }
@@ -56,7 +56,7 @@ permalink: /rom-lookup/mobile/
   .drawer-handle { width: 36px; height: 4px; background: #30363d; border-radius: 2px; margin: 0 auto 16px; }
   .drawer-title { font-size: 1rem; font-weight: 700; color: #e6edf3; margin-bottom: 4px; }
   .drawer-meta { font-size: 0.78rem; color: #8b949e; margin-bottom: 14px; }
-  .drawer-meta .rom-tag { font-family: monospace; color: #3fb950; background: #1a2d1a; padding: 1px 5px; border-radius: 3px; }
+  .drawer-meta .rom-tag { font-family: monospace; color: #f7d24c; background: #2d2614; padding: 1px 5px; border-radius: 3px; }
   .img-scroll { display: flex; gap: 10px; overflow-x: auto; padding-bottom: 8px; scrollbar-width: none; margin-bottom: 14px; }
   .img-scroll::-webkit-scrollbar { display: none; }
   .img-card { flex-shrink: 0; width: 200px; background: #0d1117; border: 1px solid #21262d; border-radius: 8px; overflow: hidden; }
@@ -182,7 +182,7 @@ function applyFilters() {
   results.innerHTML = currentFiltered.map((r, idx) => {
     const romClass = r.rom ? 'card-rom' : 'card-rom em';
     const romText = r.rom ? escHtml(r.rom) : 'EM / No ROM';
-    const romBracket = r.rom ? ` <span style="color:#3fb950;font-size:0.78rem;font-weight:400">(${escHtml(r.rom)})</span>` : '';
+    const romBracket = r.rom ? ` <span style="color:#f7d24c;font-size:0.78rem;font-weight:400">(${escHtml(r.rom)})</span>` : '';
     const previewBtnHtml = r.gameId ? `<button class="preview-btn" onclick="openPreview(${idx})"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.5"/><polyline points="21 15 16 10 5 21"/></svg>Preview</button>` : '';
     const vpsHtml = r.gameId ? `<a class="vps-link" href="https://virtualpinballspreadsheet.github.io/tables?game=${r.gameId}" target="_blank" rel="noopener"><svg width="11" height="11" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>VPS</a>` : '';
     return `<div class="card">

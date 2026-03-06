@@ -24,6 +24,6 @@ This Front end is running using a self contained version og Python using a Chrom
      alt="Screenshot"><bt>
 
 - Running the software for the 1st time will trigger a security warning. Go to your System Settings / Privacy and security and allow it to run. <br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-security.jpg" 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-privacy.jpg" 
      width="75%"
      alt="Screenshot">

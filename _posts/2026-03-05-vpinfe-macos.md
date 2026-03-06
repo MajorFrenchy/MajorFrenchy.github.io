@@ -8,5 +8,5 @@ image: /Screenshots/VpinFE/VPinFE.jpg
 
 This is a Cross Platform Front end for Virtual Pinball. This post is about setting it up on MacOS <br>
 
-<img src="/Screenshots/VpinFE/VPinFE.jpg" width="50%" alt="Screenshot">
+[![Watch the video](https://img.youtube.com/vi/YD4eZIqHypw/maxresdefault.jpg)](https://www.youtube.com/watch?v=YD4eZIqHypw)
 <br>

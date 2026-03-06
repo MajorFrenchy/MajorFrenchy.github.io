@@ -15,7 +15,8 @@ This is a Cross Platform Front end for Virtual Pinball. This post is about setti
 This Front end is running using a self contained version og Python using a Chromium browser. 
 
 - Download the software. <a href="https://github.com/superhac/vpinfe/actions">VPinFE Runs</a> ( You must log in to Github ) <br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/download.jpg" 
+
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-download.jpg" 
      width="75%"
      alt="Screenshot"><br>
 - Inatall the programn by dragging the icon to the Application folder.

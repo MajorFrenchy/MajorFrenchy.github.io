@@ -31,4 +31,20 @@ This Front end is running using a self contained version og Python using a Chrom
      width="75%"
      alt="Screenshot">
      <br>
-- 
+- The 1st think you will need to do is to set your monitors in the settings menu <br>
+
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-monitors.jpg" 
+     width="75%"
+     alt="Screenshot"><br>
+
+- Set the path for your VPX Standalone location / Tables / VPinbsallX.ini
+The default folders for those are as follow:
+
+Paths:
+vpxbinpath = /Applications/VPinballX_BGFX.app/Contents/MacOS/VPinballX_BGFX
+tablerootdir = /Users/YOURUSERNAME/Desktop/vpinball/
+vpxinipath = /Users/YOURUSERNAME/Library/Application Support/VPinballX/10.8/VPinballX.ini 
+<br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-settings.jpg" 
+     width="75%"
+     alt="Screenshot"><br>

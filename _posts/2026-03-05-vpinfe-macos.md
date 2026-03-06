@@ -58,7 +58,7 @@ vpxinipath = /Users/YOURUSERNAME/Library/Application Support/VPinballX/10.8/VPin
 - Cab Theme
 
 <br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-cab.jpg" 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE cab.jpg" 
      width="75%"
      alt="Screenshot"><br><br><br>
      
@@ -66,7 +66,7 @@ vpxinipath = /Users/YOURUSERNAME/Library/Application Support/VPinballX/10.8/VPin
      
 - Tables
 <br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-tables.jpg" 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Tables.jpg" 
      width="75%"
      alt="Screenshot"><br><br><br>
 

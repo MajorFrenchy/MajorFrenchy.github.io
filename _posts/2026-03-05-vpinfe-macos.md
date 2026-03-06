@@ -40,7 +40,7 @@ This Front end is running using a self contained version og Python using a Chrom
 - Set the path for your VPX Standalone location / Tables / VPinbsallX.ini
 The default folders for those are as follow:
 
-Paths:<br>
+<br>
 vpxbinpath = /Applications/VPinballX_BGFX.app/Contents/MacOS/VPinballX_BGFX <br><br>
 tablerootdir = /Users/YOURUSERNAME/Desktop/vpinball/ <br><br>
 vpxinipath = /Users/YOURUSERNAME/Library/Application Support/VPinballX/10.8/VPinballX.ini <br><br>

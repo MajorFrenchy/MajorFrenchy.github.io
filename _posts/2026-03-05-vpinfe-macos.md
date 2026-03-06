@@ -72,3 +72,9 @@ vpxinipath = /Users/YOURUSERNAME/Library/Application Support/VPinballX/10.8/VPin
      width="75%"
      alt="Screenshot"><br><br><br>
 
+<br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpx.jpg" 
+     width="75%"
+     alt="Screenshot"><br><br><br>
+
+

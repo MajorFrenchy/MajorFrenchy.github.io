@@ -24,18 +24,18 @@ This Front end is running using a self contained version og Python using a Chrom
 
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-app.jpg" 
      width="75%"
-     alt="Screenshot"><br>
+     alt="Screenshot"><br><br><br>
 
 - Running the software for the 1st time will trigger a security warning. Go to your System Settings / Privacy and security and allow it to run. <br><br>
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-privacy.jpg" 
      width="75%"
      alt="Screenshot">
-     <br>
+     <br><br><br>
 - The 1st think you will need to do is to set your monitors in the settings menu <br><br>
 
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-monitors.jpg" 
      width="75%"
-     alt="Screenshot"><br><br>
+     alt="Screenshot"><br><br><br>
 
 - Set the path for your VPX Standalone location / Tables / VPinbsallX.ini
 The default folders for those are as follow:
@@ -47,4 +47,26 @@ vpxinipath = /Users/YOURUSERNAME/Library/Application Support/VPinballX/10.8/VPin
 <br>
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-settings.jpg" 
      width="75%"
-     alt="Screenshot"><br><br>
+     alt="Screenshot"><br><br><br>
+
+- Pick a theme by activating it. 
+<br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-theme.jpg" 
+     width="75%"
+     alt="Screenshot"><br><br><br>
+
+- Cab Theme
+
+<br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-cab.jpg" 
+     width="75%"
+     alt="Screenshot"><br><br><br>
+     
+
+     
+- Tables
+<br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-tables.jpg" 
+     width="75%"
+     alt="Screenshot"><br><br><br>
+

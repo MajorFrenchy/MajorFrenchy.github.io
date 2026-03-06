@@ -18,5 +18,5 @@ This Front end is running using a self contained version og Python using a Chrom
 
 - Inatall the programn by dragging the icon to the Application folder.
 
-![VPinFE MacOS](./_posts/Screenshots/VPinFE-MacOS/VPinFE.jpg)
+![VPinFE MacOS](./Screenshots/VPinFE-MacOS/VPinFE.jpg)
 

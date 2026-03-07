@@ -13,9 +13,9 @@ This is a Cross Platform Front end for Virtual Pinball. This post is about setti
        alt="Watch the video" 
        style="width: 70%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
 </a>
-<div align="center">
+
   <h1>Youtube Video Tutorial</h1>
-</div>
+
 
 
 This Front end is running using a self contained version og Python using a Chromium browser. 

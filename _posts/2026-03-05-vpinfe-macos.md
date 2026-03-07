@@ -8,10 +8,16 @@ image: /Screenshots/VpinFE/VPinFE.jpg
 
 This is a Cross Platform Front end for Virtual Pinball. This post is about setting it up on MacOS <br>
 
-[![Watch the video](https://img.youtube.com/vi/YD4eZIqHypw/maxresdefault.jpg)](https://www.youtube.com/watch?v=YD4eZIqHypw)
+[![Watch the video](https://img.youtube.com/vi/YD4eZIqHypw/maxresdefault.jpg)](https://www.youtube.com/watch?v=)
 <div align="center">
   <h1>Youtube Video Tutorial</h1>
 </div>
+
+<a href="https://www.youtube.com/watch?v=YD4eZIqHypw">
+  <img src="https://img.youtube.com/vi/YD4eZIqHypw/hqdefault.jpg" 
+       alt="Watch the video" 
+       style="width: 50%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
+</a>
 
 
 This Front end is running using a self contained version og Python using a Chromium browser. 

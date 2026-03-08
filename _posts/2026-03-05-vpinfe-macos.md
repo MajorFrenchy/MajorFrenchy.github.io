@@ -6,7 +6,7 @@ categories: [Front-end, Pinball, Mac]
 image: /Screenshots/VpinFE/VPinFE.jpg
 ---
 
-This is a Cross Platform Front end for Virtual Pinball. This post is about setting it up on MacOS <br>
+This is a Cross-Platform Front End for Virtual Pinball. This post is about setting it up on MacOS <br>
 
 <a href="https://www.youtube.com/watch?v=YD4eZIqHypw">
   <img src="https://img.youtube.com/vi/YD4eZIqHypw/hqdefault.jpg" 
@@ -18,14 +18,14 @@ This is a Cross Platform Front end for Virtual Pinball. This post is about setti
 
 
 
-This Front end is running using a self contained version og Python using a Chromium browser. 
+This Front end is running using a self contained version of Python using a Chromium browser. 
 
 - Download the software. <a href="https://github.com/superhac/vpinfe/actions">VPinFE Runs</a> ( You must log in to Github ) <br><br>
 
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-download.jpg" 
      width="75%"
      alt="Screenshot"><br><br>
-- Install the programn by dragging the icon to the Application folder.
+- Install the program by dragging the icon to the Application folder.
 
 
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-app.jpg" 
@@ -37,6 +37,13 @@ This Front end is running using a self contained version og Python using a Chrom
      width="75%"
      alt="Screenshot">
      <br><br><br>
+
+If you want to access the setting screen, you can access it by typing 127.0.0.1:8001
+- Running the software for the 1st time will trigger a security warning. Go to your System Settings / Privacy and security and allow it to run. <br><br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-url.jpg" 
+     width="75%"
+     alt="Screenshot">
+     
 - The 1st think you will need to do is to set your monitors in the settings menu <br><br>
 
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-monitors.jpg" 

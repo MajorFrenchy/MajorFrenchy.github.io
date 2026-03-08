@@ -94,18 +94,9 @@ vpxinipath = /Users/YOURUSERNAME/Library/Application Support/VPinballX/10.8/VPin
 <h1>Adding tables</h1>
 
 in order to run the software properly, you need to have your VPX table in a standalone structure <br>
-Table Folder Name (Manufacturer Year)/<br>
-├── TableName.vpx>br>
-├── TableName.info>br>
-└── medias/>br>
-    ├── bg.png
-    ├── dmd.png
-    ├── table.png (or fss.png)
-    ├── wheel.png
-    ├── cab.png
-    ├── flyer.png
-    ├── realdmd.png
-    ├── realdmd-color.png
-    └── audio.mp3
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-folderstructure.jpg" 
+     width="75%"
+     alt="Screenshot">
+     <br><br><br>
 
 

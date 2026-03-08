@@ -104,7 +104,7 @@ in order to run the software properly, you need to have your VPX table in a stan
 
 In the Manager UI click on tables Unmatched button to add it to your library<br>
 
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-unmatched.jpg.jpg" 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-unmatched.jpg" 
      width="75%"
      alt="Screenshot"><br><br><br>
 

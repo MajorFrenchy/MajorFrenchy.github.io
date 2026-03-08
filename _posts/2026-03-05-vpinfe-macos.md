@@ -100,7 +100,6 @@ in order to run the software properly, you need to have your VPX table in a stan
      <br><br><br>
 
   You need to add your tables Directory in the folder you set in tablerootdir = /Users/YOURUSERNAME/Desktop/vpinball/ <br><br>
-  Click SCAN TABLRS
 
 In the Manager UI click on tables Unmatched button to add it to your library<br>
 
@@ -111,9 +110,14 @@ In the Manager UI click on tables Unmatched button to add it to your library<br>
 This will bring you the the matching menu.  <br>
 *** Your table has to be associated to the VirtualPinballSpreadsheet Table ID in order for VPinFE to download the proper media. <br> <br>
 
-You will see a use my own media button. use this is you already have media for the table you want to associate. 
+You will see a "use my own media" button. use this if you already have media for the table you want to associate. 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VpinFE-mymedia.jpg" 
+     width="75%"
+     alt="Screenshot">
+     <br><br><br>
+Then see if your table is matching against the VPS database. Remove characters until you get a match and select Associate
+<br>
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VpinFE-associate.jpg" 
      width="75%"
      alt="Screenshot">
      <br><br><br>
-Then see if your table is matching against the VPS database. It is name matching , remove characters until you get a match and select Associalte

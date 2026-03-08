@@ -39,11 +39,13 @@ This Front end is running using a self contained version of Python using a Chrom
      <br><br><br>
 
 If you want to access the setting screen, you can access it by typing 127.0.0.1:8001
-- Running the software for the 1st time will trigger a security warning. Go to your System Settings / Privacy and security and allow it to run. <br><br>
+
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-url.jpg" 
      width="75%"
      alt="Screenshot">
-     
+    <br><br>
+ 
+    
 - The 1st think you will need to do is to set your monitors in the settings menu <br><br>
 
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-monitors.jpg" 

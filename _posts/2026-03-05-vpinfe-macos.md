@@ -46,7 +46,7 @@ If you want to access the setting screen, you can access it by typing 127.0.0.1:
     <br><br>
  
     
-- The 1st think you will need to do is to set your monitors in the settings menu <br><br>
+- The 1st time, you will need to set your monitors in the settings menu <br><br>
 
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-monitors.jpg" 
      width="75%"

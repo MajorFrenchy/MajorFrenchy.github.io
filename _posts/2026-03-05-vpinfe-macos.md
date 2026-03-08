@@ -112,7 +112,7 @@ This will bring you the the matching menu.  <br>
 *** Your table has to be associated to the VirtualPinballSpreadsheet Table ID in order for VPinFE to download the proper media. <br> <br>
 
 You will see a use my own media button. use this is you already have media for the table you want to associate. 
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-associate.jpg" 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VpinFE-associate.jpg" 
      width="75%"
      alt="Screenshot">
      <br><br><br>

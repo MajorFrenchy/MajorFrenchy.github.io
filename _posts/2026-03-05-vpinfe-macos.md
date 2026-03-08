@@ -38,7 +38,8 @@ This Front end is running using a self contained version of Python using a Chrom
      alt="Screenshot">
      <br><br><br>
 
-If you want to access the setting screen, you can access it by typing 127.0.0.1:8001
+If you want to access the setting screen, you can access it by typing 127.0.0.1:8001<vr>
+If it is on a different device, you will need your VpinFE computer IP address and type it IE: 192.168.1.113:8001
 
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-url.jpg" 
      width="75%"
@@ -89,5 +90,22 @@ vpxinipath = /Users/YOURUSERNAME/Library/Application Support/VPinballX/10.8/VPin
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpx.jpg" 
      width="75%"
      alt="Screenshot"><br><br><br>
+
+<h1>Adding tables</h1>
+
+in order to run the software properly, you need to have your VPX table in a standalone structure <br>
+Table Folder Name (Manufacturer Year)/
+├── TableName.vpx
+├── TableName.info
+└── medias/
+    ├── bg.png
+    ├── dmd.png
+    ├── table.png (or fss.png)
+    ├── wheel.png
+    ├── cab.png
+    ├── flyer.png
+    ├── realdmd.png
+    ├── realdmd-color.png
+    └── audio.mp3
 
 

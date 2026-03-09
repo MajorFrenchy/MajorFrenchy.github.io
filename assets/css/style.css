@@ -316,10 +316,17 @@ a:hover { color: var(--accent); }
   padding: 0.75rem;
 }
 
+.post-content .remote-gallery-link {
+  display: inline-block;
+  max-width: 260px;
+}
+
 .post-content .remote-gallery img {
   width: 100%;
+  max-width: 260px;
   border-radius: 8px;
   border: 1px solid var(--border);
+  cursor: zoom-in;
 }
 
 @media (max-width: 768px) {
@@ -328,6 +335,11 @@ a:hover { color: var(--accent); }
     display: block;
     width: 100%;
     box-sizing: border-box;
+  }
+
+  .post-content .remote-gallery-link,
+  .post-content .remote-gallery img {
+    max-width: 220px;
   }
 }
 

@@ -126,6 +126,8 @@ The Remote page includes 4 modes:
 ## Remote Gallery
 {: #remote-gallery }
 
+Click any preview to open the full-size image.
+
 <table class="remote-gallery">
   <thead>
     <tr>
@@ -136,10 +138,14 @@ The Remote page includes 4 modes:
   <tbody>
     <tr>
       <td>
-        <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" alt="VPinFE remote control" />
+        <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" target="_blank" rel="noopener noreferrer" class="remote-gallery-link">
+          <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" alt="VPinFE remote control" />
+        </a>
       </td>
       <td>
-        <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxrom.jpg" alt="PinMAME and VPX ROM controls" />
+        <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxrom.jpg" target="_blank" rel="noopener noreferrer" class="remote-gallery-link">
+          <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxrom.jpg" alt="PinMAME and VPX ROM controls" />
+        </a>
       </td>
     </tr>
     <tr>
@@ -148,10 +154,14 @@ The Remote page includes 4 modes:
     </tr>
     <tr>
       <td>
-        <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxmaintenance.jpg" alt="VPX maintenance controls" />
+        <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxmaintenance.jpg" target="_blank" rel="noopener noreferrer" class="remote-gallery-link">
+          <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxmaintenance.jpg" alt="VPX maintenance controls" />
+        </a>
       </td>
       <td>
-        <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Romcontrol.png" alt="ROM control screen" />
+        <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Romcontrol.png" target="_blank" rel="noopener noreferrer" class="remote-gallery-link">
+          <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Romcontrol.png" alt="ROM control screen" />
+        </a>
       </td>
     </tr>
   </tbody>

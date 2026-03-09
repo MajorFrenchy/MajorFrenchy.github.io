@@ -9,6 +9,7 @@ image: /Screenshots/VpinFE/VPinFE.jpg
 This is a cross-platform front end for Virtual Pinball. This guide covers setup on macOS.
 
 [![Watch the video](https://img.youtube.com/vi/YD4eZIqHypw/hqdefault.jpg)](https://www.youtube.com/watch?v=YD4eZIqHypw)
+# youtube-video-tutorial <br>
 
 ## Table of Contents
 
@@ -21,8 +22,7 @@ This is a cross-platform front end for Virtual Pinball. This guide covers setup 
 7. [Remote](#remote)
 8. [Remote Gallery](#remote-gallery)
 
-# YouTube Video Tutorial
-{: #youtube-video-tutorial }
+
 
 VPinFE runs with a self-contained Python runtime and Chromium browser.
 

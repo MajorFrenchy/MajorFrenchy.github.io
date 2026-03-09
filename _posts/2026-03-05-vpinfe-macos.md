@@ -9,21 +9,21 @@ image: /Screenshots/VpinFE/VPinFE.jpg
 This is a cross-platform front end for Virtual Pinball. This guide covers setup on macOS.
 
 [![Watch the video](https://img.youtube.com/vi/YD4eZIqHypw/hqdefault.jpg)](https://www.youtube.com/watch?v=YD4eZIqHypw)
-# youtube-video-tutorial <br>
+## youtube-video-tutorial <br>
 
 <br>
 <br>
 A frontend for vpinball with the following features:
 <br>
-Works on Linux, Windows, and Mac (Windows must use Standalone dir structure)<br>
-Multiscreen - Supports up to 3 screens (Backglass, DMD, and Table)<br>
-Keyboard & Joystick support<br>
-Table and Media Manager (Auto download art via VPinMediaDB)<br>
-Build custom table collections (VPS ID-based and filter-based)<br>
-Automatic vpx patching for Linux & Mac<br>
-Fully customizable UI theming using HTML, JS and CSS<br>
-JSON-based table metadata with VPX file parsing and feature detection<br>
-Mobile transfer support for VPinball on Android and iOS (Web Send & VPXZ Download)<br>
+- Works on Linux, Windows, and Mac (Windows must use Standalone dir structure)<br>
+- Multiscreen - Supports up to 3 screens (Backglass, DMD, and Table)<br>
+- Keyboard & Joystick support<br>
+- Table and Media Manager (Auto download art via VPinMediaDB)<br>
+- Build custom table collections (VPS ID-based and filter-based)<br>
+- Automatic vpx patching for Linux & Mac<br>
+- Fully customizable UI theming using HTML, JS and CSS<br>
+- JSON-based table metadata with VPX file parsing and feature detection<br>
+- Mobile transfer support for VPinball on Android and iOS (Web Send & VPXZ Download)<br>
 
 ## Table of Contents
 

@@ -20,7 +20,7 @@ This is a cross-platform front end for Virtual Pinball. This guide covers setup 
 5. [Initial Setup](#initial-setup)
 6. [Adding Tables](#adding-tables)
 7. [Remote](#remote)
-8. [Remote Gallery](#remote-gallery)
+
 
 
 

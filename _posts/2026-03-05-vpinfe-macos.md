@@ -121,3 +121,8 @@ Then see if your table is matching against the VPS database. Remove characters u
      width="75%"
      alt="Screenshot">
      <br><br><br>
+
+Once you associate , it will do the following: <br>
+- Make the entry and add it in your table list <br>
+- Download media <br>
+- 

@@ -129,24 +129,24 @@ The Remote page includes 4 modes:
 <table>
   <tr>
     <td align="center">
-      <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" target="_blank" rel="noopener noreferrer">
+      <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" class="zoomable-photo">
         <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" width="300" alt="VPinFE remote control" />
       </a><br/>VPinFE Control
     </td>
     <td align="center">
-      <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxrom.jpg" target="_blank" rel="noopener noreferrer">
+      <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxrom.jpg" class="zoomable-photo">
         <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxrom.jpg" width="300" alt="PinMAME and VPX ROM controls" />
       </a><br/>PinMAME / VPX ROM
     </td>
   </tr>
   <tr>
     <td align="center">
-      <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxmaintenance.jpg" target="_blank" rel="noopener noreferrer">
+      <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxmaintenance.jpg" class="zoomable-photo">
         <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxmaintenance.jpg" width="300" alt="VPX maintenance controls" />
       </a><br/>VPX Maintenance
     </td>
     <td align="center">
-      <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Romcontrol.png" target="_blank" rel="noopener noreferrer">
+      <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Romcontrol.png" class="zoomable-photo">
         <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Romcontrol.png" width="300" alt="ROM control screen" />
       </a><br/>ROM Control
     </td>

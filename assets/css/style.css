@@ -27,6 +27,8 @@ body {
   flex-direction: column;
 }
 
+body.no-scroll { overflow: hidden; }
+
 a { color: var(--accent2); text-decoration: none; }
 a:hover { color: var(--accent); }
 
@@ -433,3 +435,43 @@ a:hover { color: var(--accent); }
   font-weight: bold;
   font-size: 18px;
 }
+
+/* ── IMAGE LIGHTBOX ── */
+.image-lightbox {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.88);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+  z-index: 2000;
+}
+
+.image-lightbox.open { display: flex; }
+
+.image-lightbox-img {
+  max-width: min(1200px, 95vw);
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
+}
+
+.image-lightbox-close {
+  position: absolute;
+  top: 0.75rem;
+  right: 1rem;
+  width: 44px;
+  height: 44px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: rgba(22, 33, 62, 0.95);
+  color: #fff;
+  font-size: 1.8rem;
+  line-height: 1;
+  cursor: pointer;
+}
+
+a.zoomable-photo img { cursor: zoom-in; }

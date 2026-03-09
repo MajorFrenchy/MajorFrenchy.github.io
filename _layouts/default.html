@@ -143,6 +143,11 @@
     </div>
   </main>
 
+  <div id="imageLightbox" class="image-lightbox" aria-hidden="true">
+    <button id="imageLightboxClose" class="image-lightbox-close" aria-label="Close image viewer">×</button>
+    <img id="imageLightboxImg" class="image-lightbox-img" src="" alt="Zoomed image" />
+  </div>
+
   <footer class="site-footer">
     <div class="container footer-inner">
       <p>© 2023 by Major Frenchy. All rights reserved.</p>
@@ -177,6 +182,46 @@
     document.addEventListener('click', function() {
       document.getElementById('hwDropdown').classList.remove('open');
       document.getElementById('swDropdown').classList.remove('open');
+    });
+
+    // Image lightbox (for links with class "zoomable-photo")
+    const lightbox = document.getElementById('imageLightbox');
+    const lightboxImg = document.getElementById('imageLightboxImg');
+    const lightboxClose = document.getElementById('imageLightboxClose');
+
+    function openLightbox(src, alt) {
+      lightboxImg.src = src;
+      lightboxImg.alt = alt || 'Zoomed image';
+      lightbox.classList.add('open');
+      lightbox.setAttribute('aria-hidden', 'false');
+      document.body.classList.add('no-scroll');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('open');
+      lightbox.setAttribute('aria-hidden', 'true');
+      lightboxImg.src = '';
+      document.body.classList.remove('no-scroll');
+    }
+
+    document.addEventListener('click', function(e) {
+      const zoomLink = e.target.closest('a.zoomable-photo');
+      if (zoomLink) {
+        e.preventDefault();
+        const img = zoomLink.querySelector('img');
+        openLightbox(zoomLink.href, img ? img.alt : 'Zoomed image');
+        return;
+      }
+
+      if (e.target === lightbox || e.target === lightboxClose) {
+        closeLightbox();
+      }
+    });
+
+    document.addEventListener('keydown', function(e) {
+      if (e.key === 'Escape' && lightbox.classList.contains('open')) {
+        closeLightbox();
+      }
     });
   </script>
 

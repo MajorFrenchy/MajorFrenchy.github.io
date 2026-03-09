@@ -300,6 +300,12 @@ a:hover { color: var(--accent); }
 .post-content h2 { color: var(--accent2); margin: 1.5rem 0 0.5rem; }
 .post-content iframe { max-width: 100%; margin: 1rem 0; }
 .post-content img { max-width: 100%; height: auto; }
+.post-content img,
+.page-content img,
+.post-card img {
+  border: 2px solid #ffffff;
+  border-radius: 8px;
+}
 .post-back { margin-top: 2rem; }
 
 /* ── QUICK LINKS (homepage) ── */
@@ -455,6 +461,7 @@ a:hover { color: var(--accent); }
   max-height: 90vh;
   width: auto;
   height: auto;
+  border: none;
   border-radius: 10px;
   box-shadow: 0 12px 36px rgba(0, 0, 0, 0.45);
 }

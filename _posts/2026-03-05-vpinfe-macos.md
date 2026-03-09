@@ -132,4 +132,34 @@ Once you associate , it will do the following: <br>
 - Download media <br>
 - Create a .info file <br>
 
+<br>
+<h1>Remote</h1>
 
+<br>
+Remote is a feature allowing to control the Front end using another computer, a tablet or a phone. 
+<br> 
+The Remote has 4 modes<br>
+- Vpinfe   --- Restart Vpinfe / reboot or shutdown the computer. <br>
+- PinMAME  --- Set the Roms menu options ( such as ROM volume ) <br>
+- VPX Game --- Control the VPX game settings and Launch table
+- VPX Maintenance ---volume control / Navigation
+<br>
+<br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/vpinfectl.jpg" 
+     width="75%"
+     alt="Screenshot">
+     <br><br><br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/vpxrom.jpg" 
+     width="75%"
+     alt="Screenshot">
+     <br><br><br>
+
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/vpxmaintenance.jpg" 
+     width="75%"
+     alt="Screenshot">
+     <br><br><br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/Romcontrol.png" 
+     width="75%"
+     alt="Screenshot">
+     <br><br><br>
+     

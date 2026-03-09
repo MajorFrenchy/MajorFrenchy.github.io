@@ -400,8 +400,15 @@ a:hover { color: var(--accent); }
 .footer-inner p { color: var(--text-muted); font-size: 0.85rem; }
 
 .footer-links { display: flex; gap: 1.25rem; flex-wrap: wrap; }
-.footer-links a { color: var(--text-muted); font-size: 0.85rem; }
+.footer-links a {
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
 .footer-links a:hover { color: var(--accent); }
+.footer-link-icon { width: 14px; height: 14px; flex-shrink: 0; }
 
 /* ── RESPONSIVE ── */
 @media (max-width: 768px) {

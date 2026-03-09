@@ -136,14 +136,16 @@ Once you associate , it will do the following: <br>
 <h1>Remote</h1>
 
 <br>
-Remote is a feature allowing to control the Front end using another computer, a tablet or a phone. 
+Remote is a feature allowing to control the Front end using another computer, a tablet or a phone. It can be accessed
+by typing the VPinFE computer IP address ( IE 192.168.0.113:8001/remote ) 
 <br> 
-The Remote has 4 modes<br>
-- Vpinfe   --- Restart Vpinfe / reboot or shutdown the computer. <br>
+The Remote has 4 modes<br><br>
+- Vpinfe   --- Restart Vpinfe / reboot or shutdown the computer <br>
 - PinMAME  --- Set the Roms menu options ( such as ROM volume ) <br>
-- VPX Game --- Control the VPX game settings and Launch table
-- VPX Maintenance ---volume control / Navigation
+- VPX Game --- Control the VPX game settings and Launch table <br>
+- VPX Maintenance ---volume control / Navigation<br>
 <br>
+
 <br>
 <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" 
      width="75%"

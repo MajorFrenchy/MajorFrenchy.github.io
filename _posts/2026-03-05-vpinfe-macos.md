@@ -139,6 +139,7 @@ Once you associate , it will do the following: <br>
 Remote is a feature allowing to control the Front end using another computer, a tablet or a phone. It can be accessed
 by typing the VPinFE computer IP address ( IE 192.168.0.113:8001/remote ) 
 <br> 
+<br>
 The Remote has 4 modes<br><br>
 - Vpinfe   --- Restart Vpinfe / reboot or shutdown the computer <br>
 - PinMAME  --- Set the Roms menu options ( such as ROM volume ) <br>

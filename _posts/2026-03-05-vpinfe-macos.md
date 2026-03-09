@@ -38,8 +38,6 @@ A frontend for vpinball with the following features:
 
 
 
-VPinFE runs with a self-contained Python runtime and Chromium browser.
-
 ## Install VPinFE
 {: #install-vpinfe }
 

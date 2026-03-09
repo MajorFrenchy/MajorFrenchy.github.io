@@ -145,20 +145,20 @@ The Remote has 4 modes<br>
 - VPX Maintenance ---volume control / Navigation
 <br>
 <br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/vpinfectl.jpg" 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" 
      width="75%"
      alt="Screenshot">
      <br><br><br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/vpxrom.jpg" 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxrom.jpg" 
      width="75%"
      alt="Screenshot">
      <br><br><br>
 
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/vpxmaintenance.jpg" 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxmaintenance.jpg" 
      width="75%"
      alt="Screenshot">
      <br><br><br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/Romcontrol.png" 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Romcontrol.png" 
      width="75%"
      alt="Screenshot">
      <br><br><br>

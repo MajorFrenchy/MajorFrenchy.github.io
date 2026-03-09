@@ -126,7 +126,7 @@ The Remote page includes 4 modes:
 ## Remote Gallery
 {: #remote-gallery }
 
-<table>
+<table class="remote-gallery-table">
   <tr>
     <td align="center">
       <a href="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" class="zoomable-photo">

@@ -6,163 +6,153 @@ categories: [Front-end, Pinball, Mac]
 image: /Screenshots/VpinFE/VPinFE.jpg
 ---
 
-This is a Cross-Platform Front End for Virtual Pinball. This post is about setting it up on MacOS <br>
+This is a cross-platform front end for Virtual Pinball. This guide covers setup on macOS.
 
-<a href="https://www.youtube.com/watch?v=YD4eZIqHypw">
-  <img src="https://img.youtube.com/vi/YD4eZIqHypw/hqdefault.jpg" 
-       alt="Watch the video" 
-       style="width: 70%; height: auto; border-radius: 8px; box-shadow: 0 4px 8px rgba(0,0,0,0.3);">
-</a>
+[![Watch the video](https://img.youtube.com/vi/YD4eZIqHypw/hqdefault.jpg)](https://www.youtube.com/watch?v=YD4eZIqHypw)
 
-  <h1>Youtube Video Tutorial</h1>
+## Table of Contents
 
+1. [YouTube Video Tutorial](#youtube-video-tutorial)
+2. [Install VPinFE](#install-vpinfe)
+3. [First Launch Permissions](#first-launch-permissions)
+4. [Open the Settings Screen](#open-the-settings-screen)
+5. [Initial Setup](#initial-setup)
+6. [Adding Tables](#adding-tables)
+7. [Remote](#remote)
+8. [Remote Gallery](#remote-gallery)
 
+# YouTube Video Tutorial
+{: #youtube-video-tutorial }
 
-This Front end is running using a self contained version of Python using a Chromium browser. 
+VPinFE runs with a self-contained Python runtime and Chromium browser.
 
-- Download the software. <a href="https://github.com/superhac/vpinfe/actions">VPinFE Runs</a> ( You must log in to Github ) <br><br>
+## Install VPinFE
+{: #install-vpinfe }
 
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-download.jpg" 
-     width="75%"
-     alt="Screenshot"><br><br>
-- Install the program by dragging the icon to the Application folder.
+1. Download the latest build from [VPinFE Runs](https://github.com/superhac/vpinfe/actions) (GitHub login required).
+2. Drag the app icon into your `Applications` folder.
 
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-download.jpg" width="75%" alt="VPinFE download page" />
 
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-app.jpg" 
-     width="75%"
-     alt="Screenshot"><br><br><br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-app.jpg" width="75%" alt="VPinFE app install" />
 
-- Running the software for the 1st time will trigger a security warning. Go to your System Settings / Privacy and security and allow it to run. <br><br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-privacy.jpg" 
-     width="75%"
-     alt="Screenshot">
-     <br><br><br>
-     - Running the software for the 1st time will trigger a security warning. Go to your System Settings / Privacy and security / Files and folders and allow it to run. <br><br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-privacy2.jpg" 
-     width="75%"
-     alt="Screenshot">
-     <br><br><br>
+## First Launch Permissions
+{: #first-launch-permissions }
 
-If you want to access the setting screen, you can access it by typing 127.0.0.1:8001<vr>
-If it is on a different device, you will need your VpinFE computer IP address and type it IE: 192.168.1.113:8001
+On first launch, macOS security prompts may appear.
 
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-url.jpg" 
-     width="75%"
-     alt="Screenshot">
-    <br><br>
- 
-    
-- The 1st time, you will need to set your monitors in the settings menu <br><br>
+1. Open `System Settings > Privacy & Security` and allow VPinFE.
+2. Open `System Settings > Privacy & Security > Files and Folders` and allow file access.
 
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-monitors.jpg" 
-     width="75%"
-     alt="Screenshot"><br><br><br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-privacy.jpg" width="75%" alt="VPinFE privacy permission" />
 
-- Set the path for your VPX Standalone location / Tables / VPinbsallX.ini
-The default folders for those are as follow:
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-privacy2.jpg" width="75%" alt="VPinFE files and folders permission" />
 
-<br>
-vpxbinpath = /Applications/VPinballX_BGFX.app/Contents/MacOS/VPinballX_BGFX <br><br>
-tablerootdir = /Users/YOURUSERNAME/Desktop/vpinball/ <br><br>
-vpxinipath = /Users/YOURUSERNAME/Library/Application Support/VPinballX/10.8/VPinballX.ini <br><br>
-<br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-settings.jpg" 
-     width="75%"
-     alt="Screenshot"><br><br><br>
+## Open the Settings Screen
+{: #open-the-settings-screen }
 
-- Pick a theme by activating it. 
-<br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-theme.jpg" 
-     width="75%"
-     alt="Screenshot"><br><br><br>
+- Local device: `127.0.0.1:8001`
+- Another device on your network: `YOUR_VPINFE_IP:8001` (example: `192.168.1.113:8001`)
 
-- Cab Theme
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-url.jpg" width="75%" alt="VPinFE URL and settings access" />
 
-<br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE cab.jpg" 
-     width="75%"
-     alt="Screenshot"><br><br><br>
-     
+## Initial Setup
+{: #initial-setup }
 
-     
-- Tables
-<br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Tables.jpg" 
-     width="75%"
-     alt="Screenshot"><br><br><br>
+1. Configure monitor mappings in the Settings menu.
+2. Set the VPX Standalone paths:
+   - `vpxbinpath = /Applications/VPinballX_BGFX.app/Contents/MacOS/VPinballX_BGFX`
+   - `tablerootdir = /Users/YOURUSERNAME/Desktop/vpinball/`
+   - `vpxinipath = /Users/YOURUSERNAME/Library/Application Support/VPinballX/10.8/VPinballX.ini`
+3. Pick and activate your theme.
 
-<br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpx.jpg" 
-     width="75%"
-     alt="Screenshot"><br><br><br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-monitors.jpg" width="75%" alt="VPinFE monitor settings" />
 
-<h1>Adding tables</h1>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-settings.jpg" width="75%" alt="VPinFE path settings" />
 
-in order to run the software properly, you need to have your VPX table in a standalone structure <br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-folderstructure.jpg" 
-     width="75%"
-     alt="Screenshot">
-     <br><br><br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-theme.jpg" width="75%" alt="VPinFE theme selection" />
 
-  You need to add your tables Directory in the folder you set in tablerootdir = /Users/YOURUSERNAME/Desktop/vpinball/ <br><br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE%20cab.jpg" width="75%" alt="VPinFE cabinet theme" />
 
-In the Manager UI click on tables Unmatched button to add it to your library<br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Tables.jpg" width="75%" alt="VPinFE tables view" />
 
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-unmatched.jpg" 
-     width="75%"
-     alt="Screenshot"><br><br><br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpx.jpg" width="75%" alt="VPinFE VPX launch options" />
 
-This will bring you the the matching menu.  <br>
-*** Your table has to be associated to the VirtualPinballSpreadsheet Table ID in order for VPinFE to download the proper media. <br> <br>
+# Adding Tables
+{: #adding-tables }
 
-You will see a "use my own media" button. use this if you already have media for the table you want to associate. 
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-mymedia.jpg" 
-     width="75%"
-     alt="Screenshot">
-     <br><br><br>
-Then see if your table is matching against the VPS database. Remove characters until you get a match and select Associate
-<br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VpinFE-associate.jpg" 
-     width="75%"
-     alt="Screenshot">
-     <br><br><br>
+To run correctly, your VPX files should follow a standalone folder structure.
 
-Once you associate , it will do the following: <br>
-- Make the entry and add it in your table list <br>
-- Download media <br>
-- Create a .info file <br>
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-folderstructure.jpg" width="75%" alt="VPX folder structure" />
 
-<br>
-<h1>Remote</h1>
+Add your tables folder under:
 
-<br>
-Remote is a feature allowing to control the Front end using another computer, a tablet or a phone. It can be accessed
-by typing the VPinFE computer IP address ( IE 192.168.0.113:8001/remote ) 
-<br> 
-<br>
-The Remote has 4 modes<br><br>
-- Vpinfe   --- Restart Vpinfe / reboot or shutdown the computer <br>
-- PinMAME  --- Set the Roms menu options ( such as ROM volume ) <br>
-- VPX Game --- Control the VPX game settings and Launch table <br>
-- VPX Maintenance ---volume control / Navigation<br>
-<br>
+`tablerootdir = /Users/YOURUSERNAME/Desktop/vpinball/`
 
-<br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" 
-     width="75%"
-     alt="Screenshot">
-     <br><br><br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxrom.jpg" 
-     width="75%"
-     alt="Screenshot">
-     <br><br><br>
+In Manager UI, use the **Tables > Unmatched** button to add tables to your library.
 
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxmaintenance.jpg" 
-     width="75%"
-     alt="Screenshot">
-     <br><br><br>
-<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Romcontrol.png" 
-     width="75%"
-     alt="Screenshot">
-     <br><br><br>
-     
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-unmatched.jpg" width="75%" alt="Unmatched tables" />
+
+Your table must be associated with a VirtualPinballSpreadsheet table ID so VPinFE can download matching media.
+
+If you already have your own media, use **Use my own media**. Otherwise, trim extra characters in the table name until you get a VPS match, then click **Associate**.
+
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-mymedia.jpg" width="75%" alt="Use my own media" />
+
+<img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VpinFE-associate.jpg" width="75%" alt="Associate table in VPS" />
+
+After association, VPinFE will:
+
+- Add the table entry to your library
+- Download media
+- Create a `.info` file
+
+# Remote
+{: #remote }
+
+Remote lets you control the front end from another computer, tablet, or phone.
+
+Use:
+
+`YOUR_VPINFE_IP:8001/remote` (example: `192.168.0.113:8001/remote`)
+
+The Remote page includes 4 modes:
+
+- `VPinFE`: restart VPinFE, reboot, or shut down the computer
+- `PinMAME`: change ROM menu settings (for example, ROM volume)
+- `VPX Game`: control VPX game settings and launch tables
+- `VPX Maintenance`: volume and navigation controls
+
+## Remote Gallery
+{: #remote-gallery }
+
+<table class="remote-gallery">
+  <thead>
+    <tr>
+      <th>VPinFE Control</th>
+      <th>PinMAME / VPX ROM</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpinfectl.jpg" alt="VPinFE remote control" />
+      </td>
+      <td>
+        <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxrom.jpg" alt="PinMAME and VPX ROM controls" />
+      </td>
+    </tr>
+    <tr>
+      <th>VPX Maintenance</th>
+      <th>ROM Control</th>
+    </tr>
+    <tr>
+      <td>
+        <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-vpxmaintenance.jpg" alt="VPX maintenance controls" />
+      </td>
+      <td>
+        <img src="https://raw.githubusercontent.com/MajorFrenchy/MajorFrenchy.github.io/main/Screenshots/VpinFE/VPinFE-Romcontrol.png" alt="ROM control screen" />
+      </td>
+    </tr>
+  </tbody>
+</table>

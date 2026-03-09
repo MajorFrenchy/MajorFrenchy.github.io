@@ -297,6 +297,40 @@ a:hover { color: var(--accent); }
 .post-content p { margin-bottom: 1rem; }
 .post-content h2 { color: var(--accent2); margin: 1.5rem 0 0.5rem; }
 .post-content iframe { max-width: 100%; margin: 1rem 0; }
+.post-content img { max-width: 100%; height: auto; }
+
+.post-content .remote-gallery {
+  width: 100%;
+  border-collapse: collapse;
+  table-layout: fixed;
+  margin-top: 0.5rem;
+}
+
+.post-content .remote-gallery th,
+.post-content .remote-gallery td {
+  text-align: center;
+  vertical-align: top;
+}
+
+.post-content .remote-gallery td {
+  padding: 0.75rem;
+}
+
+.post-content .remote-gallery img {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid var(--border);
+}
+
+@media (max-width: 768px) {
+  .post-content .remote-gallery th,
+  .post-content .remote-gallery td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+}
+
 .post-back { margin-top: 2rem; }
 
 /* ── QUICK LINKS (homepage) ── */

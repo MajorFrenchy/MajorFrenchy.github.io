@@ -118,7 +118,8 @@ After association, VPinFE will:
 - Add the table entry to your library
 - Download media
 - Create a `.info` file
-
+<br>--------------
+<br>
 # Remote
 {: #remote }
 
@@ -126,14 +127,14 @@ Remote lets you control the front end from another computer, tablet, or phone.
 
 Use:
 
-`YOUR_VPINFE_IP:8001/remote` (example: `192.168.0.113:8001/remote`)
+YOUR_VPINFE_IP:8001/remote (example: 192.168.0.113:8001/remote)
 
 The Remote page includes 4 modes:
 
-- `VPinFE`: restart VPinFE, reboot, or shut down the computer
-- `PinMAME`: change ROM menu settings (for example, ROM volume)
-- `VPX Game`: control VPX game settings and launch tables
-- `VPX Maintenance`: volume and navigation controls
+- VPinFE: restart VPinFE, reboot, or shut down the computer
+- PinMAME: change ROM menu settings (for example, ROM volume)
+- VPX Game: control VPX game settings and launch tables
+- VPX Maintenance: volume and navigation controls
 
 <table class="remote-gallery-table">
   <tr>

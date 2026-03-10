@@ -13,6 +13,8 @@ permalink: /rom-lookup/
   body { font-family: 'Segoe UI', system-ui, sans-serif; background: #0d1117; color: #e6edf3; min-height: 100vh; padding: 24px; }
   h1 { font-size: 1.4rem; font-weight: 600; color: #58a6ff; margin-bottom: 4px; }
   .subtitle { font-size: 0.85rem; color: #8b949e; margin-bottom: 20px; }
+  .home-btn { display: inline-flex; align-items: center; gap: 6px; margin-bottom: 14px; padding: 7px 12px; border-radius: 6px; border: 1px solid #30363d; background: #161b22; color: #e6edf3; font-size: 0.82rem; text-decoration: none; transition: all 0.15s; }
+  .home-btn:hover { border-color: #58a6ff; color: #58a6ff; background: #1f2d3f; }
   .controls { display: flex; gap: 10px; margin-bottom: 16px; align-items: center; flex-wrap: wrap; }
   input[type=text] { flex: 1; max-width: 480px; padding: 8px 14px; background: #161b22; border: 1px solid #30363d; border-radius: 6px; color: #e6edf3; font-size: 0.9rem; outline: none; transition: border-color 0.15s; }
   input[type=text]:focus { border-color: #58a6ff; }
@@ -76,6 +78,7 @@ permalink: /rom-lookup/
 <body>
 <h1>VPX Table → ROM Lookup</h1>
 <p class="subtitle">PinballX Database + Gottlieb supplement — 2519 total entries</p>
+<a class="home-btn" href="https://www.majorfrenchy.com/">← MajorFrenchy Home</a>
 <div class="controls">
   <input type="text" id="search" placeholder="Type a table name or ROM to search…" autofocus>
   <button class="filter-btn active" id="btn-all" onclick="setFilter('all')">All</button>

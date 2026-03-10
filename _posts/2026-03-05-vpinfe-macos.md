@@ -135,9 +135,6 @@ The Remote page includes 4 modes:
 - `VPX Game`: control VPX game settings and launch tables
 - `VPX Maintenance`: volume and navigation controls
 
-## Remote Gallery
-{: #remote-gallery }
-
 <table class="remote-gallery-table">
   <tr>
     <td align="center">

@@ -7,9 +7,15 @@ published: false
 ---
 
 
-This is the page if your have a current working DOF config for your cabinet. If you are starting from scratch and do not have a config for your Force feeback and addressable LED, then click HERE to that article.  <br>
 
-I am going to try keeping this guide as practical and easy to understand. I am not going to go deep in the concepts. <br>
+
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/DOF-supported.jpg" 
+     width="50%"
+     alt="Screenshot">
+
+This is the page if your have a current Windows working DOF config for your cabinet. If you are starting from scratch and do not have a config for your Force feeback and addressable LED, then click HERE .  <br>
+
+I am going to try keeping this guide as practical and easy to understand as possible. I am not going to go deep in the concepts. <br>
 <br>
 
 If you already have DOF working on Windows, we will make it work on Linux much faster. Here are the things to consider on Linux for DOF

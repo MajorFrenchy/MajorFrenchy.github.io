@@ -10,7 +10,7 @@ published: false
 
 
 <img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/DOF-supported.jpg" 
-     width="50%"
+     width="100%"
      alt="Screenshot">
 
 This is the page if your have a current Windows working DOF config for your cabinet. If you are starting from scratch and do not have a config for your Force feeback and addressable LED, then click HERE .  <br>

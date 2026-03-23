@@ -43,7 +43,7 @@ STEP 2 <br>
 Install and setup VPX ( Look at this Article and Video if you need help ) <br>
 
 STEP 3 <br>
-Turn on the DOF plugin in VPX  ( F12 LiveUI menu / Plugins / DOF ) <br>
+Turn on the DOF plugin in VPX  ( F12 LiveUI menu / Plugins / DOF ) Save Globally <br>
 
 STEP 4 <br>
 Copy your Online DOF config to the following folder.  ( .local/share/VpinballX/10.8.0/directoutputconfig ) <br>
@@ -59,14 +59,17 @@ lsusb
 Look for your device and note ID xxxx:yyyy (vendor:product).
 
 Create a rule file:
-sudo nano /etc/udev/rules.d/99-vpinball.rules
+'''Bash sudo nano /etc/udev/rules.d/99-vpinball.rules```
 Add this line (replace IDs):
-SUBSYSTEM=="usb", ATTR{idVendor}=="xxxx", ATTR{idProduct}=="yyyy", MODE="0666"
+```bash SUBSYSTEM=="usb", ATTR{idVendor}=="xxxx", ATTR{idProduct}=="yyyy", MODE="0666"```
 Save and exit (Ctrl+O, Enter, Ctrl+X).
 
 Reload rules:
 
+```bash
 sudo udevadm control --reload-rules
-sudo udevadm trigger
+sudo udevadm trigger```
+
+<br>
 Unplug and replug the device (or reboot). <br>
 

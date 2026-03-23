@@ -60,14 +60,17 @@ Look for your device and note ID xxxx:yyyy (vendor:product).
 
 Create a rule file:
 ---
-'''Bash 
-sudo nano /etc/udev/rules.d/99-vpinball.rules
+
+```bash
+sudo nano /etc/udev/rules.d/99-vpinball.rules 
 ```
+
 ---
 <br>
----
+
 Add this line (replace IDs):
-```bash SUBSYSTEM=="usb", ATTR{idVendor}=="xxxx", ATTR{idProduct}=="yyyy", MODE="0666"
+```bash
+SUBSYSTEM=="usb", ATTR{idVendor}=="xxxx", ATTR{idProduct}=="yyyy", MODE="0666"
 ```
 ---
 <br>

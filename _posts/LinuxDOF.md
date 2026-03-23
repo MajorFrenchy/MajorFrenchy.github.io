@@ -6,12 +6,25 @@ categories: [Front-end, Pinball, Mac]
 published: false
 ---
 
-
-
-
-<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/DOF-supported.jpg" 
-     width="100%"
-     alt="Screenshot">
+Tested & Working
+Pinscape - @mjrgh's popular pinball controller with 32+ outputs
+Pinscape Pico - RP2040-based version with enhanced features
+TeensyStripController - Teensy based WS2812 LED strip controller
+WemosD1MPStripController - Wemos D1 Mini Pro based WS2812 LED strip controller
+PacLED64 - Ultimarc's 64-output LED controller with PWM support
+LedWiz - LED-Wiz's 32-port USB compatible lighting and output controller
+PinOne - Cleveland Software Design controller with 63 outputs
+FTDI Controllers - FT245R bitbang controllers
+Implemented & Ready To Test
+DudesCab - RP2040-based controller with 128 PWM outputs
+UMXController - Unified MX protocol for addressable LED strips (via DudesCab MX)
+ArtNet/DMX - Professional lighting control via Ethernet (all platforms)
+PinControl - Arduino-based controller with 10 outputs
+WS2811/WS2812 LED Strips - Addressable LED strip support
+PAC Controllers (PacDrive, PacUIO) - Cross-platform libusb implementation
+Not Implemented
+SSF Controllers - Audio-based feedback systems
+Philips Hue - Smart lighting integration
 
 This is the page if your have a current Windows working DOF config for your cabinet. If you are starting from scratch and do not have a config for your Force feeback and addressable LED, then click HERE .  <br>
 

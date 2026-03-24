@@ -5,8 +5,9 @@ date: 2026-03-23
 categories: [Front-end, Pinball, Mac]
 published: false
 ---
-
-RAW URL
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/tested.jpg" 
+     width="100%"
+     alt="Screenshot">
 <img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/DOF-supported.jpg" 
      width="100%"
      alt="Screenshot">

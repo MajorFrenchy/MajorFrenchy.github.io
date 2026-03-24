@@ -116,6 +116,11 @@ Add this line (replace IDs):
 ```bash
 SUBSYSTEM=="usb", ATTR{idVendor}=="xxxx", ATTR{idProduct}=="yyyy", MODE="0666"
 ```
+
+Example for Raspberry Pi Pico RP2040 (check with `lsusb`, commonly `2e8a:000a`):
+```bash
+SUBSYSTEM=="usb", ATTR{idVendor}=="2e8a", ATTR{idProduct}=="000a", MODE="0666"
+```
 ---
 <br>
 Save and exit (Ctrl+O, Enter, Ctrl+X).
@@ -130,4 +135,3 @@ sudo udevadm trigger
 
 <br>
 Unplug and replug the device (or reboot). <br>
-

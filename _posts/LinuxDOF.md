@@ -31,6 +31,7 @@ What do you need to get DOF working on Ubuntu <br>
 - DOF Config files <br>
 - Your hardware configured <br>
 - Udev rule for each device <br>
+- Add dialout group for Modem access/Serial ports access
 
 I create a tool that will help you test your devices under Linux ( Pinball Toolset ) This tool has some limited device config capability, it is designed to test the ports. 
 I strongly suggest you use the native Windows app for your device ( in Windows or Linux using Wine ). The tool will also flash firmware on the Teensy and Wemos. The tool is also designed to create a cabinet file and create a B2SServer.xml file  

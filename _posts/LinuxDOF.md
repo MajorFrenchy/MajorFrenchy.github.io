@@ -10,10 +10,10 @@ published: false
 
 | Hardware | Description | Documentation / Source |
 | :--- | :--- | :--- |
-| **Pinscape** | @mjrgh's popular pinball controller with 32+ outputs | [GitHub](https://github.com/mjrgh/Pinscape_Controller) |
-| **Pinscape Pico** | RP2040-based version with enhanced features | [GitHub](https://github.com/mjrgh/PinscapePico) |
-| **TeensyStripController** | Teensy based WS2812 LED strip controller | [GitHub](https://github.com/DirectOutput/TeensyStripController) |
-| **WemosD1MPStripController** | Wemos D1 Mini Pro based WS2812 LED strip controller | [GitHub](https://github.com/jsm174/libdof) |
+| **Pinscape** | @mjrgh's popular pinball controller with 32+ outputs | [Pinscape](https://github.com/mjrgh/Pinscape_Controller) |
+| **Pinscape Pico** | RP2040-based version with enhanced features | [Pico](https://github.com/mjrgh/PinscapePico) |
+| **TeensyStripController** | Teensy based WS2812 LED strip controller | [Teensy](https://github.com/DirectOutput/TeensyStripController) |
+| **WemosD1MPStripController** | Wemos D1 Mini Pro based WS2812 LED strip controller | [Wemos](https://www.wemos.cc/en/latest/) |
 | **PacLED64** | Ultimarc's 64-output LED controller with PWM support | [Ultimarc](https://www.ultimarc.com/output/led-and-other-output-devices/pacled64/) |
 | **LedWiz** | LED-Wiz's 32-port USB compatible lighting and output controller | [GroovyGameGear](https://groovygamegear.com/webstore/index.php?main_page=product_info&products_id=239) |
 | **PinOne** | Cleveland Software Design controller with 63 outputs | [Product Docs](https://pinball-docs.clevelandsoftwaredesign.com/docs/PinOne/) |
@@ -26,7 +26,7 @@ published: false
 | Hardware | Description | Documentation / Source |
 | :--- | :--- | :--- |
 | **DudesCab** | RP2040-based controller with 128 PWM outputs | [GitHub](https://github.com/Arnoz/DudesCab) |
-| **UMXController** | Unified MX protocol for addressable strips | [GitHub](https://github.com/jsm174/libdof) |
+| **UMXController** | Unified MX protocol for addressable strips | [UMX](https://www.omsmotion.com/umx) |
 | **ArtNet/DMX** | Professional Ethernet-based lighting control | [ArtNet](https://art-net.org.uk/) |
 | **PinControl** | Arduino-based controllers for 10+ outputs | [Website](http://www.pcb-dev.com/) |
 

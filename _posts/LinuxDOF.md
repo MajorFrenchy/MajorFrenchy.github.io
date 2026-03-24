@@ -5,7 +5,34 @@ date: 2026-03-23
 categories: [Front-end, Pinball, Mac]
 published: false
 ---
-HardwareDescriptionDocumentation / SourcePinscape@mjrgh's popular pinball controller with 32+ outputsGitHubPinscape PicoRP2040-based version with enhanced featuresGitHubTeensyStripControllerTeensy based WS2812 LED strip controllerGitHubWemosD1MPStripControllerWemos D1 Mini Pro based WS2812 LED strip controllerGitHubPacLED64Ultimarc's 64-output LED controller with PWM supportUltimarcLedWizLED-Wiz's 32-port USB compatible lighting and output controllerGroovyGameGearPinOneCleveland Software Design controller with 63 outputsProduct DocsFTDI ControllersFT245R bitbang controllersWiki🧪 Implemented & Ready To TestHardwareDescriptionDocumentation / SourceDudesCabRP2040-based controller with 128 PWM outputsGitHubUMXControllerUnified MX protocol for addressable stripsGitHubArtNet/DMXProfessional Ethernet-based lighting controlArtNetPinControlArduino-based controllers for 10+ outputsWebsite
+
+### 🎮 Hardware Compatibility List
+
+| Hardware | Description | Documentation / Source |
+| :--- | :--- | :--- |
+| **Pinscape** | @mjrgh's popular pinball controller with 32+ outputs | [GitHub](https://github.com/mjrgh/Pinscape_Controller) |
+| **Pinscape Pico** | RP2040-based version with enhanced features | [GitHub](https://github.com/mjrgh/PinscapePico) |
+| **TeensyStripController** | Teensy based WS2812 LED strip controller | [GitHub](https://github.com/DirectOutput/TeensyStripController) |
+| **WemosD1MPStripController** | Wemos D1 Mini Pro based WS2812 LED strip controller | [GitHub](https://github.com/jsm174/libdof) |
+| **PacLED64** | Ultimarc's 64-output LED controller with PWM support | [Ultimarc](https://www.ultimarc.com/output/led-and-other-output-devices/pacled64/) |
+| **LedWiz** | LED-Wiz's 32-port USB compatible lighting and output controller | [GroovyGameGear](https://groovygamegear.com/webstore/index.php?main_page=product_info&products_id=239) |
+| **PinOne** | Cleveland Software Design controller with 63 outputs | [Product Docs](https://pinball-docs.clevelandsoftwaredesign.com/docs/PinOne/) |
+| **FTDI Controllers** | FT245R bitbang controllers | [Wiki](https://github.com/DirectOutput/DirectOutput/wiki/FT245R-Bitbang-Controller) |
+
+---
+
+### 🧪 Implemented & Ready To Test
+
+| Hardware | Description | Documentation / Source |
+| :--- | :--- | :--- |
+| **DudesCab** | RP2040-based controller with 128 PWM outputs | [GitHub](https://github.com/Arnoz/DudesCab) |
+| **UMXController** | Unified MX protocol for addressable strips | [GitHub](https://github.com/jsm174/libdof) |
+| **ArtNet/DMX** | Professional Ethernet-based lighting control | [ArtNet](https://art-net.org.uk/) |
+| **PinControl** | Arduino-based controllers for 10+ outputs | [Website](http://www.pcb-dev.com/) |
+
+
+
+
 <img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/DOF-supported.jpg" 
      width="100%"
      alt="Screenshot"><br>

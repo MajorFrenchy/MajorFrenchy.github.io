@@ -5,9 +5,7 @@ date: 2026-03-23
 categories: [Front-end, Pinball, Mac]
 published: false
 ---
-<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/tested.jpg" 
-     width="100%"
-     alt="Screenshot">
+HardwareDescriptionDocumentation / SourcePinscape@mjrgh's popular pinball controller with 32+ outputsGitHubPinscape PicoRP2040-based version with enhanced featuresGitHubTeensyStripControllerTeensy based WS2812 LED strip controllerGitHubWemosD1MPStripControllerWemos D1 Mini Pro based WS2812 LED strip controllerGitHubPacLED64Ultimarc's 64-output LED controller with PWM supportUltimarcLedWizLED-Wiz's 32-port USB compatible lighting and output controllerGroovyGameGearPinOneCleveland Software Design controller with 63 outputsProduct DocsFTDI ControllersFT245R bitbang controllersWiki🧪 Implemented & Ready To TestHardwareDescriptionDocumentation / SourceDudesCabRP2040-based controller with 128 PWM outputsGitHubUMXControllerUnified MX protocol for addressable stripsGitHubArtNet/DMXProfessional Ethernet-based lighting controlArtNetPinControlArduino-based controllers for 10+ outputsWebsite
 <img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/DOF-supported.jpg" 
      width="100%"
      alt="Screenshot"><br>

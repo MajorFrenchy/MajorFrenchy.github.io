@@ -67,7 +67,7 @@ You need to add a Udev rule for each of your USB controller ( Pinscape Pico, Pin
 
 <a href="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/_posts/guides/Linux-UDEV-Quick-Tutorial.md">UDEV complete guide</a>
 
-<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/udev-rule.png" 
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/udev-rule.jpg" 
      width="100%"
      alt="Screenshot">
 -----

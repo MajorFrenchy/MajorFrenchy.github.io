@@ -1,6 +1,8 @@
 ## Linux Setup Tutorial (Pinscape + LED-Wiz, Wemos Optional)
 
-<img src="/https://github.com/MajorFrenchy/MajorFrenchy.github.io/raw/main/Screenshots/Linux-DOF/udev-rule.jpg" width="50%"> 
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/udev-rule.jpg" 
+     width="100%"
+     alt="Screenshot">
 
 - Use `udev` rules for `Pinscape` and `LED-Wiz` (HID devices).
 - For `Wemos/CH340` serial, a custom `udev` rule is usually **not needed**.

@@ -57,7 +57,7 @@ STEP 5 <br>
 edit your GlobalConfig_B2Sserver.xml change the paths as follow.<br>
 
 STEP 6 <br>
-You need to add a Udev rule for each of your USB controller ( Pinscape Pico, PinOne, Arnoz, Wemos , Teensy , ) udev permissions control who can access hardware devices (USB boards, serial ports, HID controllers, etc.) when Linux detects them. Without correct udev rules, apps like VPX may not be allowed to read/write your controller unless run as root, which causes missing inputs or unstable behavior. With proper rules, your normal user gets consistent access to the right devices at boot/replug time, improving reliability and security (no need to run everything with elevated privileges). <br>
+You need to add a Udev rule for each of your USB controller ( Pinscape Pico, PinOne, Arnoz, Teensy , ) udev permissions control who can access hardware devices (USB boards, serial ports, HID controllers, etc.) when Linux detects them. Without correct udev rules, apps like VPX may not be allowed to read/write your controller unless run as root, which causes missing inputs or unstable behavior. With proper rules, your normal user gets consistent access to the right devices at boot/replug time, improving reliability and security (no need to run everything with elevated privileges). <br>
 
 -----
 Plug the device in.

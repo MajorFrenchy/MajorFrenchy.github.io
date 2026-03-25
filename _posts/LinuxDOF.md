@@ -67,6 +67,12 @@ Download VPX 10.8.1_BGFX ( This version has a DOF plugin built in )
 STEP 2 <br>
 
 Install and setup VPX ( Look at this Article and Video if you need help ) <br>
+<p>
+   <a href="https://www.youtube.com/watch?v=HLAduvD9Z_U" target="_blank" rel="noopener">
+    <img src="/assets/css/images/youtube-logo.svg" alt="YouTube" width="25" style="vertical-align:middle; margin-right:10px;">You can see an overview of the LiveUI
+  </a>
+</p>
+
 
 STEP 3 <br>
 Turn on the DOF plugin in VPX  ( F12 LiveUI menu / Plugins / DOF ) Save Globally <br>

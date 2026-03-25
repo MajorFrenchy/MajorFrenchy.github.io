@@ -70,6 +70,9 @@ Install and setup VPX ( Look at this Article and Video if you need help ) <br>
 
 STEP 3 <br>
 Turn on the DOF plugin in VPX  ( F12 LiveUI menu / Plugins / DOF ) Save Globally <br>
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Enable DOF.jpg" 
+     width="100%"
+     alt="Screenshot">
 
 STEP 4 <br>
 Copy your Online DOF config to the following folder.  ( .local/share/VpinballX/10.8.0/directoutputconfig ) You also copy GlobalConfig_B2Sserver.xml and cabi ent.xml ibn this folder.<br>

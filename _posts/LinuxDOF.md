@@ -29,17 +29,8 @@ published: false
 | **UMXController** | Unified MX protocol for addressable strips | [UMX](https://www.omsmotion.com/umx) |
 | **ArtNet/DMX** | Professional Ethernet-based lighting control | [ArtNet](https://art-net.org.uk/) |
 | **PinControl** | Arduino-based controllers for 10+ outputs | [Website](http://www.pcb-dev.com/) |
-
-
-
-
-<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/DOF-supported.jpg" 
-     width="100%"
-     alt="Screenshot"><br>
-
-
-
-     
+<br>
+ 
 
 This is the page if your have a current Windows working DOF config for your cabinet. If you are starting from scratch and do not have a config for your Force feeback and addressable LED, then click HERE .  <br>
 

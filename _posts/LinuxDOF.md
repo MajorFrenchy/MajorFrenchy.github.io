@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "VPinFE MacOS"
+title: "DOF on Linux"
 date: 2026-03-23
 categories: [Front-end, Pinball, Mac]
 published: false

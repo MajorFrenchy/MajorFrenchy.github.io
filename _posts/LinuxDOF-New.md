@@ -84,6 +84,7 @@ Turn on the DOF plugin in VPX  ( F12 LiveUI menu / Plugins / DOF ) Save Globally
 
 STEP 4 <br>
 You will need your Config from the online DOF config. Download your config and extract it in ( .local/share/VpinballX/10.8.0/directoutputconfig )<br> 
+<a href="https://configtool.vpuniverse.com/app/home">Online DOF Config Tool</a>
 
 
 STEP 5 <br>

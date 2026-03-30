@@ -83,7 +83,23 @@ Turn on the DOF plugin in VPX  ( F12 LiveUI menu / Plugins / DOF ) Save Globally
 -----
 
 STEP 4 <br>
-Copy your Online DOF config to the following folder.  ( .local/share/VpinballX/10.8.0/directoutputconfig ) You also copy GlobalConfig_B2Sserver.xml and cabi ent.xml ibn this folder.<br>
+Copy your Online DOF config to the following folder.  ( .local/share/VpinballX/10.8.0/directoutputconfig ) You also copy GlobalConfig_B2Sserver.xml and cabinet.xml in this folder.<br>
+
+```
+<?xml version="1.0" encoding="utf-8"?>
+<GlobalConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <DOFPath />
+  <CabinetConfigFilePattern>{GlobalConfigDirectory}/cabinet.xml</CabinetConfigFilePattern>
+  <EnableLogging>true</EnableLogging>
+  <ClearLogOnSessionStart>true</ClearLogOnSessionStart>
+  <LogFilePattern>{GlobalConfigDirectory}/DirectOutput.log</LogFilePattern>
+</GlobalConfig>
+```
+
+
+
+
+
 
 STEP 5 <br>
 edit your GlobalConfig_B2Sserver.xml change the paths as follow.<br>

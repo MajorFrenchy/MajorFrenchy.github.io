@@ -127,6 +127,7 @@ LOOK AT THE VIDEO TUTORIAL FOR USING THE PINCAB TOOLKIT <br>
 - LOOK AT THE WEMOS FLASH/TEST VIDEO <BR>
 - LOOK AT THE TEENSY FLASH/TEST VIDEO <BR>
 - LOOK AT THE CABINET CREATION VIDEO <BR>
+- LOOK AT THE UDEV RULE CREATION VIDEO <BR>
 
 STEP 7 <br>
 You need to add a Udev rule for each of your USB controller ( Pinscape Pico, PinOne, Arnoz, Teensy , ) udev permissions control who can access hardware devices (USB boards, serial ports, HID controllers, etc.) when Linux detects them. Without correct udev rules, apps like VPX may not be allowed to read/write your controller unless run as root, which causes missing inputs or unstable behavior. With proper rules, your normal user gets consistent access to the right devices at boot/replug time, improving reliability and security (no need to run everything with elevated privileges). <br>
@@ -136,7 +137,8 @@ You need to add a Udev rule for each of your USB controller ( Pinscape Pico, Pin
 
 <img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/udev-rule.jpg" 
      width="100%"
-     alt="Screenshot">
+     alt="Screenshot"> <br>
+     There is an option in the Pincab Toolkit to create a Udev rule automatically. 
 -----
 Plug the device in.
 Open Terminal.

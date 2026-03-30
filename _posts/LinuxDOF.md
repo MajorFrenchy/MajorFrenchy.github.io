@@ -85,6 +85,9 @@ Turn on the DOF plugin in VPX  ( F12 LiveUI menu / Plugins / DOF ) Save Globally
 STEP 4 <br>
 Copy your Online DOF config to the following folder.  ( .local/share/VpinballX/10.8.0/directoutputconfig ) You also copy GlobalConfig_B2Sserver.xml and cabinet.xml in this folder.<br>
 
+
+STEP 5 <br>
+edit your GlobalConfig_B2Sserver.xml change the paths as follow.<br>
 ```
 <?xml version="1.0" encoding="utf-8"?>
 <GlobalConfig xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
@@ -95,14 +98,6 @@ Copy your Online DOF config to the following folder.  ( .local/share/VpinballX/1
   <LogFilePattern>{GlobalConfigDirectory}/DirectOutput.log</LogFilePattern>
 </GlobalConfig>
 ```
-
-
-
-
-
-
-STEP 5 <br>
-edit your GlobalConfig_B2Sserver.xml change the paths as follow.<br>
 
 STEP 6 <br>
 You need to add a Udev rule for each of your USB controller ( Pinscape Pico, PinOne, Arnoz, Teensy , ) udev permissions control who can access hardware devices (USB boards, serial ports, HID controllers, etc.) when Linux detects them. Without correct udev rules, apps like VPX may not be allowed to read/write your controller unless run as root, which causes missing inputs or unstable behavior. With proper rules, your normal user gets consistent access to the right devices at boot/replug time, improving reliability and security (no need to run everything with elevated privileges). <br>

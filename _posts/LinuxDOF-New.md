@@ -88,8 +88,12 @@ STEP 4 <br>
 You will need your Config from the online DOF config. Download your config and extract it in ( .local/share/VpinballX/10.8.0/directoutputconfig )<br> 
 <a href="https://configtool.vpuniverse.com/app/home">Online DOF Config Tool</a><br>
 
-<a href="https://youtu.be/rN-9ncXd-Cc?t=1027"> How to configure Online DOF</a>
 
+<p>
+   <a href="https://youtu.be/rN-9ncXd-Cc?t=1027" target="_blank" rel="noopener">
+    <img src="/assets/css/images/youtube-logo.svg" alt="YouTube" width="40" style="vertical-align:middle; margin-right:10px;">How to configure Online DOF
+  </a>
+</p>
 
 
 

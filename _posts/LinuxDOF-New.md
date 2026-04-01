@@ -123,7 +123,7 @@ you can simply copy the code in the box below and paste it in the .local/share/V
 ```
 
 <br>
-Let's create a cabient file now. 
+Let's create a cabinet file now. 
 The cabinet file is required if you have addressble LED and a Sainsmart board controller. once created , you will copy it in the .local/share/VpinballX/10.8.0/directoutputconfig folder. <br>
 The easiest way to create your cabinet file is the use the Pincab Toolkit. There is an option in the tool to <br>
 - create the settings for the Sainsmart board <br>
@@ -140,7 +140,7 @@ LOOK AT THE VIDEO TUTORIAL FOR USING THE PINCAB TOOLKIT <br>
 - LOOK AT THE UDEV RULE CREATION VIDEO <BR>
 
 STEP 7 <br>
-You need to add a Udev rule for each of your USB controller ( Pinscape Pico, PinOne, Arnoz, Teensy , ) udev permissions control who can access hardware devices (USB boards, serial ports, HID controllers, etc.) when Linux detects them. Without correct udev rules, apps like VPX may not be allowed to read/write your controller unless run as root, which causes missing inputs or unstable behavior. With proper rules, your normal user gets consistent access to the right devices at boot/replug time, improving reliability and security (no need to run everything with elevated privileges). <br>
+You need to add a Udev rule for each of your USB controller ( Pinscape Pico, PinOne, Arnoz, Teensy , ) udev permissions control who can access hardware devices (USB boards, serial ports, HID controllers, etc.) when Linux detects them. Without correct udev rules, apps like VPX may not be allowed to read/write your controller unless run as root, which causes missing inputs or unstable behavior. With proper rules, your normal user gets consistent access to the right devices at boot/replug time, improving reliability and security (no need to run everything with elevated privilege). <br>
 <br> 
 
 <a href="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/_posts/guides/Linux-UDEV-Quick-Tutorial.md">UDEV complete guide</a>

@@ -43,7 +43,6 @@ Here are the things to consider on Linux for DOF
 - All force feedback should work on Linux depending on the type of controller you are using. 
 - SSF ( Surround Sound Feedback ) is currently NOT WORKING. 
 - Addressable LED are working. ( Some effect might be innacurate ) 
-- Pup Packs are working 50/50 ( A lot of them will require re-coding )
 <br>
 <br>
 
@@ -52,10 +51,13 @@ What do you need to get DOF working on Ubuntu <br>
 - DOF Config files <br>
 - Your hardware configured <br>
 - Udev rule for each device <br>
-- Add dialout group for Modem access/Serial ports access
+- Add dialout group for Modem access/Serial ports access ( This is specific for the Wemos )
 
-I create a tool that will help you test your devices under Linux ( Pinball Toolset ) This tool has some limited device config capability, it is designed to test the ports. 
-I strongly suggest you use the native Windows app for your device ( in Windows or Linux using Wine ). The tool will also flash firmware on the Teensy and Wemos. The tool is also designed to create a cabinet file and create a B2SServer.xml file  
+I created a tool that will help you test your devices under Linux ( Pinball Toolset ) This tool is designed to test the ports
+I strongly suggest using the native Windows program for configuring your device <br>
+ - The tool will flash firmware on the Teensy and Wemos <br>
+ - The tool will create a cabinet file and create a B2SServer.xml file <br>
+ - The tool will configure and test Addressable LED  <br>
 <br>
 <br>
 
@@ -66,7 +68,7 @@ Download VPX 10.8.1_BGFX ( This version has a DOF plugin built in )
 
 STEP 2 <br>
 
-Install and setup VPX ( Look at this Article and Video if you need help ) <br>
+Install and setup VPX ( Look at this video if you need help ) <br>
 <p>
    <a href="https://youtu.be/HLAduvD9Z_U?t=510" target="_blank" rel="noopener">
     <img src="/assets/css/images/youtube-logo.svg" alt="YouTube" width="40" style="vertical-align:middle; margin-right:10px;">Check out the video segment
@@ -84,7 +86,11 @@ Turn on the DOF plugin in VPX  ( F12 LiveUI menu / Plugins / DOF ) Save Globally
 
 STEP 4 <br>
 You will need your Config from the online DOF config. Download your config and extract it in ( .local/share/VpinballX/10.8.0/directoutputconfig )<br> 
-<a href="https://configtool.vpuniverse.com/app/home">Online DOF Config Tool</a>
+<a href="https://configtool.vpuniverse.com/app/home">Online DOF Config Tool</a><br>
+
+<a href="https://youtu.be/rN-9ncXd-Cc?t=1027"> How to configure Online DOF</a>
+
+
 
 
 STEP 5 <br>

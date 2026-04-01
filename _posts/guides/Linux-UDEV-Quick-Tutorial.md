@@ -1,4 +1,4 @@
-## Linux Setup Tutorial (Pinscape + LED-Wiz, Wemos Optional)
+## Linux UDEV Hardware (Pinscape/LEDWIZ/Saintsmart/Arnoz/PinOne/Wemos/Teensy)
 
 <img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Linux-DOF/udev-rule.jpg" 
      width="100%"
@@ -46,7 +46,7 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="fafa", ATTR{idProduct}=="00f7", MODE="0660", 
 EOF2
 ```
 
-- Create LED-Wiz rule:
+- Create LEDWIZ rule:
 
 ```bash
 sudo tee /etc/udev/rules.d/99-ledwiz.rules >/dev/null <<'EOF2'

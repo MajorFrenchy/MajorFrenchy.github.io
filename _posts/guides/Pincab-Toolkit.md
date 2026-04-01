@@ -2,22 +2,30 @@
 
 ## Table of Contents
 
-1. What This Tool Is For
-2. How To Think About The App
-3. Common UI Elements
-4. Tab-By-Tab Deep Dive
-5. Wemos Tab
-6. Teensy Tab
-7. LEDWiz Tab
-8. KL25Z / Pinscape Tab
-9. Pico Tab
-10. Arnoz Tab
-11. Sainsmart Tab
-12. Cabinet Configurator Tab
-13. About Tab
-14. Recommended Beginner Workflow
-15. Troubleshooting Notes
-16. Suggested Image Labels
+### Core Overview
+
+- [What This Tool Is For](#what-this-tool-is-for)
+- [How To Think About The App](#how-to-think-about-the-app)
+- [Common UI Elements](#common-ui-elements)
+- [Tab-By-Tab Deep Dive](#tab-by-tab-deep-dive)
+
+### Hardware Tabs
+
+- [Wemos Tab](#wemos-tab)
+- [Teensy Tab](#teensy-tab)
+- [LEDWiz Tab](#ledwiz-tab)
+- [KL25Z / Pinscape Tab](#kl25z--pinscape-tab)
+- [Pico Tab](#pico-tab)
+- [Arnoz Tab](#arnoz-tab)
+- [Sainsmart Tab](#sainsmart-tab)
+- [Cabinet Configurator Tab](#cabinet-configurator-tab)
+- [About Tab](#about-tab)
+
+### Workflows & Help
+
+- [Recommended Beginner Workflow](#recommended-beginner-workflow)
+- [Troubleshooting Notes](#troubleshooting-notes)
+- [Suggested Image Labels](#suggested-image-labels)
 
 ---
 
@@ -851,4 +859,3 @@ Use these labels when you add pictures later:
 - `[IMAGE PLACEHOLDER: Strip direction preview]`
 - `[IMAGE PLACEHOLDER: ALED Test popup]`
 - `[IMAGE PLACEHOLDER: About tab screenshot]`
-

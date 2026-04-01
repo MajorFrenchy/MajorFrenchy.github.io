@@ -110,7 +110,7 @@ The log is important. If a device does not work, the log usually shows whether t
 ---
 
 ## Wemos Tab <br>
-<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/teensy.png" 
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/wemos.png" 
      width="100%"
      alt="Screenshot"> <br>
 

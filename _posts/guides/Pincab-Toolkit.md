@@ -188,7 +188,11 @@ Use Wemos when you want to confirm:
 
 ---
 
-## Teensy Tab
+## Teensy Tab<br>
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/teensy.png" 
+     width="100%"
+     alt="Screenshot"> <br>
+<br>
 
 Purpose: manage Teensy-based LED strip controllers.
 
@@ -253,6 +257,12 @@ Use Teensy when you need:
 ---
 
 ## LEDWiz Tab
+<br>
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/ledwiz
+     .png" 
+     width="100%"
+     alt="Screenshot"> <br>
+<br>
 
 Purpose: detect and test LEDWiz-compatible output devices.
 
@@ -295,6 +305,12 @@ Use LEDWiz when you want to verify:
 ---
 
 ## KL25Z / Pinscape Tab
+
+<br>
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/kl25z.png" 
+     width="100%"
+     alt="Screenshot"> <br>
+<br>
 
 Purpose: test and configure KL25Z-based Pinscape hardware.
 
@@ -380,6 +396,12 @@ Use this tab to:
 ---
 
 ## Pico Tab
+
+<br>
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/pico.png" 
+     width="100%"
+     alt="Screenshot"> <br>
+    
 
 Purpose: manage Raspberry Pi Pico / Pinscape Pico devices.
 
@@ -539,6 +561,10 @@ Use the Pico tab when you want:
 ---
 
 ## Arnoz Tab
+<br>
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/pico.png" 
+     width="100%"
+     alt="Screenshot"> <br>
 
 Purpose: manage and test Arnoz output controller hardware.
 
@@ -584,6 +610,10 @@ Use Arnoz when you want to:
 ---
 
 ## Sainsmart Tab
+<br>
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/saintsmart.png" 
+     width="100%"
+     alt="Screenshot"> <br>
 
 Purpose: manage Sainsmart relay board integration.
 
@@ -636,7 +666,11 @@ Use Sainsmart when your cabinet uses relay outputs for:
 ---
 
 ## Cabinet Configurator Tab
-
+<br>
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/cabconfig.png" 
+     width="100%"
+     alt="Screenshot"> <br>
+     
 Purpose: assemble cabinet controller and strip layout data into configuration output.
 
 [IMAGE PLACEHOLDER: Cabinet Configurator main screenshot]
@@ -646,6 +680,10 @@ This tab is where the full cabinet model comes together.
 ### Major Areas
 
 #### Cabinet Preview
+<br>
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/cab xml.png" 
+     width="100%"
+     alt="Screenshot"> <br>
 
 Visual preview area for the configurator.
 
@@ -706,14 +744,16 @@ The Addressable LED tools are split into configuration and testing.
 
 #### Configure ALED Strips
 
+
 Manage strip definitions, directions, lengths, controller assignment, brightness, and port routing.
 
 #### Test
 
 Open the controller test popup.
 
-[IMAGE PLACEHOLDER: Addressable LED tools popup]
-
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/aled test.png" 
+     width="100%"
+     alt="Screenshot"> <br>
 ### Controller Concepts
 
 Each addressable LED controller includes settings like:
@@ -730,6 +770,10 @@ Each addressable LED controller includes settings like:
 - per-strip length behavior
 
 ### Strip Concepts
+<br>
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/add strip.png" 
+     width="100%"
+     alt="Screenshot"> <br>
 
 Each strip includes:
 

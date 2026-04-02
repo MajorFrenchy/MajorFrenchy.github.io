@@ -48,7 +48,7 @@ It is aimed at cabinet builders using hardware such as:
 
 It also includes a Cabinet Configurator so detected hardware and addressable LED strip layouts can be turned into a `cabinet.xml` style configuration workflow.
 
-[IMAGE PLACEHOLDER: Main app screenshot]
+
 
 ---
 
@@ -104,7 +104,6 @@ The log is important. If a device does not work, the log usually shows whether t
 - firmware tool missing
 - controller command timeout
 
-[IMAGE PLACEHOLDER: Log panel screenshot]
 
 ---
 
@@ -126,7 +125,7 @@ Typical uses:
 - test addressable LED outputs
 - verify controller communication
 
-[IMAGE PLACEHOLDER: Wemos tab screenshot]
+
 
 ### Fields and Options
 
@@ -199,7 +198,7 @@ Use Wemos when you want to confirm:
 
 Purpose: manage Teensy-based LED strip controllers.
 
-[IMAGE PLACEHOLDER: Teensy tab screenshot]
+
 
 ### Fields and Options
 
@@ -269,7 +268,7 @@ Use Teensy when you need:
 
 Purpose: detect and test LEDWiz-compatible output devices.
 
-[IMAGE PLACEHOLDER: LEDWiz tab screenshot]
+
 
 ### Main Features
 
@@ -317,7 +316,6 @@ Use LEDWiz when you want to verify:
 
 Purpose: test and configure KL25Z-based Pinscape hardware.
 
-[IMAGE PLACEHOLDER: KL25Z tab screenshot]
 
 ### Major Capabilities
 
@@ -408,7 +406,7 @@ Use this tab to:
 
 Purpose: manage Raspberry Pi Pico / Pinscape Pico devices.
 
-[IMAGE PLACEHOLDER: Pico tab screenshot]
+
 
 ### Major Capabilities
 
@@ -571,7 +569,7 @@ Use the Pico tab when you want:
 
 Purpose: manage and test Arnoz output controller hardware.
 
-[IMAGE PLACEHOLDER: Arnoz tab screenshot]
+
 
 ### Major Capabilities
 
@@ -620,7 +618,7 @@ Use Arnoz when you want to:
 
 Purpose: manage Sainsmart relay board integration.
 
-[IMAGE PLACEHOLDER: Sainsmart tab screenshot]
+
 
 ### Major Capabilities
 
@@ -676,7 +674,7 @@ Use Sainsmart when your cabinet uses relay outputs for:
      
 Purpose: assemble cabinet controller and strip layout data into configuration output.
 
-[IMAGE PLACEHOLDER: Cabinet Configurator main screenshot]
+
 
 This tab is where the full cabinet model comes together.
 
@@ -739,7 +737,7 @@ You can choose whether to include:
 
 This is used to build the set of controllers that should be represented in the cabinet model.
 
-[IMAGE PLACEHOLDER: Detect Devices popup]
+
 
 ### Addressable LED Tools
 
@@ -795,7 +793,7 @@ Each strip includes:
 
 This helps visualize how the strip numbering will run physically.
 
-[IMAGE PLACEHOLDER: Strip direction preview]
+
 
 ### Addressable LED Test Popup
 
@@ -808,7 +806,7 @@ Lets you choose a controller and run:
 
 This is useful for verifying the controller and strip behavior from the cabinet context.
 
-[IMAGE PLACEHOLDER: ALED Test popup]
+
 
 ### What To Use It For
 
@@ -825,7 +823,7 @@ Use Cabinet Configurator when you want to:
 
 Purpose: overview of the project and support link.
 
-[IMAGE PLACEHOLDER: About tab screenshot]
+
 
 ### What It Includes
 
@@ -894,18 +892,3 @@ If JSON loads but actions do not behave correctly, verify:
 ## Suggested Image Labels
 
 Use these labels when you add pictures later:
-
-- `[IMAGE PLACEHOLDER: Main app screenshot]`
-- `[IMAGE PLACEHOLDER: Wemos tab screenshot]`
-- `[IMAGE PLACEHOLDER: Teensy tab screenshot]`
-- `[IMAGE PLACEHOLDER: LEDWiz tab screenshot]`
-- `[IMAGE PLACEHOLDER: KL25Z tab screenshot]`
-- `[IMAGE PLACEHOLDER: Pico tab screenshot]`
-- `[IMAGE PLACEHOLDER: Arnoz tab screenshot]`
-- `[IMAGE PLACEHOLDER: Sainsmart tab screenshot]`
-- `[IMAGE PLACEHOLDER: Cabinet Configurator main screenshot]`
-- `[IMAGE PLACEHOLDER: Detect Devices popup]`
-- `[IMAGE PLACEHOLDER: Addressable LED tools popup]`
-- `[IMAGE PLACEHOLDER: Strip direction preview]`
-- `[IMAGE PLACEHOLDER: ALED Test popup]`
-- `[IMAGE PLACEHOLDER: About tab screenshot]`

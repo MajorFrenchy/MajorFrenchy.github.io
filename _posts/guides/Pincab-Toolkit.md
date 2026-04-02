@@ -1,7 +1,7 @@
 # Pincab Toolset Tk Guide
 <br>
 
-<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/logoToolset.png" >
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/PincabToolkit.png" >
 
 ## Table of Contents
 

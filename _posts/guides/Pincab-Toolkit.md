@@ -889,6 +889,4 @@ If JSON loads but actions do not behave correctly, verify:
 
 ---
 
-## Suggested Image Labels
 
-Use these labels when you add pictures later:

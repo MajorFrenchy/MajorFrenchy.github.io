@@ -34,7 +34,7 @@
 
 ## What This Tool Is For
 
-Pincab Toolset Tk is a setup and testing utility for virtual pinball cabinet hardware. It brings the main cabinet tasks into one place so you can detect devices, flash firmware, test outputs, inspect inputs, configure mappings, and build cabinet configuration files without jumping between multiple tools.
+Pincab Toolset Tk is a Linux setup and testing utility for virtual pinball cabinet hardware. It brings the main cabinet tasks into one place so you can detect devices, flash firmware, test outputs, inspect inputs, configure mappings, and build cabinet configuration files without jumping between multiple tools.
 
 It is aimed at cabinet builders using hardware such as:
 

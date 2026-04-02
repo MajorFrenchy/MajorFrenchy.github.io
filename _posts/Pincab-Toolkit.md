@@ -1,3 +1,12 @@
+---
+layout: post
+title: "VPX Android"
+date: 2026-02-20
+categories: [hardware, Mobile, VPX]
+image: /Screenshots/vpx-android/Pincab-Toolkit/PincabToolkit.png
+
+Pincab Toolset is a Linux setup and testing utility for virtual pinball cabinet hardware. It brings the main cabinet tasks into one place so you can detect devices
+
 # Pincab Toolset Tk Guide
 <br>
 
@@ -34,7 +43,7 @@
 
 ## What This Tool Is For
 
-Pincab Toolset Tk is a Linux setup and testing utility for virtual pinball cabinet hardware. It brings the main cabinet tasks into one place so you can detect devices, flash firmware, test outputs, inspect inputs, configure mappings, and build cabinet configuration files without jumping between multiple tools.
+Pincab Toolset is a Linux setup and testing utility for virtual pinball cabinet hardware. It brings the main cabinet tasks into one place so you can detect devices, flash firmware, test outputs, inspect inputs, configure mappings, and build cabinet configuration files without jumping between multiple tools.
 
 It is aimed at cabinet builders using hardware such as:
 

@@ -260,8 +260,7 @@ Use Teensy when you need:
 
 ## LEDWiz Tab
 <br>
-<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/Ledwiz
-     .png" 
+<img src="https://github.com/MajorFrenchy/MajorFrenchy.github.io/blob/main/Screenshots/Pincab-Toolkit/Ledwiz.png" 
      width="100%"
      alt="Screenshot"> <br>
 <br>
